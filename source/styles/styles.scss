@@ -4,4 +4,498 @@
 @import "./common/fonts.scss";
 
 /* BLOCKS */
+@import "./blocks/page.scss";
 @import "./blocks/header.scss";
+
+
+.page {
+
+  // .page__body
+
+  &__body {
+  }
+
+  // .page__headline
+
+  &__headline {
+  }
+
+  // .page__main-header
+
+  &__main-header {
+  }
+
+  // .page__main-index
+
+  &__main-index {
+  }
+
+  // .page__main-footer
+
+  &__main-footer {
+  }
+}
+
+.visually-hidden {
+}
+
+.main-header {
+
+  // .main-header__container
+
+  &__container {
+  }
+}
+
+.container {
+
+  // .container__logo
+
+  &__logo {
+  }
+
+  // .container__navigation
+
+  &__navigation {
+  }
+
+  // .container__hero
+
+  &__hero {
+  }
+
+  // .container__programs
+
+  &__programs {
+  }
+
+  // .container__reasons
+
+  &__reasons {
+  }
+
+  // .container__stats
+
+  &__stats {
+  }
+
+  // .container__map
+
+  &__map {
+  }
+
+  // .container__social
+
+  &__social {
+  }
+
+  // .container__logo-academy
+
+  &__logo-academy {
+  }
+}
+
+.logo {
+
+  // .logo__wrapper
+
+  &__wrapper {
+  }
+
+  // .logo__image
+
+  &__image {
+  }
+
+  // .logo__image-text
+
+  &__image-text {
+  }
+}
+
+.navigation {
+
+  // .navigation__toggle
+
+  &__toggle {
+  }
+
+  // .navigation__wrapper
+
+  &__wrapper {
+  }
+
+  // .navigation__list
+
+  &__list {
+  }
+
+  // .navigation__list--closed
+
+  &__list--closed {
+  }
+
+  // .navigation__item
+
+  &__item {
+  }
+
+  // .navigation__link
+
+  &__link {
+  }
+
+  // .navigation__link--current
+
+  &__link--current {
+  }
+}
+
+.visually-hydden {
+}
+
+.main-index {
+
+  // .main-index__container
+
+  &__container {
+  }
+}
+
+.hero {
+
+  // .hero__wrapper
+
+  &__wrapper {
+  }
+
+  // .hero__title
+
+  &__title {
+  }
+
+  // .hero__description
+
+  &__description {
+  }
+
+  // .hero__image
+
+  &__image {
+  }
+
+  // .hero__button
+
+  &__button {
+  }
+}
+
+.button {
+}
+
+.programs {
+
+  // .programs__wrapper
+
+  &__wrapper {
+  }
+
+  // .programs__title
+
+  &__title {
+  }
+
+  // .programs__list
+
+  &__list {
+  }
+
+  // .programs__item
+
+  &__item {
+  }
+
+  // .programs__item--slim
+
+  &__item--slim {
+  }
+
+  // .programs__subtitle
+
+  &__subtitle {
+  }
+
+  // .programs__description
+
+  &__description {
+  }
+
+  // .programs__link
+
+  &__link {
+  }
+
+  // .programs__item--pro
+
+  &__item--pro {
+  }
+}
+
+.reasons {
+
+  // .reasons__wrapper
+
+  &__wrapper {
+  }
+
+  // .reasons__title
+
+  &__title {
+  }
+
+  // .reasons__list
+
+  &__list {
+  }
+
+  // .reasons__item
+
+  &__item {
+  }
+
+  // .reasons__item--petal
+
+  &__item--petal {
+  }
+
+  // .reasons__description
+
+  &__description {
+  }
+
+  // .reasons__number
+
+  &__number {
+  }
+
+  // .reasons__item--powder
+
+  &__item--powder {
+  }
+
+  // .reasons__item--nutrition
+
+  &__item--nutrition {
+  }
+
+  // .reasons__item--time
+
+  &__item--time {
+  }
+}
+
+.stats {
+
+  // .stats__wrapper
+
+  &__wrapper {
+  }
+
+  // .stats__title
+
+  &__title {
+  }
+
+  // .stats__description
+
+  &__description {
+  }
+
+  // .stats__module
+
+  &__module {
+  }
+
+  // .stats__meaning
+
+  &__meaning {
+  }
+
+  // .stats__number
+
+  &__number {
+  }
+
+  // .stats__text
+
+  &__text {
+  }
+
+  // .stats__action
+
+  &__action {
+  }
+
+  // .stats__costs
+
+  &__costs {
+  }
+
+  // .stats__price
+
+  &__price {
+  }
+
+  // .stats__slider
+
+  &__slider {
+  }
+
+  // .stats__image-before
+
+  &__image-before {
+  }
+
+  // .stats__image-after
+
+  &__image-after {
+  }
+
+  // .stats__range-bar
+
+  &__range-bar {
+  }
+
+  // .stats__range-toggle
+
+  &__range-toggle {
+  }
+}
+
+.main-footer {
+
+  // .main-footer__container
+
+  &__container {
+  }
+
+  // .main-footer__logo-text
+
+  &__logo-text {
+  }
+}
+
+.map {
+
+  // .map__title
+
+  &__title {
+  }
+
+  // .map__wrapper
+
+  &__wrapper {
+  }
+
+  // .map__signboard
+
+  &__signboard {
+  }
+}
+
+.signboard {
+
+  // .signboard__text
+
+  &__text {
+  }
+
+  // .signboard__address
+
+  &__address {
+  }
+
+  // .signboard__street
+
+  &__street {
+  }
+
+  // .signboard__city
+
+  &__city {
+  }
+
+  // .signboard__location
+
+  &__location {
+  }
+}
+
+.location {
+
+  // .location__image
+
+  &__image {
+  }
+
+  // .location__pin
+
+  &__pin {
+  }
+}
+
+.pin {
+}
+
+.logo-text {
+
+  // .logo-text__image
+
+  &__image {
+  }
+}
+
+.social {
+
+  // .social__item
+
+  &__item {
+  }
+
+  // .social__link
+
+  &__link {
+  }
+
+  // .social__link--vkontakte
+
+  &__link--vkontakte {
+  }
+
+  // .social__link--youtube
+
+  &__link--youtube {
+  }
+
+  // .social__link--telegram
+
+  &__link--telegram {
+  }
+}
+
+.social-list {
+}
+
+.logo-academy {
+
+  // .logo-academy__text
+
+  &__text {
+  }
+
+  // .logo-academy__image
+
+  &__image {
+  }
+}
+
