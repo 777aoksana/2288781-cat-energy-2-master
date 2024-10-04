@@ -1,0 +1,38 @@
+
+.page {
+  &__body {
+
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
+    min-height: 100%;
+  }
+
+  &__headline {
+    color: #000000;
+    font-family: "Oswald", sans-serif;
+    font-size: 60px;
+    line-height: 60px;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  &__main-header {
+  }
+
+  &__main-index {
+    flex-grow: 1;
+  }
+
+  &__main-footer {
+  }
+
+  &__main-header,
+  &__main-footer {
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+}
