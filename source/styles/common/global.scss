@@ -13,6 +13,9 @@ body {
 }
 
 body {
+  $bg: #af86a8;
+  $bg-font: #eedbdb;
+
   background-color: $bg;
   color: $bg-font;
   overflow-y: scroll;
