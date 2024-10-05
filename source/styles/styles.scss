@@ -10,63 +10,9 @@
 @import "./blocks/page.scss";
 @import "./blocks/main-header.scss";
 @import "./blocks/container.scss";
+@import "./blocks/logo.scss";
+@import "./blocks/navigation.scss";
 
-
-.logo {
-
-  // .logo__wrapper
-
-  &__wrapper {
-  }
-
-  // .logo__image
-
-  &__image {
-  }
-
-  // .logo__image-text
-
-  &__image-text {
-  }
-}
-
-.navigation {
-
-  // .navigation__toggle
-
-  &__toggle {
-  }
-
-  // .navigation__wrapper
-
-  &__wrapper {
-  }
-
-  // .navigation__list
-
-  &__list {
-  }
-
-  // .navigation__list--closed
-
-  &__list--closed {
-  }
-
-  // .navigation__item
-
-  &__item {
-  }
-
-  // .navigation__link
-
-  &__link {
-  }
-
-  // .navigation__link--current
-
-  &__link--current {
-  }
-}
 
 .main-index {
 
