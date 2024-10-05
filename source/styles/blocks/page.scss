@@ -1,18 +1,13 @@
 
 .page {
   width: 320px;
-  height: 100%;
-  margin: 0;
-  padding: 0;
+  margin: 0 auto;
 
   &__body {
     display: flex;
     flex-direction: column;
 
     min-width: 320px;
-    min-height: 100%;
-    margin: 0 auto;
-    padding: 0;
 
     font-family: $primary-font;
     font-size: 14px;
@@ -25,19 +20,17 @@
     flex-direction: column;
 
     width: 100%;
-    min-width: 320px;
     height: 100%;
-    margin: 0 auto;
+    margin: 0;
     padding: 0 20px;
 
-    box-sizing: border-box;
+    background-color: $white;
   }
 
   &__headline {
     font-family: $secondary-font;
     font-size: 60px;
     line-height: 60px;
-    font-weight: 400;
 
     text-align: left;
   }
@@ -56,14 +49,22 @@
     padding: 0;
   }
 
+  &__fullscreen-menu {
+    min-height: 264px;
+    margin: 0;
+    padding: 0;
+
+    text-align: center;
+  }
+
   &__main-index {
     display: flex;
     flex-direction: row;
 
     flex: 1;
 
-    background-color: $basic-white;
-    color: $secondary_dark-grey;
+    background-color: $white;
+    color: $special_dark-grey;
   }
 
   &__main-footer {
@@ -83,7 +84,7 @@
     margin: 0;
     padding: 0;
 
-    background-color: $basic-grey;
-    color: $secondary_dark-grey;
+    background-color: $secondary;
+    color: $special_dark-grey;
   }
 }

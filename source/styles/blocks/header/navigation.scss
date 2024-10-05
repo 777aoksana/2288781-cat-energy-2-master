@@ -2,6 +2,9 @@
   &__toggle {
     margin-left: 72px;
     padding: 0;
+
+    background-color: $white;
+    border: none;
   }
 
   &__toggle--menu-closed {
@@ -10,7 +13,7 @@
       display: block;
       width: 18px;
       height: 18px;
-      background: $basic_black;
+      background: $black;
       mask-image: url("../../icons/menu-closed.svg");
     }
   }
