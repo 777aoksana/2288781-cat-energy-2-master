@@ -1,5 +1,7 @@
 /* GLOBAL */
+@import "./common/visually-hidden.scss";
 @import "./common/variables.scss";
+@import "./common/mixins.scss";
 @import "./common/global.scss";
 @import "./common/fonts.scss";
 
@@ -7,13 +9,9 @@
 @import "./blocks/page.scss";
 
 
-.visually-hidden {
-}
-
 .main-header {
 
   // .main-header__container
-
   &__container {
   }
 }
@@ -120,9 +118,6 @@
 
   &__link--current {
   }
-}
-
-.visually-hydden {
 }
 
 .main-index {
