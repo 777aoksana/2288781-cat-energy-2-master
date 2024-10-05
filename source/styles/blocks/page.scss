@@ -31,15 +31,12 @@
   }
 
   &__headline {
-    display: flex;
-
-    margin: 0 auto;
-    padding: 0;
-
     font-family: $secondary-font;
     font-size: 60px;
     line-height: 60px;
     font-weight: 400;
+
+    text-align: left;
   }
 
   &__main-header {
@@ -51,13 +48,9 @@
 
     flex: 0 0 auto;
 
-    min-width: 320px;
     height: 38px;
     margin: 0;
     padding: 0;
-
-    background-color: $basic-white;
-    color: $secondary_dark-grey;
   }
 
   &__main-index {
@@ -83,7 +76,6 @@
 
     flex: 0 0 auto;
 
-    min-width: 320px;
     height: 236px;
     margin: 0;
     padding: 0;

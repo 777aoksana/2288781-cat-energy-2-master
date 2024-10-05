@@ -6,57 +6,11 @@
 @import "./common/fonts.scss";
 
 /* BLOCKS */
+@import "./blocks/button.scss";
 @import "./blocks/page.scss";
 @import "./blocks/main-header.scss";
+@import "./blocks/container.scss";
 
-
-.container {
-
-  // .container__logo
-
-  &__logo {
-  }
-
-  // .container__navigation
-
-  &__navigation {
-  }
-
-  // .container__hero
-
-  &__hero {
-  }
-
-  // .container__programs
-
-  &__programs {
-  }
-
-  // .container__reasons
-
-  &__reasons {
-  }
-
-  // .container__stats
-
-  &__stats {
-  }
-
-  // .container__map
-
-  &__map {
-  }
-
-  // .container__social
-
-  &__social {
-  }
-
-  // .container__logo-academy
-
-  &__logo-academy {
-  }
-}
 
 .logo {
 
@@ -148,9 +102,6 @@
 
   &__button {
   }
-}
-
-.button {
 }
 
 .programs {
@@ -458,4 +409,3 @@
   &__image {
   }
 }
-
