@@ -1,13 +1,16 @@
 
 .page {
   width: 320px;
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
 
   &__body {
     display: flex;
     flex-direction: column;
 
     min-width: 320px;
+    margin: 0;
+    padding: 0;
 
     font-family: $primary-font;
     font-size: 14px;
@@ -20,8 +23,9 @@
     flex-direction: column;
 
     width: 100%;
-    min-height: 100%;
-    margin: 0;
+    min-width: 320px;
+    height: 100%;
+    margin: 0 auto;
     padding: 0 20px;
 
     box-sizing: border-box;

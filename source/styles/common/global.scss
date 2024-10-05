@@ -1,7 +1,11 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее */
 
-$bg: #af86a8;
-$bg-font: #eedbdb;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  outline: 1px solid rebeccapurple;
+}
 
 html,
 body {
@@ -18,3 +22,8 @@ body {
   overflow-y: scroll;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
