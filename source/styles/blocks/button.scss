@@ -1,4 +1,6 @@
 .button {
+  @include button;
+
   position: relative;
 
   display: flex;
@@ -8,19 +10,9 @@
 
   width: 280px;
   height: 40px;
-  padding: 10px 44px;
-
-  background-color: $basic_green;
-  border: none;
-  box-sizing: border-box;
-  cursor: pointer;
-  color: $basic_white;
-  text-transform: uppercase;
-  text-decoration: none none none;
-  text-align: center;
 
   &__text {
-    font-family: $secondary-font;
+    font-family: inherit;
     font-size: 16px;
     line-height: 20px;
   }

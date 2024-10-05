@@ -50,28 +50,39 @@
 
         <nav class="container__navigation navigation">
 
-          <button class="navigation__toggle" type="button">
+          <button class="navigation__toggle navigation__toggle--menu-closed button" type="button">
             <span class="visually-hydden">Переключает меню</span>
           </button>
 
-          <div class="navigation__wrapper">
-            <ul class="navigation__list navigation__list--closed">
-              <li class="navigation__item">
-                <a class="navigation__link navigation__link--current" href="index.html" aria-current="page">Главная</a>
-              </li>
-              <li class="navigation__item">
-                <a class="navigation__link" href="catalog.html">Каталог продукции</a>
-              </li>
-              <li class="navigation__item">
-                <a class="navigation__link" href="form.html">Подбор программы</a>
-              </li>
-            </ul>
-          </div>
         </nav>
 
       </div>
 
     </header>
+
+    <div class="page__fullscreen-menu fullscreen-menu fullscreen-menu__active">
+
+      <div class="fullscreen-menu__content">
+
+        <div class="fullscreen-menu__columns">
+
+          <ul class="fullscreen-menu__column">
+            <li class="fullscreen-menu__item">
+              <a class="fullscreen-menu__link fullscreen-menu__link--current" href="index.html" aria-current="page">Главная</a>
+            </li>
+            <li class="fullscreen-menu__item">
+              <a class="fullscreen-menu__link" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="fullscreen-menu__item">
+              <a class="fullscreen-menu__link" href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
 
     <main class="page__main-index main-index">
 

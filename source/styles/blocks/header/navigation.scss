@@ -1,35 +1,17 @@
 .navigation {
   &__toggle {
-
+    margin-left: 72px;
+    padding: 0;
   }
 
-  // .navigation__wrapper
-
-  &__wrapper {
-  }
-
-  // .navigation__list
-
-  &__list {
-  }
-
-  // .navigation__list--closed
-
-  &__list--closed {
-  }
-
-  // .navigation__item
-
-  &__item {
-  }
-
-  // .navigation__link
-
-  &__link {
-  }
-
-  // .navigation__link--current
-
-  &__link--current {
+  &__toggle--menu-closed {
+    &::before {
+      content: "";
+      display: block;
+      width: 18px;
+      height: 18px;
+      background: $basic_black;
+      mask-image: url("../../icons/menu-closed.svg");
+    }
   }
 }

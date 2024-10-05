@@ -7,3 +7,14 @@
     font-display: swap;
   }
 }
+
+@mixin button {
+  padding: 10px 44px;
+
+  background-color: $basic_green;
+  color: $basic_white;
+  border: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+}
