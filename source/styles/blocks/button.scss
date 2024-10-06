@@ -4,20 +4,5 @@
 
 .button-secondary {
   @include button;
-  background-color: $secondary 85%;
+  background-color: $primary 85%;
 }
-
-.button {
-  @include button;
-
-  &__text {
-    font-family: inherit;
-    font-size: 16px;
-    line-height: 20px;
-  }
-
-  &:hover {
-    opacity: 0.8;
-  }
-}
-

@@ -4,7 +4,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  outline: 1px solid #60102f;   // для себя, потом удалю
+  outline: 1px solid #511029; // для себя, потом удалю
 }
 
 html,
@@ -12,18 +12,55 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-
-  box-sizing: border-box;
 }
 
 body {
-  $bg: orange;
-  background-color: $bg;
-  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+
+  font-family: $base-font-size;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
 }
 
 img {
   max-width: 100%;
   height: auto;
   object-fit: contain;
+  vertical-align: middle;
 }
+
+// .wrapper {
+//   display: flex;
+//   flex-direction: column;
+
+//   height: 100%;
+// }
+
+
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   margin: 0;
+// }
+
+// ul,
+// li {
+//   list-style-type: none;
+//   margin: 0;
+//   padding: 0;
+// }
+
+// section {
+//   position: relative;
+// }
+
+// input,
+// select,
+// button {
+//   outline: none;
+// }

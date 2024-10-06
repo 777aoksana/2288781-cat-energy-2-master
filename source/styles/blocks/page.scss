@@ -1,18 +1,8 @@
 
 .page {
-  width: 320px;
-  margin: 0 auto;
-
   &__body {
-    display: flex;
-    flex-direction: column;
-
-    min-width: 320px;
-
-    font-family: $primary-font;
-    font-size: 14px;
-    line-height: 18px;
-    font-weight: 400;
+    $bg: #ffa600; //orange
+    background-color: $bg;
   }
 
   &__wrapper {
@@ -27,7 +17,9 @@
   }
 
   &__headline {
-    font-family: $secondary-font;
+    margin: 0;
+
+    font-family: $main-font;
     font-size: 60px;
     line-height: 60px;
 
