@@ -1,38 +1,64 @@
 .container {
-
-  // .container__logo
   &__logo {
+    display: flex;
+
+    width: 190px;
+    height: 38px;
   }
 
-  // .container__navigation
   &__navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 38px;
   }
 
-  // .container__hero
   &__hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 38px;
   }
 
-  // .container__programs
   &__programs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  // .container__reasons
   &__reasons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  // .container__stats
+
   &__stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  // .container__map
+
   &__map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  // .container__social
+
   &__social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  // .container__logo-academy
+
   &__logo-academy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

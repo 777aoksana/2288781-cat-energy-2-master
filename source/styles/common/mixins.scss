@@ -8,13 +8,16 @@
   }
 }
 
-@mixin button {
+@mixin button($bg-color: $primary, $text-color: $secondary) {
+  width: 280px;
+  height: 40px;
   padding: 10px 44px;
 
-  background-color: $primary;
-  color: $white;
+  background-color: $bg-color;
+  color: $text-color;
+
   border: none;
   text-transform: uppercase;
   text-decoration: none;
-  cursor: pointer;
 }
+

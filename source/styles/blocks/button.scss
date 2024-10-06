@@ -1,3 +1,12 @@
+.button-primary {
+  @include button;
+}
+
+.button-secondary {
+  @include button;
+  background-color: $secondary 85%;
+}
+
 .button {
   @include button;
 
@@ -8,8 +17,7 @@
   align-items: center;
   gap: 4px;
 
-  width: 280px;
-  height: 40px;
+  cursor: pointer;
 
   &__text {
     font-family: inherit;

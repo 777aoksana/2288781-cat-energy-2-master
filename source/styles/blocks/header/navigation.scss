@@ -1,20 +1,22 @@
 .navigation {
   &__toggle {
-    margin-left: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 18px;
+    min-height: 18px;
+    margin: 0;
     padding: 0;
 
     background-color: $white;
     border: none;
+    cursor: pointer;
+    overflow: hidden;
   }
 
   &__toggle--menu-closed {
-    &::before {
-      content: "";
-      display: block;
-      width: 18px;
-      height: 18px;
-      background: $black;
-      mask-image: url("../../icons/menu-closed.svg");
-    }
+    width: 18px;
+    height: 18px;
   }
 }

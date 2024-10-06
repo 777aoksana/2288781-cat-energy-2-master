@@ -1,14 +1,37 @@
 .hero {
   &__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    width: 320px;
+    height: 302px;
+    margin: 0;
+    padding: 0;
+    padding-right: 35px;
+    padding-left: 36px;
+    background: $primary 85%;
   }
 
   &__title {
+    font-family: $secondary-font;
+    font-size: 36px;
+    line-height: 36px;
+    text-align: center;
+
+    color: $white;
   }
 
   &__description {
+    font-family: $secondary-font;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: left;
+
+    color: $white;
   }
 
   &__image {
+
   }
 
   &__button {

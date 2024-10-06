@@ -1,18 +1,13 @@
 .main-header {
   flex-shrink: 0;
 
-  background-color: $white;
-  color: $special_dark-grey;
-
   &__container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
-    min-width: 100%;
+    width: 320px;
     height: 38px;
-    margin: 0;
-    padding: 0;
   }
 }
