@@ -1,5 +1,6 @@
 .fullscreen-menu {
   max-width: 100%;
+  height: 100%;
   margin: 0 auto;
   padding: 0;
 
@@ -23,11 +24,14 @@
     justify-content: space-between;
 
     max-width: 100%;
+    height: 100%;
   }
 
   &__column {
+    height: 100%;
     margin: 0;
     padding: 0;
+
     list-style-type: none;
   }
 

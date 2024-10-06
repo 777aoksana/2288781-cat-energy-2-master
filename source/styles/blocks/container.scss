@@ -16,10 +16,8 @@
 
   &__hero {
     display: flex;
-    justify-content: center;
-    align-items: center;
 
-    height: 38px;
+    height: 302px;
   }
 
   &__programs {
@@ -34,13 +32,11 @@
     align-items: center;
   }
 
-
   &__stats {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-
 
   &__map {
     display: flex;
