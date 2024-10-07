@@ -8,32 +8,36 @@
   }
 }
 
-@mixin button {
-  @button {
-    display: inline-block;
+@mixin base-button {
+  display: inline-block;
 
-    width: 280px;
-    height: 40px;
-    margin: 0;
-    padding: 10px 44px;
+  width: 280px;
+  height: 40px;
+  margin: 0 auto;
+  padding: 10px 44px;
 
-    background-color: $primary;
+  border-radius: none;
+  background-color: $primary;
+  color: $white;
 
-    border: none;
+  &__text {
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 20px;
 
-    &__text {
-      font-family: inherit;
-      font-size: 16px;
-      line-height: 20px;
+    color: $white;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+  }
 
-      color: $white;
-      text-transform: uppercase;
-      text-decoration: none;
-      text-align: center;
-    }
-
-    &:hover {
-      opacity: 0.8;
-    }
+  &:hover {
+    opacity: 0.8;
   }
 }
+
+@mixin primary-button {
+  @include base-button;
+  background-color: $fon-primary;
+}
+
