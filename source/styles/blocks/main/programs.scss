@@ -1,8 +1,6 @@
 .programs {
-  display: flex;
-  flex-direction: column;
-
   &__wrapper {
+    display: grid;
   }
 
   &__title {

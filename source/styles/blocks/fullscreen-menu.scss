@@ -1,5 +1,5 @@
 .fullscreen-menu {
-  height: 198px;
+  min-height: 198px;
 
   &__active {
     display: flex;
@@ -59,8 +59,16 @@
     text-decoration: none;
   }
 
-  &__link--current {
+  &__link:hover {
     opacity: 0.8;
+  }
+
+  &__link--current {
     text-underline-position: bottom 2px solid $primary;
+  }
+
+  &__link--current:hover {
+    color: $primary;
+    opacity: 0.8;
   }
 }

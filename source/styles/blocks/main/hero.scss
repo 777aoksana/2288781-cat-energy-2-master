@@ -3,28 +3,39 @@
     display: flex;
     flex-direction: column;
 
-    width: 320px;
-    height: 302px;
+    width: 100%;
     margin: 0;
     padding: 0;
+
     background: $primary 85%;
   }
 
   &__title {
+    margin: 0;
+    padding: 0;
+    padding-top: 27px;
+    padding-bottom: 25px;
+
     font-family: $main-font;
     font-size: 36px;
     line-height: 36px;
     text-align: center;
+    font-weight: 400;
 
     color: $white;
   }
 
   &__description {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 29px;
+
     font-family: $main-font;
     font-size: 14px;
     line-height: 14px;
-    text-align: left;
 
+    text-transform: uppercase;
+    text-align: center;
     color: $white;
   }
 

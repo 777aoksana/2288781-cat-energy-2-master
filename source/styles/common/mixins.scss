@@ -11,14 +11,12 @@
 @mixin base-button {
   display: inline-block;
 
-  width: 280px;
+  min-width: 280px;
   height: 40px;
   margin: 0 auto;
   padding: 10px 44px;
 
-  border-radius: none;
   background-color: $primary;
-  color: $white;
 
   &__text {
     font-family: inherit;
