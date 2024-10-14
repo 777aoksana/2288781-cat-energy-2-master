@@ -9,23 +9,23 @@
 }
 
 @mixin base-button {
-  display: inline-block;
-
   min-width: 280px;
   height: 40px;
   margin: 0 auto;
   padding: 10px 44px;
 
   background-color: $primary;
+  color: $white;
+  text-decoration: none;
+  cursor: pointer;
 
   &__text {
-    font-family: inherit;
+    font-family: $main-font;
     font-size: 16px;
     line-height: 20px;
 
     color: $white;
     text-transform: uppercase;
-    text-decoration: none;
     text-align: center;
   }
 

@@ -1,5 +1,8 @@
 
 .page {
+  display: flex;
+  flex-direction: column;
+
   &__body {
     $bg: #ffa600; //orange
     background-color: $bg;
@@ -39,9 +42,6 @@
   }
 
   &__main-index {
-    display: flex;
-    flex-direction: column;
-
     flex: 1;
 
     background-color: $white;
@@ -49,21 +49,7 @@
   }
 
   &__main-footer {
-    position: relative;
-    bottom: 0;
-    left: 0;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 20px;
-
     flex: 0 0 auto;
-
-    height: 236px;
-    margin: 0;
-    padding: 0;
 
     background-color: $secondary;
     color: $special_dark-grey;
