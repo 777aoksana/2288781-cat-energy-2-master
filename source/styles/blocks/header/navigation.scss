@@ -2,20 +2,25 @@
   &__toggle {
     display: flex;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: center;
 
     min-width: 24px;
     min-height: 24px;
-    margin: 0;
-    padding: 0;
 
     border: none;
     cursor: pointer;
+    background-color: transparent;
   }
 
   &__toggle--menu-opened {
+    display: block;
+
     width: 24px;
     height: 24px;
+    margin: 0;
+    padding: 0;
+
+    appearance: icon;
   }
 
   &__toggle--menu-opened:hover {
@@ -23,8 +28,14 @@
   }
 
   &__toggle--menu-closed {
+    display: block;
+
     width: 18px;
     height: 18px;
+    margin: 0;
+    padding: 0;
+
+    appearance: icon;
   }
 
   &__toggle--menu-closed:hover {
