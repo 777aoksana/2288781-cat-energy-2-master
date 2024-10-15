@@ -36,7 +36,7 @@
 
 @mixin primary-button {
   @include base-button;
-  background-color: $fon-primary;
+  background-color: $primary 85%;
 }
 
 @mixin center-element {

@@ -20,19 +20,17 @@
   }
 
   &__subtitle {
-    font-family: $main-font;
     font-size: 24px;
     line-height: 37px;
 
-    font-family: $black;
+    color: $black;
   }
 
   &__description {
-    font-family: $main-font;
     font-size: 14px;
     line-height: 18px;
 
-    $special_dark-grey;
+    color: $special_dark-grey;
   }
 
   &__link {

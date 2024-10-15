@@ -4,8 +4,10 @@
   flex-direction: column;
 
   &__body {
-    $bg: #ffa600; //orange
-    background-color: $bg;
+    margin: 0;
+
+    $bg-orange: #ffa600; // цвет оранжевый
+    background-color: $bg-orange;
   }
 
   &__wrapper {
@@ -30,7 +32,6 @@
   }
 
   &__main-header {
-    flex: 0 0 auto;
   }
 
   &__fullscreen-menu {
@@ -49,7 +50,7 @@
   }
 
   &__main-footer {
-    flex: 0 0 auto;
+    margin-top: auto;
 
     background-color: $secondary;
     color: $special_dark-grey;

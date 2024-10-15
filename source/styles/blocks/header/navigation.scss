@@ -1,18 +1,25 @@
 .navigation {
   &__toggle {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end;
+    align-items: flex-end;
 
-    min-width: 18px;
-    min-height: 18px;
+    min-width: 24px;
+    min-height: 24px;
     margin: 0;
     padding: 0;
 
-    background-color: $white;
     border: none;
     cursor: pointer;
-    overflow: hidden;
+  }
+
+  &__toggle--menu-opened {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__toggle--menu-opened:hover {
+    opacity: 0.8;
   }
 
   &__toggle--menu-closed {
