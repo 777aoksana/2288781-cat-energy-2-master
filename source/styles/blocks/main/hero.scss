@@ -16,12 +16,8 @@
     background: url("/images/hero/hero-cat/cat-mobile@2x.jpg") no-repeat center center/cover;
   }
 
-  &__content {
-
-
-    // background-color: $primary;
-  }
-
+  // &__content {
+  // }
 
   &__title {
     margin: 0;
@@ -62,6 +58,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    padding: 10px 44px;
 
     cursor: pointer;
   }

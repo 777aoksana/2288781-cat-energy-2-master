@@ -1,14 +1,11 @@
 .main-footer {
-  height: 240px;
-  margin-top: -240px;
-
-  clear: both;
+  height: 714px;
 
   &__container {
+    text-align: center;
   }
 
-  // .main-footer__logo-text
-
   &__logo-text {
+    text-align: left;
   }
 }

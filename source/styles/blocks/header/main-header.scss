@@ -1,11 +1,10 @@
 .main-header {
-  flex-shrink: 0;
-
   &__container {
     flex-direction: row;
     justify-content: space-between;
 
     min-width: 280px;
+    max-height: 38px;
 
     background-color: $white;
     color: $black;

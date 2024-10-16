@@ -1,11 +1,6 @@
 .reasons {
-
-  // .reasons__wrapper
-
   &__wrapper {
   }
-
-  // .reasons__title
 
   &__title {
     font-family: $main-font;
@@ -14,29 +9,19 @@
     font-weight: 400;
   }
 
-  // .reasons__list
-
   &__list {
     list-style-type: none;
   }
 
-  // .reasons__item
-
   &__item {
   }
-
-  // .reasons__item--petal
 
   &__item--petal {
   }
 
-  // .reasons__description
-
   &__description {
     font-family: $base-font-size;
   }
-
-  // .reasons__number
 
   &__number {
     font-family: $main-font;
@@ -48,17 +33,11 @@
     color: $basic-grey;
   }
 
-  // .reasons__item--powder
-
   &__item--powder {
   }
 
-  // .reasons__item--nutrition
-
   &__item--nutrition {
   }
-
-  // .reasons__item--time
 
   &__item--time {
   }

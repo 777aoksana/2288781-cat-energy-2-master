@@ -10,12 +10,10 @@
 
 @mixin base-button {
   min-width: 280px;
-  height: 40px;
-  margin: 0 auto;
-  padding: 10px 44px;
+  min-height: 40px;
+  margin: 0;
+  padding: 0;
 
-  background-color: $primary;
-  color: $white;
   text-decoration: none;
   cursor: pointer;
 
@@ -24,7 +22,6 @@
     font-size: 16px;
     line-height: 20px;
 
-    color: $white;
     text-transform: uppercase;
     text-align: center;
   }
@@ -37,4 +34,14 @@
 @mixin primary-button {
   @include base-button;
   background-color: $primary;
+  // +85%
+  color: $white;
 }
+
+// @mixin secondary-button {
+//   @include base-button;
+//   background-color: $basic_grey;
+//   color: $font_special-dark-grey;
+// }
+
+// пока не поняла как работает миксин с кнопками

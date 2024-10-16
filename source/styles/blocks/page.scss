@@ -2,12 +2,15 @@
 .page {
   position: relative;
 
+  width: 320px;
+  height: 100%;
+  margin: 0 auto;
+
   display: flex;
   flex-direction: column;
 
-  min-height: 100%;
-
   &__body {
+
     $bg-orange: #ffa600; // цвет оранжевый
     background-color: $bg-orange;
   }
@@ -16,7 +19,7 @@
     display: flex;
     flex-direction: column;
 
-    min-height: 100%;
+    height: 100%;
     margin: 0 auto;
 
     background-color: $white;
@@ -33,6 +36,8 @@
     font-weight: 400;
 
     text-align: left;
+    background-color: $white;
+    color: $black;
   }
 
   &__main-header {
@@ -40,11 +45,11 @@
     align-items: center;
 
     background-color: $white;
+    color: $black;
   }
 
   &__fullscreen-menu {
     display: none;
-    justify-content: center;
     align-items: center;
 
     text-align: center;
@@ -52,25 +57,28 @@
   }
 
   &__main-index {
-    flex-grow: 1;
+    flex: 1;
 
     background-color: $white;
-    color: $special_dark-grey;
+    color: $font_special-dark-grey;
   }
 
   &__main-inner {
-    flex-grow: 1;
+    flex: 1;
 
     background-color: $white;
-    color: $special_dark-grey;
+    color: $font_special-dark-grey;
   }
 
   &__main-footer {
+    flex-shrink: 0;
+
     width: 100%;
     height: 714px;
     margin: 0 auto;
+    margin-top: auto;
 
     background-color: $basic-grey;
-    color: $special_dark-grey;
+    color: $font_special-dark-grey;
   }
 }
