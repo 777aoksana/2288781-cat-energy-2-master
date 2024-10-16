@@ -1,11 +1,13 @@
 .logo-academy {
-
-  // .logo-academy__text
+  text-decoration: none;
+  text-align: left;
 
   &__text {
-  }
+    font-size: 16px;
+    line-height: 20px;
 
-  // .logo-academy__image
+    color: $special_dark-grey;
+  }
 
   &__image {
   }

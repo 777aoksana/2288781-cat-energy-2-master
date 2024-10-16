@@ -1,26 +1,27 @@
 .signboard {
-
-  // .signboard__text
-
   &__text {
-  }
+    font-family: $main-font;
+    font-size: 16px;
+    line-height: 20px;
 
-  // .signboard__address
+    text-transform: uppercase;
+    text-align: left;
+    color: $font_dark-grey;
+  }
 
   &__address {
-  }
+    line-height: 20px;
+    font-style: normal;
 
-  // .signboard__street
+    text-align: left;
+    color: $special_dark-grey;
+  }
 
   &__street {
   }
 
-  // .signboard__city
-
   &__city {
   }
-
-  // .signboard__location
 
   &__location {
   }

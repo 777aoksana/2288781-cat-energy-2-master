@@ -7,7 +7,7 @@
   padding: 0;
 
   box-sizing: border-box;
-  outline: 1px solid #511029; // для себя, потом удалю
+  // outline: 1px solid #511029; // для себя, потом удалю
 }
 
 html,
@@ -29,38 +29,3 @@ img {
   height: auto;
   object-fit: contain;
 }
-
-
-// .wrapper {
-//   display: flex;
-//   flex-direction: column;
-
-//   height: 100%;
-// }
-
-
-// h1,
-// h2,
-// h3,
-// h4,
-// h5,
-// h6 {
-//   margin: 0;
-// }
-
-// ul,
-// li {
-//   list-style-type: none;
-//   margin: 0;
-//   padding: 0;
-// }
-
-// section {
-//   position: relative;
-// }
-
-// input,
-// select,
-// button {
-//   outline: none;
-// }

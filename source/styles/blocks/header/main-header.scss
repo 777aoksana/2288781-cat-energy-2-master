@@ -2,24 +2,12 @@
   flex-shrink: 0;
 
   &__container {
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
 
     min-width: 280px;
-    max-height: 38px;
 
-    $bg-lavender: #e6e6fa; //цвет лаванды
-    background-color: $bg-lavender;
-    color: $white;
+    background-color: $white;
+    color: $black;
   }
-
-  // &__fullscreen-menu {
-  //   min-height: 264px;
-  //   margin: 0;
-  //   padding: 0;
-
-  //   text-align: center;
-  // }
 }

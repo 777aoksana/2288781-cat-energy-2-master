@@ -8,11 +8,16 @@
   // .reasons__title
 
   &__title {
+    font-family: $main-font;
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: 400;
   }
 
   // .reasons__list
 
   &__list {
+    list-style-type: none;
   }
 
   // .reasons__item
@@ -28,11 +33,19 @@
   // .reasons__description
 
   &__description {
+    font-family: $base-font-size;
   }
 
   // .reasons__number
 
   &__number {
+    font-family: $main-font;
+    font-size: 280px;
+    font-weight: 400;
+    line-height: 280px;
+
+    text-align: center;
+    color: $basic-grey;
   }
 
   // .reasons__item--powder

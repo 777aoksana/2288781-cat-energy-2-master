@@ -1,14 +1,24 @@
 /* здесь используйте глобальные переменные */
-
-
+// Основные цвета
 $black: #000000;
 $white: #ffffff;
 $primary: #68b738;
-$secondary: #f2f2f2;
 
-$basic_grey: #d9d9d9;
-$special_dark-grey: #444444;
-$special_grey: #666666;
+// Дополнительные фоновые цвета
+$basic-grey: #f2f2f2;
+$basic_dark-grey: #d9d9d9;
 $fon_grey: #eaeaea;
+$line-grey : #cdcdcd;
+
+$special_grey: #666666;
 $decoration-grey: #e6e6e6;
+
+//Текстовые цвета
 $font_dark-grey: #111111;
+$special_dark-grey: #444444;
+
+
+// !!!Мои вопросы:
+// 85% у фона?? почему ругается по поводу цвета фона #68B738D9... opacity ли это? как задать правильно цвет?
+// font-family: #444444; в браузере стоит восклицательный знак - что не так со шрифтом?
+

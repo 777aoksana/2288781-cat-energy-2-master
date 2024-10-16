@@ -1,76 +1,73 @@
 .stats {
-
-  // .stats__wrapper
-
   &__wrapper {
   }
 
-  // .stats__title
-
   &__title {
+    font-family: $main-font;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 40px;
   }
-
-  // .stats__description
 
   &__description {
+    font-family: $special_dark-grey;
   }
-
-  // .stats__module
 
   &__module {
   }
 
-  // .stats__meaning
-
   &__meaning {
   }
 
-  // .stats__number
-
   &__number {
+    font-family: $main-font;
+    font-size: 24px;
+    line-height: 24px;
   }
-
-  // .stats__text
 
   &__text {
-  }
+    font-family: $main-font;
+    font-size: 24px;
+    line-height: 24px;
 
-  // .stats__action
+    text-transform: uppercase;
+  }
 
   &__action {
+    font-family: $base-font-size;
+    font-size: 12px;
+    line-height: 12px;
   }
-
-  // .stats__costs
 
   &__costs {
-  }
+    font-family: $main-font;
+    font-size: 14px;
+    line-height: 20px;
 
-  // .stats__price
+    text-transform: uppercase;
+    text-align: center;
+  }
 
   &__price {
-  }
+    font-family: $main-font;
+    font-size: 14px;
+    line-height: 20px;
 
-  // .stats__slider
+    text-transform: uppercase;
+    text-align: center;
+  }
 
   &__slider {
   }
 
-  // .stats__image-before
-
   &__image-before {
   }
-
-  // .stats__image-after
 
   &__image-after {
   }
 
-  // .stats__range-bar
-
   &__range-bar {
   }
-
-  // .stats__range-toggle
 
   &__range-toggle {
   }

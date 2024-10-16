@@ -28,7 +28,7 @@
 
   <div class="page__wrapper">
 
-    <h1 class="page__headline visually-hidden">Сайт магазина «Кэт энерджи» - главная страница</h1>
+    <h1 class="page__headline visually-hidden">Онлайн-магазин «Кэт энерджи» - главная страница</h1>
 
     <header class="page__main-header main-header">
 
@@ -50,43 +50,20 @@
 
         <nav class="container__navigation navigation">
 
-          <button class="navigation__toggle navigation__toggle--menu-opened" type="button" aria-label="Переключает меню">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+          <button class="navigation__toggle navigation__toggle--menu-opened button" type="button" aria-label="Переключает меню">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <line y1="3" x2="24" y2="3" stroke="black" stroke-width="2" />
+              <line y1="11" x2="24" y2="11" stroke="black" stroke-width="2" />
+              <line y1="19" x2="24" y2="19" stroke="black" stroke-width="2" />
+            </svg>
+          </button>
+
+          <button class="navigation__toggle navigation__toggle--menu-closed button" type="button" aria-label="Переключает меню">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
               <line y1="-0.75" x2="24.7577" y2="-0.75" transform="matrix(0.686589 -0.727046 0.686589 0.727046 2.00171 20)" stroke="black" stroke-width="1.5" />
               <line y1="-0.75" x2="24.7577" y2="-0.75" transform="matrix(0.686589 0.727046 -0.686589 0.727046 1 2)" stroke="black" stroke-width="1.5" />
             </svg>
           </button>
-
-          <div class="page__fullscreen-menu fullscreen-menu fullscreen-menu__active">
-
-            <div class="fullscreen-menu__content">
-
-              <div class="fullscreen-menu__columns">
-
-                <ul class="fullscreen-menu__column">
-                  <li class="fullscreen-menu__item">
-                    <a class="fullscreen-menu__link fullscreen-menu__link--current" href="index.html" aria-current="page">Главная</a>
-                  </li>
-                  <li class="fullscreen-menu__item">
-                    <a class="fullscreen-menu__link" href="catalog.html">Каталог продукции</a>
-                  </li>
-                  <li class="fullscreen-menu__item">
-                    <a class="fullscreen-menu__link" href="form.html">Подбор программы</a>
-                  </li>
-                </ul>
-
-              </div>
-
-              <button class="navigation__toggle navigation__toggle--menu-closed" type="button" aria-label="Переключает меню" disabled>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-                  <line y1="-0.75" x2="24.7577" y2="-0.75" transform="matrix(0.686589 -0.727046 0.686589 0.727046 2.00171 20)" stroke="black" stroke-width="1.5" />
-                  <line y1="-0.75" x2="24.7577" y2="-0.75" transform="matrix(0.686589 0.727046 -0.686589 0.727046 1 2)" stroke="black" stroke-width="1.5" />
-                </svg>
-              </button>
-
-            </div>
-
-          </div>
 
         </nav>
 
@@ -94,14 +71,32 @@
 
     </header>
 
+    <div class="page__fullscreen-menu fullscreen-menu fullscreen-menu__active">
+      <div class="fullscreen-menu__column">
+        <ul class="fullscreen-menu__list">
+          <li class="fullscreen-menu__item">
+            <a class="fullscreen-menu__link fullscreen-menu__link--current" href="index.html" aria-current="page">Главная</a>
+          </li>
+          <li class="fullscreen-menu__item">
+            <a class="fullscreen-menu__link" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="fullscreen-menu__item">
+            <a class="fullscreen-menu__link" href="form.html">Подбор программы</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
     <main class="page__main-index main-index">
 
       <div class="main-index__container container">
 
         <section class="container__hero hero">
           <div class="hero__wrapper">
-            <h2 class="hero__title">Функциональное питание для котов</h2>
-            <p class="hero__slogan">Занялся собой? Займись котом!</p>
+            <div class="hero__content">
+              <h2 class="hero__title">Функциональное питание для котов</h2>
+              <p class="hero__slogan">Занялся собой? Займись котом!</p>
+            </div>
           </div>
           <picture>
             <source media="(min-width: 1440px)" width="552" height="499" type="image/png" srcset="images/hero/hero-glass/glass-desktop@1x.png 1x, images/hero/hero-glass/glass-desktop@2x.png 2x">
@@ -119,12 +114,12 @@
             <ul class="programs__list">
               <li class="programs__item programs__item--slim">
                 <h3 class="programs__subtitle">Похудение</h3>
-                <p class="programs__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+                <p class="programs__description">Ваш кот весит больше собаки и<br> почти утратил способность лазить<br> по деревьям? Пора на диету! Cat<br> Energy Slim поможет вашему<br> питомцу сбросить лишний вес.</p>
                 <a class="programs__link" href="#">Каталог Slim</a>
               </li>
               <li class="programs__item programs__item--pro">
                 <h3 class="programs__subtitle">Набор массы</h3>
-                <p class="programs__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+                <p class="programs__description">Заработать авторитет среди<br> дворовых котов и даже собак?<br> Серия Cat Energy Pro поможет<br> вашему коту нарастить<br> необходимые мышцы!</p>
                 <a class="programs__link" href="#">Каталог Pro</a>
               </li>
             </ul>
@@ -133,23 +128,23 @@
 
         <section class="container__reasons reasons">
           <div class="reasons__wrapper">
-            <h2 class="reasons__title">Как это работает?</h2>
+            <h2 class="reasons__title">Как это работает</h2>
             <ol class="reasons__list">
               <li class="reasons__item reasons__item--petal">
                 <p class="reasons__description">Функциональное питание содержит только полезные питательные вещества.</p>
-                <span class="reasons__number">1</span>
+                <span class="reasons__number visually-hidden">1</span>
               </li>
               <li class="reasons__item reasons__item--powder">
                 <p class="reasons__description">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
-                <span class="reasons__number">2</span>
+                <span class="reasons__number visually-hidden">2</span>
               </li>
               <li class="reasons__item reasons__item--nutrition">
                 <p class="reasons__description">Замените один-два приема обычной еды на наше функциональное питание.</p>
-                <span class="reasons__number">3</span>
+                <span class="reasons__number visually-hidden">3</span>
               </li>
               <li class="reasons__item reasons__item--time">
                 <p class="reasons__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
-                <span class="reasons__number">4</span>
+                <span class="reasons__number visually-hidden">4</span>
               </li>
             </ol>
           </div>
@@ -178,10 +173,7 @@
               <p class="stats__action">Затрачено времени</p>
             </div>
             <p class="stats__costs">Затраты на питание:
-              <span class="stats__price">
-                <span class="stats__number">15 000</span>
-                <span class="stats__text">руб.</span>
-              </span>
+              <span class="stats__price">15 000 руб.</span>
             </p>
             <div class="stats__slider">
               <picture>

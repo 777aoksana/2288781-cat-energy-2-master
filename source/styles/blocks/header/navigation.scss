@@ -5,19 +5,15 @@
     align-items: center;
 
     min-width: 24px;
-    min-height: 24px;
+    padding: 7px 0;
 
     border: none;
-    cursor: pointer;
     background-color: transparent;
   }
 
   &__toggle--menu-opened {
-    display: block;
-
-    width: 24px;
-    margin: 0;
-    padding: 0;
+    width: 100%;
+    height: 100%;
   }
 
   &__toggle--menu-opened:hover {
@@ -25,14 +21,10 @@
   }
 
   &__toggle--menu-closed {
-    display: block;
+    display: none;
 
-    width: 18px;
-    height: 18px;
-    margin: 0;
-    padding: 0;
-
-    appearance: icon;
+    width: 100%;
+    height: 100%;
   }
 
   &__toggle--menu-closed:hover {
