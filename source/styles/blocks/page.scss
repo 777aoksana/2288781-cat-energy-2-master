@@ -58,6 +58,13 @@
     color: $special_dark-grey;
   }
 
+  &__main-inner {
+    flex-grow: 1;
+
+    background-color: $white;
+    color: $special_dark-grey;
+  }
+
   &__main-footer {
     width: 100%;
     height: 714px;

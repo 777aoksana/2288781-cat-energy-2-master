@@ -15,10 +15,13 @@
 @import "./blocks/header/navigation.scss";
 @import "./blocks/fullscreen-menu.scss";
 @import "./blocks/main/main-index.scss";
+@import "./blocks/main/main-inner.scss";
 @import "./blocks/main/hero.scss";
 @import "./blocks/main/programs.scss";
 @import "./blocks/main/reasons.scss";
 @import "./blocks/main/stats.scss";
+@import "./blocks/main/catalog-container.scss";
+@import "./blocks/main/catalog.scss";
 @import "./blocks/footer/main-footer.scss";
 @import "./blocks/footer/map.scss";
 @import "./blocks/footer/signboard.scss";
@@ -27,3 +30,153 @@
 @import "./blocks/footer/social.scss";
 @import "./blocks/footer/social-list.scss";
 @import "./blocks/footer/logo-academy.scss";
+
+
+.card-list {
+
+  // .card-list__item
+
+  &__item {
+  }
+}
+
+.card-item {
+
+  // .card-item__link
+
+  &__link {
+  }
+
+  // .card-item__image
+
+  &__image {
+  }
+
+  // .card-item__subtitle
+
+  &__subtitle {
+  }
+
+  // .card-item__content
+
+  &__content {
+  }
+
+  // .card-item__order
+
+  &__order {
+  }
+
+  // .card-item__text
+
+  &__text {
+  }
+}
+
+.card {
+
+  // .card__list
+
+  &__list {
+  }
+
+  // .card__item
+
+  &__item {
+  }
+
+  // .card__description
+
+  &__description {
+  }
+
+  // .card__meaning
+
+  &__meaning {
+  }
+}
+
+.addition {
+
+  // .addition__title
+
+  &__title {
+  }
+
+  // .addition__products
+
+  &__products {
+  }
+
+  // .addition__gift
+
+  &__gift {
+  }
+
+  // .addition__gift--present
+
+  &__gift--present {
+  }
+
+  // .addition__text
+
+  &__text {
+  }
+}
+
+.products {
+
+  // .products__list
+
+  &__list {
+  }
+
+  // .products__item
+
+  &__item {
+  }
+
+  // .products__subtitle
+
+  &__subtitle {
+  }
+
+  // .products__content
+
+  &__content {
+  }
+}
+
+.product {
+
+  // .product__item
+
+  &__item {
+  }
+
+  // .product__meaning
+
+  &__meaning {
+  }
+
+  // .product__price
+
+  &__price {
+  }
+
+  // .product__order
+
+  &__order {
+  }
+
+  // .product__text
+
+  &__text {
+  }
+
+  // .product__list
+
+  &__list {
+  }
+}
+
