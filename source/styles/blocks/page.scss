@@ -5,11 +5,9 @@
   display: flex;
   flex-direction: column;
 
-  min-height: 100vh; //?
+  min-height: 100%;
 
   &__body {
-    margin: 0;
-
     $bg-orange: #ffa600; // цвет оранжевый
     background-color: $bg-orange;
   }
@@ -18,9 +16,8 @@
     display: flex;
     flex-direction: column;
 
-    height: 100%;
+    min-height: 100%;
     margin: 0 auto;
-    padding: 0;
 
     background-color: $white;
   }
@@ -36,15 +33,6 @@
   }
 
   &__main-header {
-    margin: 0;
-  }
-
-  &__fullscreen-menu {
-    min-height: 264px;
-    margin: 0;
-    padding: 0;
-
-    text-align: center;
   }
 
   &__main-index {
@@ -64,7 +52,7 @@
 
     width: 100%;
     height: 714px;
-    margin-top: auto;
+    margin: 0 auto;
 
     background-color: $secondary;
     color: $special_dark-grey;
