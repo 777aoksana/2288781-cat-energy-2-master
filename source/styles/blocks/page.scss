@@ -48,6 +48,10 @@
     color: $black;
   }
 
+  &__main-header--active {
+    flex-shrink: 0;
+  }
+
   &__main-index {
     flex: 1;
 
