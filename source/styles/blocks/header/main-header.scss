@@ -1,12 +1,9 @@
 .main-header {
+  position: relative;
+
+  width: 100%;
+
   &__container {
-    flex-direction: row;
-    justify-content: space-between;
-
-    min-width: 280px;
-    max-height: 38px;
-
-    background-color: $white;
-    color: $black;
+    text-align: center;
   }
 }

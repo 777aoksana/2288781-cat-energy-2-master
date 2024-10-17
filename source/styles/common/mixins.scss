@@ -9,22 +9,35 @@
 }
 
 @mixin base-button {
-  min-width: $min-width;
-  min-height: $min-height;
+  min-width: 280px;
+  min-height: 40px;
 
-  text-decoration: $text-decoration;
-  cursor: $cursor;
+  text-decoration: none;
+  cursor: pointer;
 
   &__text {
-    font-family: $font-family;
-    font-size: $font-size;
-    line-height: $line-height;
+    font-family: $main-font;
+    font-size: 16px;
+    line-height: 20px;
 
-    text-transform: $text-transform;
-    text-align: $text-align;
+    text-transform: uppercase;
+    text-align: center;
   }
 
   &:hover {
-    opacity: $opacity;
+    opacity: 0.8;
   }
+}
+
+@mixin primary-button {
+  @include base-button;
+  background-color: $primary;
+  color: $white;
+}
+
+@mixin secondary-button {
+  @include base-button;
+  background-color: $primary;
+  color: $white;
+  opacity: 0.85;
 }

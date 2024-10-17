@@ -36,14 +36,15 @@
   }
 
   &__fullscreen-menu {
-    position: relative;
-
-    display: none;
+    display: block;
+    align-items: center;
 
     min-width: 100%;
     max-height: 100%;
 
-    background-color: transparent;
+    text-align: center;
+    background-color: $white;
+    z-index: 1;
   }
 }
 
