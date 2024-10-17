@@ -1,0 +1,43 @@
+@mixin font-face($font-family, $font-weight, $font-style, $font-src) {
+  @font-face {
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-style: $font-style;
+    src: $font-src;
+    font-display: swap;
+  }
+}
+
+@mixin base-button {
+  min-width: 280px;
+  min-height: 40px;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  &__text {
+    font-family: $main-font;
+    font-size: 16px;
+    line-height: 20px;
+
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+@mixin primary-button {
+  @include base-button;
+  background-color: $primary;
+  color: $white;
+}
+
+@mixin secondary-button {
+  @include base-button;
+  background-color: $primary;
+  color: $white;
+  opacity: 0.85;
+}
