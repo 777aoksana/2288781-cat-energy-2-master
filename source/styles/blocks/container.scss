@@ -19,6 +19,13 @@
     height: 38px;
   }
 
+  &__navigation--opened {
+    position: relative;
+
+    background-image: url("menu-opened.svg");
+    background-size: 24px 24px;
+  }
+
   &__navigation {
     display: flex;
     align-items: center;
