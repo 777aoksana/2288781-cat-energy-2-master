@@ -9,39 +9,22 @@
 }
 
 @mixin base-button {
-  min-width: 280px;
-  min-height: 40px;
-  margin: 0;
-  padding: 0;
+  min-width: $min-width;
+  min-height: $min-height;
 
-  text-decoration: none;
-  cursor: pointer;
+  text-decoration: $text-decoration;
+  cursor: $cursor;
 
   &__text {
-    font-family: $main-font;
-    font-size: 16px;
-    line-height: 20px;
+    font-family: $font-family;
+    font-size: $font-size;
+    line-height: $line-height;
 
-    text-transform: uppercase;
-    text-align: center;
+    text-transform: $text-transform;
+    text-align: $text-align;
   }
 
   &:hover {
-    opacity: 0.8;
+    opacity: $opacity;
   }
 }
-
-@mixin primary-button {
-  @include base-button;
-  background-color: $primary;
-  // +85%
-  color: $white;
-}
-
-// @mixin secondary-button {
-//   @include base-button;
-//   background-color: $basic_grey;
-//   color: $font_special-dark-grey;
-// }
-
-// пока не поняла как работает миксин с кнопками

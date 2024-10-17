@@ -1,6 +1,6 @@
 .stats {
-  &__wrapper {
-  }
+  // &__wrapper {
+  // }
 
   &__title {
     font-family: $main-font;
@@ -13,10 +13,13 @@
     font-family: $font_special-dark-grey;
   }
 
-  &__module {
-  }
+  // &__module {
+  // }
 
   &__meaning {
+    font-family: $main-font;
+    font-size: 24px;
+    line-height: 24px;
   }
 
   &__number {
@@ -56,18 +59,18 @@
     text-align: center;
   }
 
-  &__slider {
-  }
+  // &__slider {
+  // }
 
-  &__image-before {
-  }
+  // &__image-before {
+  // }
 
-  &__image-after {
-  }
+  // &__image-after {
+  // }
 
-  &__range-bar {
-  }
+  // &__range-bar {
+  // }
 
-  &__range-toggle {
-  }
+  // &__range-toggle {
+  // }
 }

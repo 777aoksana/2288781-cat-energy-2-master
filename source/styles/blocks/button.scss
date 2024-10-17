@@ -1,4 +1,38 @@
 .button {
+  @include base-button;
   @include primary-button;
-  // @include secondary-button;
+  @include secondary-button;
 }
+
+@include base-button {
+  min-width: 280px;
+  min-height: 40px;
+  text-decoration: none;
+  cursor: pointer;
+
+  &__text {
+    font-family: $main-font;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+@include primary-button {
+  @include base-button;
+  background-color: $primary, 0.85;
+  color: $white;
+}
+
+@include secondary-button {
+  @include base-button;
+  background-color: $basic_grey;
+  color: $font_special-dark-grey;
+}
+
+// пока не поняла как работает миксин с кнопками
