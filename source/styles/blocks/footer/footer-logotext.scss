@@ -1,0 +1,21 @@
+.footer-logotext {
+  width: 128px;
+  height: 24px;
+
+  &__link {
+    cursor: pointer;
+  }
+
+  &__image {
+    display: block;
+
+    &:hover,
+    &:focus {
+      color: $hover;
+    }
+
+    &:active {
+      color: $active;
+    }
+  }
+}

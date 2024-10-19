@@ -1,0 +1,44 @@
+.reasons {
+  // &__wrapper {
+  // }
+
+  &__title {
+    font-family: $main-font;
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: 400;
+  }
+
+  &__list {
+    list-style-type: none;
+  }
+
+  // &__item {
+  // }
+
+  // &__item--petal {
+  // }
+
+  &__description {
+    font-family: $base-font-size;
+  }
+
+  &__number {
+    font-family: $main-font;
+    font-size: 280px;
+    font-weight: 400;
+    line-height: 280px;
+
+    text-align: center;
+    color: $accent-light-grey;
+  }
+
+  // &__item--powder {
+  // }
+
+  // &__item--nutrition {
+  // }
+
+  // &__item--time {
+  // }
+}

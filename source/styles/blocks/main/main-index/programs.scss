@@ -1,0 +1,51 @@
+.programs {
+  &__wrapper {
+    display: grid;
+  }
+
+  &__title {
+    font-family: $main-font;
+    font-size: 24px;
+    line-height: 37px;
+    font-weight: 400;
+  }
+
+  &__list {
+    list-style-type: none;
+  }
+
+  // &__item {
+  // }
+
+  // &__item--slim {
+  // }
+
+  &__subtitle {
+    font-family: $main-font;
+    font-size: 24px;
+    line-height: 37px;
+    font-weight: 400;
+
+    color: $black;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    font-size: 14px;
+    line-height: 18px;
+
+    color: $accent-dark-grey;
+  }
+
+  &__link {
+    font-family: $main-font;
+
+    color: $black;
+    text-align: center;
+    text-decoration-line: none;
+    text-transform: uppercase;
+  }
+
+  // &__item--pro {
+  // }
+}

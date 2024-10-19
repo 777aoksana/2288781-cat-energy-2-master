@@ -1,0 +1,28 @@
+.signboard {
+  &__text {
+    font-family: $main-font;
+    font-size: 16px;
+    line-height: 20px;
+
+    text-transform: uppercase;
+    text-align: left;
+    color: $extra-dark-grey;
+  }
+
+  &__address {
+    line-height: 20px;
+    font-style: normal;
+
+    text-align: left;
+    color: $accent-dark-grey;
+  }
+
+  // &__street {
+  // }
+
+  // &__city {
+  // }
+
+  // &__location {
+  // }
+}

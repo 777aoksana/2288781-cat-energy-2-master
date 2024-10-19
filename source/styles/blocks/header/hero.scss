@@ -1,0 +1,66 @@
+.hero {
+  &__wrapper {
+    min-height: 302px;
+    padding-left: 0;
+    padding-right: 0;
+
+    background-color: $primary;
+  }
+
+  &__wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background: url("/images/hero/hero-cat/cat-mobile@2x.jpg") no-repeat center center/cover;
+  }
+
+  // &__content {
+  // }
+
+  &__title {
+    margin: 0;
+    padding: 0;
+    padding-top: 27px;
+    padding-bottom: 25px;
+
+    font-family: $main-font;
+    font-size: 36px;
+    line-height: 36px;
+    text-align: center;
+    font-weight: 400;
+
+    color: $white;
+  }
+
+  &__slogan {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 29px;
+
+    font-family: $main-font;
+    font-size: 14px;
+    line-height: 14px;
+
+    text-transform: uppercase;
+    text-align: center;
+    color: $white;
+  }
+
+  &__image {
+    display: block;
+  }
+
+  &__button {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px 44px;
+
+    cursor: pointer;
+  }
+}

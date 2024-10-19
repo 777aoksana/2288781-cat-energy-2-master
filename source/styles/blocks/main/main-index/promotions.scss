@@ -1,0 +1,61 @@
+.promotions {
+  &__title {
+    font-family: $main-font;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+
+    text-align: left;
+  }
+
+  &__slogan {
+    font-family: $main-font;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+
+    text-align: center;
+  }
+
+  &__form {
+    width: 280px;
+    min-height: 56px;
+    padding: 13px;
+
+    border: 1px solid $dark-grey;
+  }
+
+  &__label {
+    width: 254px;
+    min-height: 30px;
+  }
+
+  &__input {
+    border: 1px solid $dark-grey;
+  }
+
+  &__input::placeholder {
+    font-family: $main-font;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+
+    text-align: left;
+    text-transform: uppercase;
+    color: $dark-grey;
+  }
+
+  &__order {
+    padding: 15px 0;
+
+    border: none;
+  }
+
+  &__text {
+    font-family: $main-font;
+    font-size: 20px;
+    line-height: 26px;
+
+    text-transform: uppercase;
+  }
+}
