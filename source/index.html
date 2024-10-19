@@ -25,44 +25,48 @@
 
     <header class="page__main-header main-header">
 
-      <div class="main-header__container container">
+      <a class="main-header__logo logo" href="index.html" aria-current="page">
 
-        <a class="container__logo logo" href="index.html" aria-current="page">
-          <div class="logo__wrapper">
-            <picture>
-              <source media="(min-width: 1440px)" type="image/svg+xml" width="70" height="59" srcset="images/logo/header-logo/logotype-desktop.svg">
-              <source media="(min-width: 768px)" type="image/svg+xml" width="60" height="50" srcset="images/logo/header-logo/logotype-tablet.svg">
-              <img class="logo__image" width="33" height="38" src="images/logo/header-logo/logotype-mobile.svg" alt="Логотип магазина «Кэт энерджи».">
-            </picture>
-            <picture>
-              <source media="(min-width: 1440px)" type="image/svg+xml" width="118" height="21" srcset="images/logo/header-logo/logotext-desktop.svg">
-              <img class="logo__image-text" width="101" height="18" src="images/logo/header-logo/logotext-mobile-tablet.svg" alt="Текстовый логотип магазина «Кэт энерджи».">
-            </picture>
-          </div>
-        </a>
+        <picture>
+          <source media="(min-width: 1440px)" type="image/svg+xml" width="70" height="59" srcset="images/logo/header-logo/logotype-desktop.svg">
+          <source media="(min-width: 768px)" type="image/svg+xml" width="60" height="50" srcset="images/logo/header-logo/logotype-tablet.svg">
+          <img class="logo__image" width="33" height="38" src="images/logo/header-logo/logotype-mobile.svg" alt="Логотип магазина «Кэт энерджи».">
+        </picture>
 
-        <nav class="container__navigation navigation">
+        <picture>
+          <source media="(min-width: 1440px)" type="image/svg+xml" width="118" height="21" srcset="images/logo/header-logo/logotext-desktop.svg">
+          <img class="logo__image-text" width="101" height="18" src="images/logo/header-logo/logotext-mobile-tablet.svg" alt="Текстовый логотип магазина «Кэт энерджи».">
+        </picture>
 
-          <button class="navigation__toggle" type="button">
-            <span class="visually-hydden">Переключает меню</span>
-          </button>
+      </a>
 
-          <div class="navigation__wrapper">
-            <ul class="navigation__list navigation__list--closed">
-              <li class="navigation__item">
-                <a class="navigation__link navigation__link--current" href="index.html" aria-current="page">Главная</a>
-              </li>
-              <li class="navigation__item">
-                <a class="navigation__link" href="catalog.html">Каталог продукции</a>
-              </li>
-              <li class="navigation__item">
-                <a class="navigation__link" href="form.html">Подбор программы</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+      <nav class="main-header__navigation navigation main-header__navigation--closed main-header__navigation--nojs">
 
-      </div>
+        <button class="navigation__toggle" type="button">
+          <span class="visually-hydden">Открыть меню</span>
+        </button>
+
+        <div class="navigation__wrapper">
+
+          <ul class="navigation__list site-list">
+
+            <li class="site-list__item">
+              <a class="site-list__link site-list__link--current" href="index.html" aria-current="page">Главная</a>
+            </li>
+
+            <li class="site-list__item">
+              <a class="site-list__link" href="catalog.html">Каталог продукции</a>
+            </li>
+
+            <li class="site-list__item">
+              <a class="site-list__link" href="form.html">Подбор программы</a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </nav>
 
     </header>
 
