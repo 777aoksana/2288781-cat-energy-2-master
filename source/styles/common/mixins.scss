@@ -1,3 +1,4 @@
+// @import("common/fonts.scss");
 @mixin font-face($font-family, $font-weight, $font-style, $font-src) {
   @font-face {
     font-family: $font-family;
@@ -8,6 +9,7 @@
   }
 }
 
+// @import("blocks/button.scss");
 @mixin base-button {
   min-width: 280px;
   min-height: 40px;

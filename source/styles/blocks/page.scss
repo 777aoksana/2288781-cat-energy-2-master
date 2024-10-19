@@ -1,45 +1,49 @@
 
 .page {
-  position: relative;
-
-  width: 320px;
   height: 100%;
-  margin: 0 auto;
 
-  display: flex;
-  flex-direction: column;
+  font-family: $base-font-size;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+
+  color: $font_special-dark-grey;
+  $bg-orange: #ffa600; // orange
+  background-color: $bg-orange;
 
   &__body {
-    $bg-orange: #ffa600; // цвет оранжевый
-    background-color: $bg-orange;
-  }
-
-  &__wrapper {
     display: flex;
     flex-direction: column;
 
+    width: 320px;
+    min-height: 100%;
+    margin: 0 auto;
+
+    background-color: $light-grey;
+    overflow: hidden;
+  }
+
+  &__wrapper {
     width: 100%;
     height: 100%;
     margin: 0 auto;
-
-    background-color: $white;
   }
 
   &__headline {
-    display: flex;
-
     margin: 0;
+    padding: 0;
 
     font-family: $main-font;
     font-size: 60px;
     line-height: 60px;
-    font-weight: 400;
 
+    color: $black;
     text-align: left;
     background-color: $white;
-    color: $black;
   }
 
+  // @import("blocks/main-header.scss");
+  // header
   &__main-header {
     display: flex;
     align-items: center;
@@ -48,10 +52,8 @@
     color: $black;
   }
 
-  &__main-header--active {
-    flex-shrink: 0;
-  }
-
+  // @import("blocks/main-index.scss");
+  // main - главная страница
   &__main-index {
     flex: 1;
 
@@ -59,6 +61,8 @@
     color: $font_special-dark-grey;
   }
 
+  // @import("blocks/main-inner.scss");
+  // main - каталог
   &__main-inner {
     flex: 1;
 
@@ -66,6 +70,17 @@
     color: $font_special-dark-grey;
   }
 
+  // @import("blocks/main-inner.scss");
+  // main - страница подбора программы
+  &__main-form {
+    flex: 1;
+
+    background-color: $white;
+    color: $font_special-dark-grey;
+  }
+
+  // @import("blocks/main-footer.scss");
+  // footer
   &__main-footer {
     flex-shrink: 0;
 
