@@ -1,10 +1,61 @@
-@media (max-width: 768px) {
-  .navigation__toggle {
+.navigation {
+  position: relative;
+
+  &__toggle {
     position: absolute;
+    top: 0;
+    right: 0;
+
+    display: block;
+
+    min-width: 24px;
+    height: 24px;
+    padding: 7px 0;
+
+    border: none;
+    background-color: transparent;
+    z-index: 2;
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+      opacity: 0.8;
+    }
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      &__toggle {
+        position: absolute;
+
+        width: 24px;
+        height: 24px;
+        padding: 0;
+
+        background-image: url("menu-closed.svg");
+        background-repeat: no-repeat;
+        background-size: 18px 18px;
+        background-color: transparent;
+        background-position: center;
+      }
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &--closed &__toggle::before {
+    content: "";
+
+    position: absolute;
+    top: 15px;
+    left: 17px;
 
     width: 24px;
     height: 24px;
-    padding: 0;
 
     background-image: url("menu-closed.svg");
     background-repeat: no-repeat;
@@ -12,36 +63,14 @@
     background-color: transparent;
     background-position: center;
   }
-}
 
-@media (max-width: 768px) {
-  .container__navigation--opened .navigation__list {
-    display: none;
-  }
-}
-
-.navigation {
-  position: relative;
-
-  &__toggle {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-
-    min-width: 24px;
-    padding: 7px 0;
-
-    border: none;
-    background-color: transparent;
+  &--closed &__toggle:active::before {
+    background-color: $primary;
+    opacity: 0.3;
   }
 
-  &__opened {
-    display: flex;
-    align-items: center;
-  }
-
-  &__opened:hover {
-    opacity: 0.8;
+  &--nojs {
+    position: absolute;
   }
 
   &__list {
@@ -50,48 +79,5 @@
     padding: 0;
 
     list-style-type: none;
-  }
-
-  &__item {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-
-    min-width: 320px;
-    padding-top: 22px;
-    padding-bottom: 24px;
-
-    text-align: center;
-    border-bottom: 1px solid $decoration-grey;
-  }
-
-  &__item:first-child {
-    border-top: 1px solid $decoration-grey;
-  }
-
-  &__link {
-    display: block;
-
-    font-family: $main-font;
-    font-size: 20px;
-    line-height: 20px;
-    text-transform: uppercase;
-
-    color: $black;
-    text-decoration: none;
-  }
-
-  &__link:hover {
-    opacity: 0.8;
-  }
-
-  &__link--current {
-    text-underline-position: bottom 2px solid $primary;
-  }
-
-  &__link--current:hover {
-    color: $primary;
-    opacity: 0.8;
   }
 }

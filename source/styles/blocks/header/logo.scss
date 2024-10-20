@@ -1,0 +1,32 @@
+.logo {
+  &__image {
+    width: 33px;
+    height: 38px;
+
+    //   @media (min-width: $tablet-width) {
+    //     // стиль
+    //   }
+
+    //   @media (min-width: $tablet-width) {
+    //     // стиль
+    //   }
+  }
+
+  &__image-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 101px;
+    height: 18px;
+    margin-left: 56px;
+
+    //   @media (min-width: $tablet-width) {
+    //     // стиль
+    //   }
+
+    //   @media (min-width: $tablet-width) {
+    //     // стиль
+    //   }
+  }
+}

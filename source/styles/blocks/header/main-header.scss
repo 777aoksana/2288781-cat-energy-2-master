@@ -2,11 +2,68 @@
   position: relative;
 
   display: flex;
+  // flex-direction: row;
   align-items: center;
 
-  width: 100%;
+  padding: 0 20px;
 
-  &__container {
-    text-align: center;
+  background-color: $white;
+
+  @media (min-width: $tablet-width) {
+    background-color: $white; // стиль?
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $white; // стиль?
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 190px;
+    min-height: 38px;
+    margin-right: 65px;
+
+    vertical-align: center;
+  }
+
+  &__logo {
+    display: block;
+
+    min-width: 100%;
+    height: 100%;
+
+    text-align: left;
+
+    @media (min-width: $tablet-width) {
+      order: 4; // стиль!
+      // height: ;
+    }
+
+    @media (min-width: $desktop-width) {
+      order: 5; // стиль!
+      // height: ;
+    }
+
+    // &__logo img {
+    //   width: 33px;
+    //   height: 38px;
+
+    //   @media (min-width: $tablet-width) {
+    //     // стиль
+    //   }
+
+    //   @media (min-width: $tablet-width) {
+    //     // стиль
+    //   }
+    // }
+  }
+
+  // @import("blocks/navigation.scss");
+  &__navigation {
+    position: relative;
   }
 }
