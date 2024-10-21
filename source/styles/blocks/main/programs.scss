@@ -14,8 +14,14 @@
     list-style-type: none;
   }
 
-  // &__item {
-  // }
+  //либо круг поместить в стиль??? пока думаю
+  &__item {
+    width: 200px;
+    height: 200px;
+
+    background: $primary;
+    border-radius: 50%;
+  }
 
   // &__item--slim {
   // }

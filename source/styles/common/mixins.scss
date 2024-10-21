@@ -11,11 +11,21 @@
 
 // @import("blocks/button.scss");
 @mixin base-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+
   min-width: 280px;
   min-height: 40px;
+  margin: 0;
+  padding: 0;
 
+  background-color: transparent;
+  color: $black;
   text-decoration: none;
   cursor: pointer;
+  border: none;
+  border-radius: none;
 
   &__text {
     font-family: $main-font;
@@ -28,6 +38,20 @@
 
   &:hover {
     opacity: 0.8;
+  }
+
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:focus-visible {
+    opacity: 0.8;
+    border: none;
+    // outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 

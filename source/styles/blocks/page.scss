@@ -23,6 +23,33 @@
     overflow-x: hidden;
   }
 
+  &__body--index {
+    @media (min-width: $desktop-min-width) {
+      position: relative;
+
+      // &::before {
+      //   content: '';
+
+      //   position: absolute;
+
+      //   width: 50%;
+      //   height: 694px;
+      //   top: 0;
+      //   right: 0;
+
+      //   background-image: url("../images/index-cat/cat-desktop@1x.webp");
+      //   background-repeat: no-repeat;
+      //   background-color: rgba(104, 183, 56, 0.85);
+      //   z-index: -1;
+
+      //   @media (min-resolution: 2dppx) {
+      //     background-image: url("../images/index-cat/cat-desktop@2x.webp");
+      //     background-size: cover;
+      //   }
+      // }
+    }
+  }
+
   // @import("blocks/main-header.scss");
   &__main-header {
     flex-shrink: 0;
