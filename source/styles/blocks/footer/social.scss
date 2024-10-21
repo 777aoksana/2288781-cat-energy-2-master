@@ -1,16 +1,50 @@
 .social {
+  &__list {
+    list-style-type: none;
+  }
+
   // &__item {
   // }
 
-  // &__link {
-  // }
+  &__link {
+    display: block;
 
-  // &__link--vkontakte {
-  // }
+    min-width: 28px;
+    min-height: 28px;
 
-  // &__link--youtube {
-  // }
+    background-position: 50%;
+    background-repeat: no-repeat;
+    transition: all 1.3s;
+  }
 
-  // &__link--telegram {
-  // }
+  &__link:hover,
+  &__link:focus {
+    background-color: $primary;
+  }
+
+  &__link:active {
+    background-color: $primary;
+    opacity: 0.3;
+  }
+
+  &__link--vkontakte {
+    // mask-image: url("../../icons/");
+    // mask-size: 28px 22px;
+    // mask-repeat: no-repeat;
+    background-color: $social-grey;
+  }
+
+  &__link--youtube {
+    // mask-image: url("../../icons/");
+    // mask-size: 28px 22px;
+    // mask-repeat: no-repeat;
+    background-color: $social-grey;
+  }
+
+  &__link--telegram {
+    // mask-image: url("../../icons/");
+    // mask-size: 28px 22px;
+    // mask-repeat: no-repeat;
+    background-color: $social-grey;
+  }
 }

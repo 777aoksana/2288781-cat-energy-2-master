@@ -1,71 +1,125 @@
 
 .page {
-  position: relative;
-
-  width: 320px;
   height: 100%;
-  margin: 0 auto;
 
-  display: flex;
-  flex-direction: column;
+  $bg-orange: #ffa600; // orange
+  background-color: $bg-orange;
 
   &__body {
-    $bg-orange: #ffa600; // цвет оранжевый
-    background-color: $bg-orange;
-  }
-
-  &__wrapper {
     display: flex;
     flex-direction: column;
 
-    width: 100%;
-    height: 100%;
+    width: $mobile-min-width;
+    min-height: 100%;
     margin: 0 auto;
 
-    background-color: $white;
-  }
-
-  &__headline {
-    display: flex;
-
-    margin: 0;
-
-    font-family: $main-font;
-    font-size: 60px;
-    line-height: 60px;
+    font-family: $base-font-size;
+    font-size: 14px;
+    line-height: 18px;
     font-weight: 400;
 
-    text-align: left;
-    background-color: $white;
-    color: $black;
+    color: $font-special-dark-grey;
+    background-color: $basic-grey;
+    overflow-x: hidden;
   }
 
+  &__body--index {
+    @media (min-width: $desktop-min-width) {
+      position: relative;
+
+      // &::before {
+      //   content: '';
+
+      //   position: absolute;
+
+      //   width: 50%;
+      //   height: 694px;
+      //   top: 0;
+      //   right: 0;
+
+      //   background-image: url("../images/index-cat/cat-desktop@1x.webp");
+      //   background-repeat: no-repeat;
+      //   background-color: rgba(104, 183, 56, 0.85);
+      //   z-index: -1;
+
+      //   @media (min-resolution: 2dppx) {
+      //     background-image: url("../images/index-cat/cat-desktop@2x.webp");
+      //     background-size: cover;
+      //   }
+      // }
+    }
+  }
+
+  // @import("blocks/main-header.scss");
   &__main-header {
-    display: flex;
-    align-items: center;
+    flex-shrink: 0;
+
+    width: 100%;
+    height: 65px;
+    margin: 0 auto;
+    margin-bottom: auto;
 
     background-color: $white;
     color: $black;
+
+    @media (min-width: $tablet-min-width) {
+      // background-color: ;
+    }
+
+    @media (min-width: $desktop-min-width) {
+      // background-color: ;
+    }
   }
 
-  &__main-header--active {
-    flex-shrink: 0;
-  }
-
+  // @import("blocks/main-index.scss");
   &__main-index {
     flex: 1;
 
     background-color: $white;
-    color: $font_special-dark-grey;
+    color: $font-special-dark-grey;
+
+    @media (min-width: $tablet-min-width) {
+      // background-color: ;
+    }
+
+    @media (min-width: $desktop-min-width) {
+      // background-color: ;
+    }
   }
 
+  // @import("blocks/main-inner.scss");
   &__main-inner {
     flex: 1;
 
     background-color: $white;
-    color: $font_special-dark-grey;
+    color: $font-special-dark-grey;
+
+    @media (min-width: $tablet-min-width) {
+      // background-color: ;
+    }
+
+    @media (min-width: $desktop-min-width) {
+      // background-color: ;
+    }
   }
 
+  // @import("blocks/main-inner.scss");
+  &__main-form {
+    flex: 1;
+
+    background-color: $white;
+    color: $font-special-dark-grey;
+
+    @media (min-width: $tablet-min-width) {
+      // background-color: ;
+    }
+
+    @media (min-width: $desktop-min-width) {
+      // background-color: ;
+    }
+  }
+
+  // @import("blocks/main-footer.scss");
   &__main-footer {
     flex-shrink: 0;
 
@@ -75,6 +129,14 @@
     margin-top: auto;
 
     background-color: $basic-grey;
-    color: $font_special-dark-grey;
+    color: $font-special-dark-grey;
+
+    @media (min-width: $tablet-min-width) {
+      // background-color: ;
+    }
+
+    @media (min-width: $desktop-min-width) {
+      // background-color: ;
+    }
   }
 }
