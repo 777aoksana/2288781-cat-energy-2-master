@@ -22,7 +22,7 @@
       opacity: 0.8;
     }
 
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-min-width) {
       display: none;
     }
 

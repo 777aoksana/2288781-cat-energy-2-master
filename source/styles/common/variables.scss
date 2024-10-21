@@ -6,20 +6,21 @@ $primary: #68b738;
 $white: #ffffff;
 
 // Additional background colors
-$basic_grey: #f2f2f2;
-$basic_dark-grey: #d9d9d9;
-$decoration_grey: #e6e6e6;
-$fon_grey: #eaeaea;
-$line_grey: #cdcdcd;
+$basic-grey: #f2f2f2;
+$basic-dark-grey: #d9d9d9;
+$decoration-grey: #e6e6e6;
+$fon-grey: #eaeaea;
+$line-grey: #cdcdcd;
 $light-grey: #d3d3d3;
-$social_grey: #666666;
+$social-grey: #666666;
 
 // Text Colors
-$font_dark-grey: #111111;
-$font_additional-dark-grey: #222222;
-$font_special-dark-grey: #444444;
+$font-dark-grey: #111111;
+$font-additional-dark-grey: #222222;
+$font-special-dark-grey: #444444;
 
 // Viewports
-$tablet-width: 768px;
-$desktop-width: 1200px;
-$mobile-width-only: 767px;
+$mobile-min-width: 320px;
+$tablet-min-width: 768px;
+$desktop-min-width: 1200px;
+

@@ -9,7 +9,7 @@
     display: flex;
     flex-direction: column;
 
-    width: 320px;
+    width: $mobile-min-width;
     min-height: 100%;
     margin: 0 auto;
 
@@ -18,7 +18,7 @@
     line-height: 18px;
     font-weight: 400;
 
-    color: $font_special-dark-grey;
+    color: $font-special-dark-grey;
     background-color: $basic-grey;
     overflow-x: hidden;
   }
@@ -35,11 +35,11 @@
     background-color: $white;
     color: $black;
 
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-min-width) {
       // background-color: ;
     }
 
-    @media (min-width: $desktop-width) {
+    @media (min-width: $desktop-min-width) {
       // background-color: ;
     }
   }
@@ -49,13 +49,13 @@
     flex: 1;
 
     background-color: $white;
-    color: $font_special-dark-grey;
+    color: $font-special-dark-grey;
 
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-min-width) {
       // background-color: ;
     }
 
-    @media (min-width: $desktop-width) {
+    @media (min-width: $desktop-min-width) {
       // background-color: ;
     }
   }
@@ -65,13 +65,13 @@
     flex: 1;
 
     background-color: $white;
-    color: $font_special-dark-grey;
+    color: $font-special-dark-grey;
 
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-min-width) {
       // background-color: ;
     }
 
-    @media (min-width: $desktop-width) {
+    @media (min-width: $desktop-min-width) {
       // background-color: ;
     }
   }
@@ -81,13 +81,13 @@
     flex: 1;
 
     background-color: $white;
-    color: $font_special-dark-grey;
+    color: $font-special-dark-grey;
 
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-min-width) {
       // background-color: ;
     }
 
-    @media (min-width: $desktop-width) {
+    @media (min-width: $desktop-min-width) {
       // background-color: ;
     }
   }
@@ -102,13 +102,13 @@
     margin-top: auto;
 
     background-color: $basic-grey;
-    color: $font_special-dark-grey;
+    color: $font-special-dark-grey;
 
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-min-width) {
       // background-color: ;
     }
 
-    @media (min-width: $desktop-width) {
+    @media (min-width: $desktop-min-width) {
       // background-color: ;
     }
   }

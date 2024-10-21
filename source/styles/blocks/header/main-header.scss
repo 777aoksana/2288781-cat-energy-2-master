@@ -9,11 +9,11 @@
 
   background-color: $white;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $tablet-min-width) {
     background-color: $white; // стиль?
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $desktop-min-width) {
     background-color: $white; // стиль?
   }
 
@@ -38,12 +38,12 @@
 
     text-align: left;
 
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-min-width) {
       order: 4; // стиль!
       // height: ;
     }
 
-    @media (min-width: $desktop-width) {
+    @media (min-width: $desktop-min-width) {
       order: 5; // стиль!
       // height: ;
     }
