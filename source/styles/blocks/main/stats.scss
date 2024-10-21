@@ -68,8 +68,53 @@
   // &__image-after {
   // }
 
-  // &__range-bar {
-  // }
+  &__range-bar {
+    position: relative;
+
+    width: 560px;
+    height: 512px;
+    padding: 0;
+
+    background-color: transparent;
+    color: $social-grey;
+    border: none;
+    transition: ease-in-out 0.2s;
+  }
+
+  &__range-bar:hover {
+    color: $primary;
+  }
+
+  &__range-bar:active {
+    color: $5eaa2f;
+  }
+
+  &__range-bar::before {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    display: block;
+
+    width: 4px;
+    height: 100%;
+
+    background-color: $social-grey;
+    border-radius: 2px;
+    transition: ease-in-out 0.2s;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+
+  &__range-bar::before:hover {
+    background-color: $primary;
+  }
+
+  &__range-bar::before:active {
+    background-color: $5eaa2f;
+  }
 
   // &__range-toggle {
   // }

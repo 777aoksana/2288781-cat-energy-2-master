@@ -1,4 +1,18 @@
 .logo {
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &:focus-visible {
+    opacity: 0.5;
+    border: none;
+  }
+
   &__image {
     width: 33px;
     height: 38px;

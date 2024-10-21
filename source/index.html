@@ -143,9 +143,19 @@
             <picture>
               <source media="(min-width: 768px)" type="image/png" width="560" height="512" srcset="images/cats/tablet-desktop-cat-after@1x.png, images/cats/tablet-desktop-cat-after@2x.png 2x"><img class="stats__image-after" width="280" height="256" src="images/cats/mobile-cat-after@1x.png" srcset="images/cats/mobile-cat-after@2x.png 2x" alt="Похудевший кот после программы питания">
             </picture>
-            <div class="stats__range-bar"><input class="stats__range-toggle" type="range" name="range-toggle" aria-label="Передвижение слайда"></div>
+            <button class="stats__range-bar" type="button">
+              <svg class="stats__range-toggle" width="40" height="40" aria-hidden="true" focusable="false"></svg>
+              <use href="icons/stack.svg#slider"></use>
+              </svg>
+              <svg viewBox="0 0 40 40" width="40" height="40" fill="none" id="slider">
+                <rect x="1" y="1" width="38" height="38" rx="19" fill="$white"></rect>
+                <rect x="1" y="1" width="38" height="38" rx="19" stroke="currentColor" stroke-width="2"></rect>
+                <path d="m16 11-8 9 8 9v-18Zm16 9-8-9v18|8-9Z" fill="currentColor"></path>
+              </svg>
+              <span class="visually-hidden">Ползунок слайдера</span>
+            </button>
+            </button>
           </div>
-        </div>
       </section>
       <section class="container__map map">
 
@@ -174,8 +184,8 @@
 
   <footer class="page__main-footer main-footer">
 
-    <a class="main-footer__logo-text logo-text" href="./" aria-current="page">
-      <img class="logo-text__image" width="128" height="24" src="images/logo/footer-logo/footer-logotext.svg" alt="Текстовый логотип магазина «Кэт энерджи».">
+    <a class="main-footer__logo-text footer-logo-text" href="./" aria-current="page">
+      <img class="footer-logo-text__image" width="128" height="24" src="images/logo/footer-logo/footer-logotext.svg" alt="Товарный знак текстового логотипа магазина «Кэт энерджи».">
     </a>
 
     <section class="main-footer__social social">
@@ -186,6 +196,9 @@
 
         <li class="social__item">
           <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+            <svg width="28" height="22">
+              <use></use>
+            </svg>
             <span class="visually-hidden">Канал HTML Academy в «Вконтакте»</span>
           </a>
         </li>
@@ -208,7 +221,9 @@
 
     <a class="main-footer__logo-academy logo-academy" href="https://htmlacademy.ru/intensive/adaptive">
       <span class="logo-academy__text">HTML Academy</span>
-      <img class="logo-academy__image" width="27" height="34" src="images/logo/footer-logo/logo-html.svg" alt="Логотип компании HTML Academy.">
+      <svg class="logo-academy__image" width="27" height="34" aria-hidden="true" focusable="false">
+        <use href="images/icons/stack.svg#htmlacademy"></use>
+      </svg>
     </a>
 
   </footer>
