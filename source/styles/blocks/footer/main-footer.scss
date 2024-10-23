@@ -9,3 +9,19 @@
     text-align: left;
   }
 }
+
+.logo-academy {
+  background-image: url("../../icons/htmlacademy.svg");
+  text-decoration: none;
+  text-align: left;
+
+  &__text {
+    font-size: 16px;
+    line-height: 20px;
+
+    color: $accent-dark-grey;
+  }
+
+  // &__image {
+  // }
+}

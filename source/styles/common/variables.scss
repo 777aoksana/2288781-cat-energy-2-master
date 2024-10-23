@@ -1,27 +1,23 @@
 /* здесь используйте глобальные переменные */
 
 // Primary colors
+$white: #ffffff;
 $black: #000000;
 $primary: #68b738;
-$white: #ffffff;
 
-// Additional background colors
-$basic-grey: #f2f2f2;
-$basic-dark-grey: #d9d9d9;
-$decoration-grey: #e6e6e6;
-$fon-grey: #eaeaea;
-$line-grey: #cdcdcd;
+// Additional colors
+$accent-light-grey: #f2f2f2;
+$very-light-grey: #eaeaea;
+$extra-light-grey: #e6e6e6;
+$specify-light-grey: #d9d9d9;
 $light-grey: #d3d3d3;
-$social-grey: #666666;
-
-// Text Colors
-$font-dark-grey: #111111;
-$font-additional-dark-grey: #222222;
-$font-special-dark-grey: #444444;
+$dark-grey: #cdcdcd;
+$accent-dark-grey: #444444;
+$very-dark-grey: #666666;
+$extra-dark-grey: #111111;
+$specify-dark-grey: #222222;
 
 // Viewports
-$mobile-min-width: 320px;
 $mobile-min-width-only: 767px;
 $tablet-min-width: 768px;
 $desktop-min-width: 1200px;
-

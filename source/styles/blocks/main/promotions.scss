@@ -22,7 +22,7 @@
     min-height: 56px;
     padding: 13px;
 
-    border: 1px solid $line_grey;
+    border: 1px solid $dark-grey;
   }
 
   &__label {
@@ -30,9 +30,9 @@
     min-height: 30px;
   }
 
-  &__input {
-    border: 1px solid $line_grey;
-  }
+  // &__input {
+
+  // }
 
   &__input::placeholder {
     font-family: $main-font;
@@ -42,7 +42,7 @@
 
     text-align: left;
     text-transform: uppercase;
-    color: $font_special-dark-grey;
+    color: $dark-grey;
   }
 
   &__order {

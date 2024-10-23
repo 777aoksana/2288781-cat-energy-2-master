@@ -9,7 +9,7 @@
     display: flex;
     flex-direction: column;
 
-    width: $mobile-min-width;
+    min-width: $mobile-min-width-only;
     min-height: 100%;
     margin: 0 auto;
 
@@ -18,8 +18,8 @@
     line-height: 18px;
     font-weight: 400;
 
-    color: $font-special-dark-grey;
-    background-color: $basic-grey;
+    color: $accent-dark-grey;
+    background-color: $accent-light-grey;
     overflow-x: hidden;
   }
 
@@ -27,116 +27,142 @@
     @media (min-width: $desktop-min-width) {
       position: relative;
 
-      // &::before {
-      //   content: '';
+      &::before {
+        content: "";
 
-      //   position: absolute;
+        position: absolute;
+        top: 0;
+        right: 0;
 
-      //   width: 50%;
-      //   height: 694px;
-      //   top: 0;
-      //   right: 0;
+        width: 50%;
+        height: 694px;
 
-      //   background-image: url("../images/index-cat/cat-desktop@1x.webp");
-      //   background-repeat: no-repeat;
-      //   background-color: rgba(104, 183, 56, 0.85);
-      //   z-index: -1;
+        background-image: url("../images/index-cat/cat-desktop@1x.webp");
+        background-repeat: no-repeat;
+        background-color: #68b738d9;
+        z-index: -1;
 
-      //   @media (min-resolution: 2dppx) {
-      //     background-image: url("../images/index-cat/cat-desktop@2x.webp");
-      //     background-size: cover;
-      //   }
-      // }
+        @media (min-resolution: 2dppx) {
+          background-image: url("../images/index-cat/cat-desktop@2x.webp");
+          background-size: cover;
+        }
+      }
+
+      &__body--index .site-list__link {
+        @media (min-width: $desktop-min-width) {
+          color: $white;
+        }
+      }
+
+      &__body--index .main-header__navigation {
+        border-bottom: none;
+      }
+
+      &__body--index .hero__title {
+        @media (min-width: $desktop-min-width) {
+          padding-top: 58px;
+        }
+      }
+
+      &__body--index .site-list__link--current {
+        @media (min-width: $tablet-min-width) {
+          border-bottom: 2px solid $white;
+        }
+      }
+    }
+
+    // @import("blocks/main-header.scss");
+    &__main-header {
+      flex-shrink: 0;
+
+      width: 100%;
+      height: 65px;
+      margin: 0 auto;
+      margin-bottom: auto;
+
+      background-color: $white;
+      color: $black;
+
+      @media (min-width: $tablet-min-width) {
+        // background-color: ;
+      }
+
+      @media (min-width: $desktop-min-width) {
+        // background-color: ;
+      }
+    }
+
+    // @import("blocks/main-index.scss");
+    &__main-index {
+      flex: 1;
+
+      background-color: $white;
+      color: $accent-dark-grey;
+
+      @media (min-width: $tablet-min-width) {
+        // background-color: ;
+      }
+
+      @media (min-width: $desktop-min-width) {
+        // background-color: ;
+      }
+    }
+
+    // @import("blocks/main-inner.scss");
+    &__main-inner {
+      flex: 1;
+
+      background-color: $white;
+      color: $accent-dark-grey;
+
+      @media (min-width: $tablet-min-width) {
+        // background-color: ;
+      }
+
+      @media (min-width: $desktop-min-width) {
+        // background-color: ;
+      }
+    }
+
+    // @import("blocks/main-inner.scss");
+    &__main-form {
+      flex: 1;
+
+      background-color: $white;
+      color: $accent-dark-grey;
+
+      @media (min-width: $tablet-min-width) {
+        // background-color: ;
+      }
+
+      @media (min-width: $desktop-min-width) {
+        // background-color: ;
+      }
+    }
+
+    // @import("blocks/main-footer.scss");
+    &__main-footer {
+      flex-shrink: 0;
+
+      width: 100%;
+      height: 714px;
+      margin: 0 auto;
+      margin-top: auto;
+
+      background-color: $accent-light-grey;
+      color: $accent-dark-grey;
+
+      @media (min-width: $tablet-min-width) {
+        // background-color: ;
+      }
+
+      @media (min-width: $desktop-min-width) {
+        // background-color: ;
+      }
     }
   }
 
-  // @import("blocks/main-header.scss");
-  &__main-header {
-    flex-shrink: 0;
-
-    width: 100%;
-    height: 65px;
-    margin: 0 auto;
-    margin-bottom: auto;
-
-    background-color: $white;
-    color: $black;
-
-    @media (min-width: $tablet-min-width) {
-      // background-color: ;
-    }
-
-    @media (min-width: $desktop-min-width) {
-      // background-color: ;
-    }
-  }
-
-  // @import("blocks/main-index.scss");
-  &__main-index {
-    flex: 1;
-
-    background-color: $white;
-    color: $font-special-dark-grey;
-
-    @media (min-width: $tablet-min-width) {
-      // background-color: ;
-    }
-
-    @media (min-width: $desktop-min-width) {
-      // background-color: ;
-    }
-  }
-
-  // @import("blocks/main-inner.scss");
-  &__main-inner {
-    flex: 1;
-
-    background-color: $white;
-    color: $font-special-dark-grey;
-
-    @media (min-width: $tablet-min-width) {
-      // background-color: ;
-    }
-
-    @media (min-width: $desktop-min-width) {
-      // background-color: ;
-    }
-  }
-
-  // @import("blocks/main-inner.scss");
-  &__main-form {
-    flex: 1;
-
-    background-color: $white;
-    color: $font-special-dark-grey;
-
-    @media (min-width: $tablet-min-width) {
-      // background-color: ;
-    }
-
-    @media (min-width: $desktop-min-width) {
-      // background-color: ;
-    }
-  }
-
-  // @import("blocks/main-footer.scss");
-  &__main-footer {
-    flex-shrink: 0;
-
-    width: 100%;
-    height: 714px;
-    margin: 0 auto;
-    margin-top: auto;
-
-    background-color: $basic-grey;
-    color: $font-special-dark-grey;
-
-    @media (min-width: $tablet-min-width) {
-      // background-color: ;
-    }
-
-    @media (min-width: $desktop-min-width) {
-      // background-color: ;
-    }
-  }
+  // &__svg {
+  //   display: none;
+  // }
 }

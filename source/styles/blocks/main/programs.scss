@@ -4,27 +4,57 @@
   }
 
   &__title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
     font-family: $main-font;
     font-size: 24px;
     line-height: 37px;
     font-weight: 400;
+
+    text-transform: uppercase;
   }
 
   &__list {
     list-style-type: none;
   }
 
-  //либо круг поместить в стиль??? пока думаю
   &__item {
-    width: 200px;
-    height: 200px;
+    width: 280px;
+    height: 266px;
+    padding: 0 20px;
+  }
 
-    background: $primary;
+  &__item--slim::before,
+  &__item--pro::before {
+    content: "";
+
+    display: block;
+
+    width: 50px;
+    height: 50px;
+
+    background-color: $primary;
     border-radius: 50%;
   }
 
-  // &__item--slim {
-  // }
+  &__item--slim::after {
+    content: "";
+
+    position: absolute;
+    top: -3px;
+    left: 7px;
+
+    display: block;
+
+    width: 36px;
+    height: 50px;
+
+    background-image: url("../icons/stack.svg#cat-slim");
+    background-repeat: no-repeat;
+    background-size: 36px 50px;
+  }
 
   &__subtitle {
     font-family: $main-font;
@@ -40,7 +70,7 @@
     font-size: 14px;
     line-height: 18px;
 
-    color: $font_special-dark-grey;
+    color: $accent-dark-grey;
   }
 
   &__link {
@@ -52,6 +82,20 @@
     text-transform: uppercase;
   }
 
-  // &__item--pro {
-  // }
+  &__item--pro::after {
+    content: "";
+
+    position: absolute;
+    top: 11px;
+    left: -8px;
+
+    display: block;
+
+    width: 67px;
+    height: 28px;
+
+    background-image: url("../icons/stack.svg#cat-pro");
+    background-repeat: no-repeat;
+    background-size: 67px 28px;
+  }
 }
