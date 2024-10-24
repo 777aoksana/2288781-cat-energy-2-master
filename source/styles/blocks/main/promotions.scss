@@ -46,9 +46,7 @@
   }
 
   &__order {
-    padding: 15px 0;
-
-    border: none;
+    @include additional-button;
   }
 
   &__text {

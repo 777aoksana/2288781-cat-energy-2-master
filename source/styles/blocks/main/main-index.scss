@@ -1,6 +1,15 @@
 .main-index {
   flex-grow: 1;
 
-  // &__container {
-  // }
+  width: 320px;
+  height: 100%;
+  margin: 0 auto;
+
+  &__container {
+    padding: 0 20px;
+  }
+
+  &__map {
+    padding: 0;
+  }
 }

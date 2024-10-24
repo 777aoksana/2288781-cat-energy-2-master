@@ -69,10 +69,6 @@
     opacity: 0.3;
   }
 
-  &--nojs {
-    position: absolute;
-  }
-
   &__list {
     min-height: 198px;
     margin: 0;
@@ -81,7 +77,6 @@
     list-style-type: none;
   }
 }
-
 
 // .page-header__bar {
 //   display: grid;

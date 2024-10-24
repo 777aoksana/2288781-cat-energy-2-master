@@ -1,12 +1,16 @@
 .main-header {
-  padding: 0 20px;
-
   background-color: $white;
 
   &__wrapper {
+    width: 320px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
   }
 
   &__logo {
+    min-width: 190px;
+    min-height: 38px;
   }
 
   &__toogle {
@@ -20,56 +24,18 @@
     border: none;
   }
 
-  &__toogle--closed {
-    background-image: url("../../icons/stack.svg#icon-menu-closed");
+  @media (min-width: 768px) {
+    &__toogle {
+      display: none;
+    }
+
+    &__toogle--closed {
+      background-image: url("../../icons/stack.svg#icon-menu-closed");
+    }
+
+    // @import("blocks/navigation.scss");
+    &__navigation {
+      position: relative;
+    }
   }
-
-  &__toogle--nojs {
-  }
-
-  &__navigation {
-  }
-
-  // @import("blocks/navigation.scss");
-  // &__navigation {
-  //   position: relative;
-  // }
-
-  // @media ($mobile-min-width-only) {
-  //   &__navigation {
-  //     border-bottom: 1px solid $specify-light-grey;
-  //   }
-  // }
-
-  // @media ($tablet-min-width) {
-  //   &__navigation {
-  //     display: flex;
-  //     justify-content: space-between;
-
-  //     margin: 24px 30px;
-  //   }
-  // }
-
-  // @media ($desktop-min-width) {
-  //   &__navigation {
-  //     display: flex;
-  //     justify-content: space-between;
-
-  //     max-width: 1220px;
-  //     margin: 53px auto;
-  //   }
-  // }
-
-  // @media ($mobile-min-width-only) {
-  //   &__toogle {
-  //     background-color: transparent;
-  //     border: none;
-  //   }
-  // }
-
-  // @media (min-width: 768px) {
-  //   &__toogle {
-  //     display: none;
-  //   }
-  // }
 }

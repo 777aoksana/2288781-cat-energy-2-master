@@ -11,21 +11,16 @@
 
 // @import("blocks/button.scss");
 @mixin base-button {
-  position: absolute;
-  top: 0;
-  left: 0;
+  display: block;
 
   min-width: 280px;
   min-height: 40px;
-  margin: 0;
-  padding: 0;
+  padding: 10px 0;
 
   background-color: transparent;
   color: $black;
   text-decoration: none;
-  cursor: pointer;
   border: none;
-  border-radius: none;
 
   &__text {
     font-family: $main-font;
@@ -46,8 +41,6 @@
 
   &:focus-visible {
     opacity: 0.8;
-    border: none;
-    // outline: none;
   }
 
   &:active {
@@ -66,4 +59,10 @@
   background-color: $primary;
   color: $white;
   opacity: 0.85;
+}
+
+@mixin additional-button {
+  @include base-button;
+  background-color: $accent-light-grey;
+  color: $black;
 }
