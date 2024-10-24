@@ -1,0 +1,46 @@
+.footer-logo-text {
+  &__image {
+    width: 128px;
+    height: 24px;
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+
+    &:focus-visible {
+      opacity: 0.5;
+      border: none;
+    }
+
+    //   @media (min-width: $tablet-width) {
+    //     // стиль
+    //   }
+
+    //   @media (min-width: $tablet-width) {
+    //     // стиль
+    //   }
+  }
+
+  // &__image {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   align-items: center;
+
+  //   width: 1281px;
+  //   height: 24px;
+  //   margin-left: 56px;
+
+  //     @media (min-width: $tablet-width) {
+  //       // стиль
+  //     }
+
+  //     @media (min-width: $tablet-width) {
+  //       // стиль
+  //     }
+  // }
+}

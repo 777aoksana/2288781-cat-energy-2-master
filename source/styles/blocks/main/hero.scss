@@ -1,36 +1,36 @@
 .hero {
   &__wrapper {
-    min-height: 302px;
-    padding-left: 0;
-    padding-right: 0;
+    position: relative;
+
+    width: 320px;
+    padding: 0;
 
     background-color: $primary;
   }
 
-  &__wrapper::after {
-    content: "";
+  .hero__wrapper--index {
     position: absolute;
     top: 0;
     left: 0;
 
-    background: url("/images/hero/hero-cat/cat-mobile@2x.jpg") no-repeat center center/cover;
+    width: 320px;
+    height: 302px;
+
+    background: url("../../../images/index-cat/cat-mobile@2x.jpg") no-repeat center center/cover;
+    background-size: 320px 302px;
+    z-index: -1;
   }
 
-  // &__content {
-  // }
-
   &__title {
-    margin: 0;
-    padding: 0;
     padding-top: 27px;
     padding-bottom: 25px;
 
     font-family: $main-font;
     font-size: 36px;
     line-height: 36px;
-    text-align: center;
     font-weight: 400;
 
+    text-align: center;
     color: $white;
   }
 
@@ -50,17 +50,5 @@
 
   &__image {
     display: block;
-  }
-
-  &__button {
-    position: relative;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    padding: 10px 44px;
-
-    cursor: pointer;
   }
 }

@@ -1,5 +1,9 @@
 .main-footer {
-  height: 714px;
+  &__wrapper {
+    min-width: 100%;
+    min-height: 100%;
+    padding: 20px 0;
+  }
 
   &__container {
     text-align: center;
@@ -7,5 +11,18 @@
 
   &__logo-text {
     text-align: left;
+  }
+}
+
+.logo-academy {
+  background-image: url("../../icons/htmlacademy.svg");
+  text-decoration: none;
+  text-align: left;
+
+  &__text {
+    font-size: 16px;
+    line-height: 20px;
+
+    color: $accent-dark-grey;
   }
 }

@@ -16,7 +16,7 @@
     line-height: 20px;
     font-weight: 400;
 
-    color: $font_special-dark-grey;
+    color: $specify-dark-grey;
     text-transform: uppercase;
   }
 
@@ -25,7 +25,7 @@
   }
 
   &__order {
-    @include secondary-button;
+    // @include secondary-button;
 
     padding: 10px 109px;
   }

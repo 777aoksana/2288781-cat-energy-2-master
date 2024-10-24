@@ -1,24 +1,62 @@
 .programs {
   &__wrapper {
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
   }
 
   &__title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
     font-family: $main-font;
     font-size: 24px;
     line-height: 37px;
     font-weight: 400;
+
+    text-transform: uppercase;
   }
 
   &__list {
     list-style-type: none;
   }
 
-  // &__item {
-  // }
+  &__item {
+    width: 280px;
+    height: 266px;
+    padding: 0 20px;
+  }
 
-  // &__item--slim {
-  // }
+  &__item--slim::before,
+  &__item--pro::before {
+    content: "";
+
+    display: block;
+
+    width: 50px;
+    height: 50px;
+
+    background-color: $primary;
+    border-radius: 50%;
+  }
+
+  &__item--slim {
+    position: relative;
+
+    width: 36px;
+    height: 50px;
+
+    mask-image: url("../../icons/stack.svg#cat-slim");
+    background-color: $black;
+    background-size: 36px 50px;
+    transition: 0.3s ease-in-out;
+    z-index: 1;
+  }
+
+  &__item--slim:hover {
+    background-color: $primary;
+  }
 
   &__subtitle {
     font-family: $main-font;
@@ -34,18 +72,60 @@
     font-size: 14px;
     line-height: 18px;
 
-    color: $font_special-dark-grey;
+    color: $accent-dark-grey;
   }
 
   &__link {
+    position: relative;
+
     font-family: $main-font;
 
     color: $black;
     text-align: center;
     text-decoration-line: none;
     text-transform: uppercase;
+    cursor: pointer;
   }
 
-  // &__item--pro {
-  // }
+  &__link::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: block;
+
+    width: 32px;
+    height: 10px;
+
+    background-image: url("../../icons/stack.svg#icon-arrow");
+    background-repeat: no-repeat;
+    transition: 0.3s ease-in-out;
+  }
+
+  &__link::after:hover {
+    background-color: $primary;
+  }
+
+  &__link:active {
+    opacity: 0.3;
+  }
+
+  &__item--pro::after {
+    content: "";
+
+    position: absolute;
+    top: 11px;
+    left: -8px;
+
+    display: block;
+
+    width: 67px;
+    height: 28px;
+
+    background-image: url("../../icons/stack.svg#cat-pro");
+    background-repeat: no-repeat;
+    background-size: 67px 28px;
+  }
 }

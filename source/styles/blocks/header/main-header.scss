@@ -1,12 +1,40 @@
 .main-header {
-  position: relative;
+  &__wrapper {
+    min-width: 100%;
+    min-height: 100%;
+    padding: 0 20px;
 
-  display: flex;
-  align-items: center;
+    background-color: transparent;
+  }
 
-  width: 100%;
+  &__wrapper--index::after {
+    content: "";
 
-  &__container {
-    text-align: center;
+    display: block;
+    padding: 0;
+
+    background-image: url("../../../images/index-cat/cat-mobile@2x.jpg");
+    background-repeat: no-repeat;
+  }
+
+  // @import("blocks/navigation.scss");
+  &__navigation {
+    min-width: 100%;
+
+    background-color: $white;
+    color: $black;
+  }
+
+  // @import("blocks/logo.scss");
+  &__logo {
+    min-width: 190px;
+    min-height: 38px;
+  }
+
+  // @import("blocks/hero.scss");
+  &__hero {
+    min-width: 100%;
+    min-height: 100%;
+    padding: 0;
   }
 }

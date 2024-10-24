@@ -1,3 +1,4 @@
+// @import("common/fonts.scss");
 @mixin font-face($font-family, $font-weight, $font-style, $font-src) {
   @font-face {
     font-family: $font-family;
@@ -8,36 +9,29 @@
   }
 }
 
-@mixin base-button {
-  min-width: 280px;
-  min-height: 40px;
+// // @import("blocks/button.scss");
+// @mixin base-button ($padding-top, $padding-bottom, $text-decoration, $border) {
+//   padding-top: $padding-top;
+//   padding-bottom: $padding-bottom;
 
-  text-decoration: none;
-  cursor: pointer;
+//   text-decoration: $text-decoration;
+//   border: $border;
+// }
 
-  &__text {
-    font-family: $main-font;
-    font-size: 16px;
-    line-height: 20px;
+// @mixin primary-button {
+//   @include base-button;
+//   background-color: $primary;
+//   color: $white;
+// }
 
-    text-transform: uppercase;
-    text-align: center;
-  }
+// @mixin secondary-button {
+//   @include base-button;
+//   background-color: rgb(104, 183, 56, 85%);
+//   color: $white;
+// }
 
-  &:hover {
-    opacity: 0.8;
-  }
-}
-
-@mixin primary-button {
-  @include base-button;
-  background-color: $primary;
-  color: $white;
-}
-
-@mixin secondary-button {
-  @include base-button;
-  background-color: $primary;
-  color: $white;
-  opacity: 0.85;
-}
+// @mixin additional-button {
+//   @include base-button;
+//   background-color: $accent-light-grey;
+//   color: $black;
+// }

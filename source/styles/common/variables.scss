@@ -1,19 +1,25 @@
 /* здесь используйте глобальные переменные */
-// Основные цвета
-$black: #000000;
+
+// Primary colors
 $white: #ffffff;
+$black: #000000;
 $primary: #68b738;
 
-// Дополнительные фоновые цвета
-$basic_grey: #f2f2f2;
-$basic_dark-grey: #d9d9d9;
-$fon_grey: #eaeaea;
-$line_grey: #cdcdcd;
-$special_light-grey: #d3d3d3;
-$social_grey: #666666;
-$decoration_grey: #e6e6e6;
+// Additional colors
+$accent-light-grey: #f2f2f2;
+$very-light-grey: #eaeaea;
+$extra-light-grey: #e6e6e6;
+$specify-light-grey: #d9d9d9;
+$light-grey: #d3d3d3;
+$dark-grey: #cdcdcd;
+$accent-dark-grey: #444444;
+$very-dark-grey: #666666;
+$extra-dark-grey: #111111;
+$specify-dark-grey: #222222;
 
-//Текстовые цвета
-$font_dark-grey: #111111;
-$font_additional-dark-grey: #222222;
-$font_special-dark-grey: #444444;
+$tomato: #ff6347; //для себя
+
+// Viewports
+$mobile-min-width: 320px;
+$tablet-min-width: 768px;
+$desktop-min-width: 1200px;
