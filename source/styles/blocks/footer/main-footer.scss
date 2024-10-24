@@ -1,5 +1,9 @@
 .main-footer {
-  height: 714px;
+  &__wrapper {
+    min-width: 100%;
+    min-height: 100%;
+    padding: 20px 0;
+  }
 
   &__container {
     text-align: center;
@@ -21,7 +25,4 @@
 
     color: $accent-dark-grey;
   }
-
-  // &__image {
-  // }
 }

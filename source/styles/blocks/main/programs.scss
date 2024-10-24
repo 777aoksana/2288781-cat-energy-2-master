@@ -1,7 +1,8 @@
 .programs {
   &__wrapper {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
   }
 
   &__title {
@@ -40,21 +41,21 @@
     border-radius: 50%;
   }
 
-  &__item--slim::after {
-    content: "";
-
-    position: absolute;
-    top: -3px;
-    left: 7px;
-
-    display: block;
+  &__item--slim {
+    position: relative;
 
     width: 36px;
     height: 50px;
 
-    background-image: url("../icons/stack.svg#cat-slim");
-    background-repeat: no-repeat;
+    mask-image: url("../../icons/stack.svg#cat-slim");
+    background-color: $black;
     background-size: 36px 50px;
+    transition: 0.3s ease-in-out;
+    z-index: 1;
+  }
+
+  &__item--slim:hover {
+    background-color: $primary;
   }
 
   &__subtitle {
@@ -75,12 +76,40 @@
   }
 
   &__link {
+    position: relative;
+
     font-family: $main-font;
 
     color: $black;
     text-align: center;
     text-decoration-line: none;
     text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  &__link::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: block;
+
+    width: 32px;
+    height: 10px;
+
+    background-image: url("../../icons/stack.svg#icon-arrow");
+    background-repeat: no-repeat;
+    transition: 0.3s ease-in-out;
+  }
+
+  &__link::after:hover {
+    background-color: $primary;
+  }
+
+  &__link:active {
+    opacity: 0.3;
   }
 
   &__item--pro::after {
@@ -95,7 +124,7 @@
     width: 67px;
     height: 28px;
 
-    background-image: url("../icons/stack.svg#cat-pro");
+    background-image: url("../../icons/stack.svg#cat-pro");
     background-repeat: no-repeat;
     background-size: 67px 28px;
   }

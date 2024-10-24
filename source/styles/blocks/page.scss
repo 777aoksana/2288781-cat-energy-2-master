@@ -7,8 +7,8 @@
   background-color: $bg-orange;
 
   &__body {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
+    display: flex;
+    flex-direction: column;
 
     min-height: 100%;
 
@@ -18,7 +18,6 @@
     font-weight: 400;
 
     color: $accent-dark-grey;
-    background-color: $tomato;
     overflow-x: hidden;
   }
 
@@ -36,53 +35,38 @@
 
   // @import("blocks/main-header.scss");
   &__main-header {
-    min-width: 100%;
-    min-height: 65px;
-    margin: 0;
-    padding: 0 20px;
+    flex-grow: 0;
+    flex-shrink: 0;
 
-    background-color: $white;
-    color: $black;
+    min-height: 65px;
   }
 
   // @import("blocks/main-index.scss");
   &__main-index {
-    min-width: 100%;
-    margin: 0;
-    padding: 0 20px;
+    flex-grow: 1;
 
-    background-color: $white;
-    color: $accent-dark-grey;
+    min-width: 100%;
   }
 
   // @import("blocks/main-inner.scss");
   &__main-inner {
-    min-width: 100%;
-    margin: 0;
-    padding: 0 20px;
+    flex-grow: 1;
 
-    background-color: $white;
-    color: $accent-dark-grey;
+    min-width: 100%;
   }
 
   // @import("blocks/main-inner.scss");
   &__main-form {
-    min-width: 100%;
-    margin: 0;
-    padding: 0 20px;
+    flex-grow: 1;
 
-    background-color: $white;
-    color: $accent-dark-grey;
+    min-width: 100%;
   }
 
   // @import("blocks/main-footer.scss");
   &__main-footer {
-    min-width: 100%;
-    min-height: 714px;
-    margin: 0;
-    padding: 0 20px;
+    flex-grow: 0;
+    flex-shrink: 0;
 
-    background-color: $accent-light-grey;
-    color: $accent-dark-grey;
+    min-height: 240px;
   }
 }

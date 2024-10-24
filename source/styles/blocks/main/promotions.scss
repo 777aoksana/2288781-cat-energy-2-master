@@ -46,7 +46,8 @@
   }
 
   &__order {
-    @include additional-button;
+    position: relative;
+    // @include additional-button;
   }
 
   &__text {

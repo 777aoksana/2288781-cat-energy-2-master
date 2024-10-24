@@ -1,41 +1,40 @@
 .main-header {
-  background-color: $white;
-
   &__wrapper {
-    width: 320px;
-    height: 100%;
-    margin: 0 auto;
+    min-width: 100%;
+    min-height: 100%;
     padding: 0 20px;
+
+    background-color: transparent;
   }
 
+  &__wrapper--index::after {
+    content: "";
+
+    display: block;
+    padding: 0;
+
+    background-image: url("../../../images/index-cat/cat-mobile@2x.jpg");
+    background-repeat: no-repeat;
+  }
+
+  // @import("blocks/navigation.scss");
+  &__navigation {
+    min-width: 100%;
+
+    background-color: $white;
+    color: $black;
+  }
+
+  // @import("blocks/logo.scss");
   &__logo {
     min-width: 190px;
     min-height: 38px;
   }
 
-  &__toogle {
-    width: 24px;
-    height: 24px;
-
-    background-color: $white;
-    background-image: url("../../icons/stack.svg#icon-menu-opened");
-    background-repeat: no-repeat;
-    background-size: 24px 24px;
-    border: none;
-  }
-
-  @media (min-width: 768px) {
-    &__toogle {
-      display: none;
-    }
-
-    &__toogle--closed {
-      background-image: url("../../icons/stack.svg#icon-menu-closed");
-    }
-
-    // @import("blocks/navigation.scss");
-    &__navigation {
-      position: relative;
-    }
+  // @import("blocks/hero.scss");
+  &__hero {
+    min-width: 100%;
+    min-height: 100%;
+    padding: 0;
   }
 }
