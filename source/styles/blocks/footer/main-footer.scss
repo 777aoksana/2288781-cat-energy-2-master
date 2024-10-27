@@ -1,28 +1,71 @@
 .main-footer {
   &__wrapper {
+    position: relative;
+
+    display: block;
+
     min-width: 100%;
     min-height: 100%;
+    margin: 0 auto;
     padding: 20px 0;
   }
 
-  &__container {
-    text-align: center;
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    margin-right: -20px;
+    margin-left: -20px;
+  }
+
+  &__column {
+    flex: 0 0 100%;
+
+    max-width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
   }
 
   &__logo-text {
-    text-align: left;
+    display: block;
+
+    max-width: 128px;
+    margin: 0 auto;
+    padding: 40px 0 20px;
+
+    transition: 0.3s;
   }
-}
 
-.logo-academy {
-  background-image: url("../../icons/htmlacademy.svg");
-  text-decoration: none;
-  text-align: left;
+  &__logo-text a {
+    text-decoration: none;
 
-  &__text {
-    font-size: 16px;
-    line-height: 20px;
+    background-color: transparent;
+  }
 
-    color: $accent-dark-grey;
+  &__social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    padding: 20px 0;
+
+    list-style-type: none;
+    border-top: 1px solid $specify-light-grey;
+    border-bottom: 1px solid $specify-light-grey;
+  }
+
+  .logo-academy {
+    background-image: url("../../icons/htmlacademy.svg");
+    text-decoration: none;
+    text-align: left;
+
+    &__text {
+      font-size: 16px;
+      line-height: 20px;
+
+      color: $accent-dark-grey;
+    }
   }
 }
