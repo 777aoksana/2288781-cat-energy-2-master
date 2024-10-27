@@ -5,8 +5,21 @@
   height: 100%;
   margin: 0 auto;
 
-  &__container {
-    padding: 0 20px;
+  &__wrapper {
+    min-width: 320px;
+    margin: 0 auto;
+  }
+
+  &__programs {
+    padding: 0;
+  }
+
+  &__reasons {
+    padding: 0;
+  }
+
+  &__stats {
+    padding: 0;
   }
 
   &__map {

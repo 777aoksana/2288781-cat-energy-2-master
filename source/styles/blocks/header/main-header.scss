@@ -1,16 +1,54 @@
 .main-header {
   &__wrapper {
+    width: $mobile-min-width;
     min-width: 100%;
     min-height: 100%;
     padding: 0 20px;
 
-    background-color: transparent;
+    background-color: $white;
+  }
+
+  @media ($mobile-min-width) {
+    &__wrapper {
+      width: $mobile-min-width;
+      min-width: 100%;
+      min-height: 100%;
+      padding: 0 30px;
+    }
+  }
+
+  @media ($mobile-min-width-only) {
+    &__wrapper {
+      width: $mobile-min-width-only;
+      min-width: 100%;
+      min-height: 100%;
+      padding: 0 30px;
+    }
+  }
+
+  @media ($tablet-min-width) {
+    &__wrapper {
+      width: $tablet-min-width;
+      min-width: 100%;
+      min-height: 100%;
+      padding: 0 30px;
+    }
+  }
+
+  @media ($desktop-min-width) {
+    &__wrapper {
+      width: $desktop-min-width;
+      min-width: 100%;
+      min-height: 100%;
+      padding: 0 30px;
+    }
   }
 
   &__wrapper--index::after {
     content: "";
 
     display: block;
+
     padding: 0;
 
     background-image: url("../../../images/index-cat/cat-mobile@2x.jpg");
@@ -20,15 +58,6 @@
   // @import("blocks/navigation.scss");
   &__navigation {
     min-width: 100%;
-
-    background-color: $white;
-    color: $black;
-  }
-
-  // @import("blocks/logo.scss");
-  &__logo {
-    min-width: 190px;
-    min-height: 38px;
   }
 
   // @import("blocks/hero.scss");
