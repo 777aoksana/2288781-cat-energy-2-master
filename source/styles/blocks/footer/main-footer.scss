@@ -28,7 +28,9 @@
 }
 
 .main-footer__footer-logotext {
-  width: fit-content;
+  width: 128px;
+  height: 24px;
+  margin-inline: auto;
 
   &:hover {
     fill: $hover;
