@@ -21,9 +21,9 @@
 
   <h1 class="page__headline visually-hidden">Онлайн-магазин «Кэт энерджи» - главная страница</h1>
 
-  <header class="page__main-header page__main-header--index main-header">
+  <div class="page__top">
 
-    <div class="main-header__wrapper container">
+    <header class="page__main-header page__main-header--index main-header">
 
       <a class="main-header__logo" href="index.html" aria-label="Активная главная страница">
 
@@ -41,35 +41,35 @@
 
       </a>
 
-      <nav class="main-header__navigation navigation navigation--closed">
+      <nav class="main-header__main-nav main-nav main-nav--closed main-nav--no-js">
 
-        <button class="navigation__toggle" type="button" aria-label="Открыть/скрыть меню"></button>
+        <button class="main-nav__toggle main-nav__toggle--no-js" type="button" aria-label="Открыть/скрыть меню"></button>
 
-        <div class="navigation__wrapper">
+        <div class="main-nav__wrapper">
 
-          <ul class="navigation__list navigation__list--index">
-            <li class="navigation__item navigation__item--active">
-              <a class="navigation__link" href="./" aria-current="page">Главная</a>
+          <ul class="main-nav__list">
+
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--white main-nav__link--active" href="./" aria-current="page">Главная</a>
             </li>
-            <li class="navigation__item">
-              <a class="navigation__link" href="catalog.html">Каталог продукции</a>
+
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--white" href="catalog.html">Каталог продукции</a>
             </li>
-            <li class="navigation__item">
-              <a class="navigation__link" href="form.html" disabled>Подбор программы</a>
+
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--white" href="programs.html">Подбор программы</a>
             </li>
+
           </ul>
 
         </div>
 
       </nav>
 
-    </div>
+    </header>
 
-  </header>
-
-  <main class="page__main main-index">
-
-    <!-- <section class="main-header__hero hero">
+    <section class="main-header__hero hero">
 
       <h2 class="visually-hidden">Подбор программы</h2>
 
@@ -101,6 +101,10 @@
       </div>
 
     </section>
+
+  </div>
+
+  <main class="page__main main-index">
 
     <section class="programs">
 
@@ -249,7 +253,7 @@
 
       </div>
 
-    </section> -->
+    </section>
 
   </main>
 

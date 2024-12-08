@@ -3,9 +3,6 @@
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-
   box-sizing: border-box;
   outline: 1px solid #09b38e; // для себя, потом удалю
 
@@ -22,8 +19,6 @@ body {
 }
 
 body {
-  position: static;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -43,7 +38,6 @@ body {
   font-style: normal;
 
   color: $accent-dark-grey;
-  background-color: $white;
   text-align: left;
 }
 

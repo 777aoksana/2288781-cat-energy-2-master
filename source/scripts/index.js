@@ -2,18 +2,15 @@
 
 // меню
 
-const navMain = document.querySelector('.navigation');
-const navToggle = document.querySelector('.navigation__toggle');
+const navMain = document.querySelector('.main-nav')
+  , navToggle = document.querySelector('.main-nav__toggle');
 
-navToggle.addEventListener('click', () => {
-  if (navMain.classList.contains('navigation--closed')) {
-    navMain.classList.remove('navigation--closed');
-    navMain.classList.add('navigation--opened');
-  } else {
-    navMain.classList.add('navigation--closed');
-    navMain.classList.remove('navigation--opened');
-  }
-});
+navMain.classList.remove('main-nav--no-js'),
+navToggle.classList.remove('main-nav__toggle--no-js'),
+navToggle.addEventListener('click', (() => {
+  navMain.classList.toggle('main-nav--closed');
+}
+));
 
 
 // ползунок

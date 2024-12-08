@@ -1,0 +1,219 @@
+.main-nav__toggle {
+  position: absolute;
+  top: 20px;
+  right: 102px;
+  z-index: 10;
+
+  display: block;
+
+  width: 24px;
+  height: 24px;
+  padding-block: 0;
+  padding-inline: 0;
+
+  mask-image: url("../../../icons/stack.svg#icon-menu-closed");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  background-color: $black;
+
+  border: none;
+  outline: none;
+  transition: opacity 0.5s linear;
+  user-select: none;
+  overflow: hidden;
+  cursor: pointer;
+
+  &--no-js {
+    display: none;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    display: none;
+  }
+}
+
+.main-nav__wrapper {
+  position: relative;
+
+  display: block;
+
+  min-width: 20px;
+  margin-top: 1px;
+
+  @media (min-width: $breakpoint-tablet) {
+    min-width: 436px;
+    margin-top: 25px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    min-width: 475px;
+    margin-top: 55px;
+  }
+}
+
+.main-nav__list {
+  position: absolute;
+  top: 65px;
+  left: -340px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 100%;
+  min-width: 320px;
+  height: 264px;
+  margin: 0;
+
+  background-color: $white;
+
+  @media (min-width: $breakpoint-tablet) {
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.main-nav__item {
+  border-top: 2px solid $extra-light-grey;
+  text-align: center;
+
+  @include reset-list;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-left: 33px;
+    padding: 0 0 10px;
+
+    border: none;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    padding: 0 0 5px;
+  }
+}
+
+.main-nav__link {
+  position: relative;
+
+  font-family: $main-font;
+  font-size: 20px;
+  line-height: 20px;
+
+  color: $black;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+
+    &--active {
+      padding-bottom: 4px;
+      border-bottom: 2px solid $primary;
+      pointer-events: none;
+    }
+
+    &--green {
+      border-bottom: 2px solid $primary;
+    }
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    &--white {
+      color: $white;
+    }
+
+    font-size: 20px;
+    line-height: 30px;
+
+    &--active {
+      border-bottom: 2px solid $white;
+    }
+
+    &--active-green {
+      border-bottom: 2px solid $primary;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .main-nav--closed .main-nav__toggle {
+    mask-image: url("../../../icons/stack.svg#icon-menu-opened");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    background-color: $black;
+
+    border: none;
+    transition: opacity 0.5s linear;
+
+    &:hover {
+      background-color: $primary;
+      opacity: 0.8;
+      transition: all 1s ease-in-out;
+      transition-duration: 200ms;
+      transform: rotate(180deg);
+    }
+
+    &:active {
+      background-color: $primary;
+      opacity: 0.6;
+      transition: all 1s ease-in-out;
+      transition-duration: 200ms;
+      transform: rotate(180deg);
+    }
+  }
+
+  .main-nav--closed .main-nav__wrapper {
+    display: none;
+  }
+
+  .main-nav--no-js .main-nav__toggle {
+    mask-image: url("../../../icons/stack.svg#icon-menu-closed");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    background-color: $black;
+
+    border: none;
+    transition: opacity 0.5s linear;
+
+    &:hover {
+      background-color: $primary;
+      opacity: 0.8;
+      transition: all 1s ease-in-out;
+      transition-duration: 200ms;
+      transform: rotate(180deg);
+    }
+
+    &:active {
+      background-color: $primary;
+      opacity: 0.6;
+      transition: all 1s ease-in-out;
+      transition-duration: 200ms;
+      transform: rotate(180deg);
+    }
+  }
+
+  .main-nav--no-js .main-nav__wrapper {
+    position: static;
+
+    display: block;
+
+    min-height: 0;
+  }
+}

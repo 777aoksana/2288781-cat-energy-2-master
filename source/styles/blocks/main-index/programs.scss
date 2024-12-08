@@ -4,7 +4,6 @@
   display: flex;
 
   margin: 0;
-  padding: 20px;
 
   @media screen and (min-width: $breakpoint-tablet) {
     padding: 0 30px;
@@ -237,11 +236,11 @@
     width: 32px;
     height: 10px;
 
-    background-image: url("../../icons/stack.svg#icon-arrow");
-    background-repeat: no-repeat;
-    background-size: 32px 10px;
-    background-position: -8px;
-    fill: $black;
+    mask-image: url("../../icons/stack.svg#icon-arrow");
+    mask-repeat: no-repeat;
+    mask-size: 32px 10px;
+    mask-position: -8px;
+    background-color: $black;
     transform: translateY(-50%);
   }
 }

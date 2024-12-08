@@ -1,92 +1,63 @@
 .main-header {
   position: relative;
 
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: center;
+  display: inline-grid;
+  grid-template-columns: 190px 24px;
+  grid-template-rows: 1fr;
+  gap: 65px;
 
   width: 100%;
   min-width: 279px;
-  height: 65px;
+  height: 66px;
   margin: 0 auto;
-  padding: 13px 0 14px;
-
-  font-family: $main-font;
-  font-size: 20px;
-  line-height: 20px;
-
-  text-align: center;
-  text-transform: uppercase;
-  background-color: $white;
-  color: $black;
-
-  @media (max-width: $breakpoint-tablet) {
-    &::before {
-      @include pseudo-element;
-      z-index: -1;
-
-      width: 100%;
-      height: 100%;
-
-      border-bottom: 1px solid $specify-light-grey;
-    }
-  }
+  padding: 0 20px;
 
   @media (min-width: $breakpoint-tablet) {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    justify-content: center;
+    display: flex;
+    flex-direction: rows;
     align-items: center;
-    gap: 33px;
+    justify-content: space-between;
 
-    height: 140px;
-    padding: 25px 0 65px;
-
-    font-size: 18px;
-    line-height: 24px;
+    min-height: 75px;
   }
 
   @media (min-width: $breakpoint-desktop) {
-    width: 1220px;
-    height: 224px;
-    padding: 55px 0 110px;
-
-    font-size: 20px;
-    line-height: 30px;
+    min-height: 114px;
 
     background-color: transparent;
-    color: $white;
   }
 }
 
-.header__wrapper {
-  @include container;
-}
-
 .main-header__logo {
+  position: relative;
+
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
   align-items: center;
   gap: 56px;
 
   width: 190px;
-  margin: 0;
+  height: 38px;
+  margin: 13px 0 14px;
 
   cursor: pointer;
-  color: currentColor;
 
   @include a;
 
   @media (min-width: $breakpoint-tablet) {
-    width: 174px;
+    justify-content: space-between;
     gap: 13px;
+
+    width: 174px;
+    height: 50px;
+    margin-top: 25px;
   }
 
   @media (min-width: $breakpoint-desktop) {
-    width: 202px;
     gap: 14px;
+
+    width: 202px;
+    height: 59px;
+    margin-top: 55px;
   }
 
   &:hover {
@@ -117,7 +88,7 @@
   }
 }
 
-.header__logo-text {
+.main-header__logo-text {
   position: relative;
   inset: 0;
 
@@ -134,17 +105,3 @@
   }
 }
 
-// .main-header__navigation {
-//   position: relative;
-//   top: 0;
-//   left: -20px;
-//   right: 20px;
-
-//   display: block;
-
-//   width: 100%;
-//   min-width: 320px;
-//   margin: 0 auto;
-
-//   background-color: $white;
-// }

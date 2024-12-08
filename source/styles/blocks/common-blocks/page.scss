@@ -1,24 +1,21 @@
 .page {
-  position: static;
-
   display: flex;
   justify-content: center;
   align-items: stretch;
 
   height: 100%;
-
-  color: $white; //для себя
-  background-color: #8483ce; //для проверки, для себя
 }
 
 .page__body {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
-  align-content: start;
+  align-items: start;
 
   min-width: 320px;
   min-height: 100%;
   margin: 0 auto;
+
+  overflow-x: hidden;
 }
 
 .page__headline {
@@ -40,6 +37,20 @@
   }
 }
 
+.page__top {
+  position: relative;
+  margin-bottom: 20px;
+
+  @media (min-width: $breakpoint-tablet) {
+    min-height: 950px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    min-height: 694px;
+    margin-bottom: 82px;
+  }
+}
+
 .page__main-header,
 .page__main-footer {
   position: relative;
@@ -57,7 +68,7 @@
 }
 
 .page__main-header {
-  position: relative;
+  @include container;
 
   @media (min-width: $breakpoint-desktop) {
     &--index {

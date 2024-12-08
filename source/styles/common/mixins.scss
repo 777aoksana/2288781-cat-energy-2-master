@@ -9,18 +9,33 @@
 }
 
 @mixin container {
+  width: 100%;
   min-width: 320px;
   margin: 0 auto;
   padding: 0 20px;
 
   @media (min-width: $breakpoint-tablet) {
-    min-width: 768px;
+    min-width: $breakpoint-tablet;
     padding: 0 30px;
   }
 
   @media (min-width: $breakpoint-desktop) {
-    max-width: 1220px;
+    max-width: $breakpoint-desktop;
     padding: 0 110px;
+  }
+
+  &--grey {
+    @media (max-width: $breakpoint-tablet) {
+      background-color: $accent-light-grey;
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+      background-color: $accent-light-grey;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      background-color: transparent;
+    }
   }
 }
 
