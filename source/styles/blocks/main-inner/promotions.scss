@@ -13,11 +13,11 @@
 .promotions__wrapper {
   padding: 0 20px;
 
-  @media (min-width: $breakpoint-tablet) {
+  @media screen and (min-width: $breakpoint-tablet) {
     padding: 0 68px;
   }
 
-  @media (min-width: $breakpoint-desktop) {
+  @media screen and (min-width: $breakpoint-desktop) {
     padding: 0 110px;
   }
 }
@@ -56,13 +56,13 @@
     z-index: -1;
   }
 
-  @media (min-width: $breakpoint-tablet) {
+  @media screen and (min-width: $breakpoint-tablet) {
     margin: 0 0 66px 70px;
     font-size: 32px;
     line-height: 32px;
   }
 
-  @media (min-width: $breakpoint-desktop) {
+  @media screen and (min-width: $breakpoint-desktop) {
     margin: 0 0 72px 110px;
 
     font-size: 40px;
@@ -80,7 +80,7 @@
   line-height: 24px;
   text-align: center;
 
-  @media (min-width: $breakpoint-tablet) {
+  @media screen and (min-width: $breakpoint-tablet) {
     font-size: 24px;
     line-height: 32px;
   }
@@ -91,14 +91,14 @@
   flex-direction: column;
   gap: 16px;
 
-  @media (min-width: $breakpoint-tablet) {
+  @media screen and (min-width: $breakpoint-tablet) {
     flex-direction: row;
     gap: 0;
     justify-content: center;
     align-items: center;
   }
 
-  @media (min-width: $breakpoint-desktop) {
+  @media screen and (min-width: $breakpoint-desktop) {
     justify-content: center;
   }
 }
@@ -119,14 +119,14 @@
     color: $accent-dark-grey;
   }
 
-  @media (min-width: $breakpoint-tablet) {
+  @media screen and (min-width: $breakpoint-tablet) {
     min-width: 376px;
     height: 54px;
     border: none;
     outline: 1px solid $dark-grey;
   }
 
-  @media (min-width: $breakpoint-desktop) {
+  @media screen and (min-width: $breakpoint-desktop) {
     min-width: 496px;
   }
 
@@ -149,7 +149,7 @@
   font-size: 20px;
   line-height: 26px;
 
-  @media (min-width: $breakpoint-tablet) {
+  @media screen and (min-width: $breakpoint-tablet) {
     width: 256px;
   }
 }

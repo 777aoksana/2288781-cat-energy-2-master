@@ -3,8 +3,11 @@
 *,
 *::before,
 *::after {
+  margin: 0;
+  padding: 0;
+
   box-sizing: border-box;
-  outline: 1px solid #a01b4e; // для себя, потом удалю
+  outline: 1px solid #09b38e; // для себя, потом удалю
 
   // outline: 5px solid rgba(255, 0, 0, 0.8);
   // outline-offset: -3px;
@@ -16,25 +19,39 @@
 html,
 body {
   height: 100%;
-  margin: 0;
-  padding: 0;
 }
 
 body {
-  display: flex;
+  position: static;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  max-width: 100%;
   min-width: 320px;
   min-height: 100%;
+  margin: 0 auto;
+  padding: 0;
 
   font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
   font-style: normal;
+
+  color: $accent-dark-grey;
+  background-color: $white;
+  text-align: left;
 }
 
-img {
+img,
+picture {
   display: block;
+
   max-width: 100%;
   height: auto;
+  object-fit: contain;
 }

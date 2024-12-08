@@ -21,11 +21,11 @@
 
   <h1 class="page__headline visually-hidden">Онлайн-магазин «Кэт энерджи» - каталог</h1>
 
-  <header class="page__main-header page__main-header--index">
+  <header class="page__main-header page__main-header--index main-header">
 
-    <nav class="navigation navigation--no-js">
+    <div class="main-header__wrapper container">
 
-      <a class="navigation__logo" href="index.html" aria-label="Переход на главную страницу">
+      <a class="main-header__logo" href="index.html" aria-label="Переход на главную страницу">
 
         <picture>
           <source media="(min-width: 1440px)" type="image/svg+xml" width="70" height="59" srcset="images/logo/header-logo/logotype-desktop.svg" />
@@ -41,28 +41,29 @@
 
       </a>
 
-      <button class="navigation__toggle toggle" type="button">
-        <span class="visually-hidden">Открыть/закрыть меню</span>
-        <div class="toggle__icon" data-tor-parent="hover">
-          <span class="toggle__icon-line"></span>
-          <span class="toggle__icon-line"></span>
-          <span class="toggle__icon-line"></span>
+      <nav class="main-header__navigation navigation navigation--closed">
+
+        <button class="navigation__toggle" type="button" aria-label="Открыть/скрыть меню"></button>
+
+        <div class="navigation__wrapper">
+
+          <ul class="navigation__list navigation__list--index">
+            <li class="navigation__item navigation__item--active">
+              <a class="navigation__link" href="index.html">Главная</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="./" aria-current="page">Каталог продукции</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="form.html" disabled>Подбор программы</a>
+            </li>
+          </ul>
+
         </div>
-      </button>
 
-      <ul class="navigation__list navigation__list--index">
-        <li class="navigation__item">
-          <a class="navigation__link" href="index.html" aria-current="page">Главная</a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__link navigation__link--current" href="./" aria-current="page">Каталог продукции</a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="form.html">Подбор программы</a>
-        </li>
-      </ul>
+      </nav>
 
-    </nav>
+    </div>
 
   </header>
 
@@ -196,7 +197,13 @@
               <h3 class="products__subtitle">Сахарозаменитель</h3>
               <div class="products__content">
                 <ul class="products__list product">
-                  <li class="product__item"><span class="product__meaning">1 упаковка (100 г)</span> <span class="product__price">200 ₽</span> <a class="product__order button" href="#"><span class="product__text">Заказать</span></a></li>
+                  <li class="product__item">
+                    <span class="product__meaning">1 упаковка (100 г)</span>
+                    <span class="product__price">200 ₽</span>
+                    <a class="product__order button" href="#">
+                      <span class="product__text">Заказать</span>
+                    </a>
+                  </li>
                 </ul>
               </div>
             </li>

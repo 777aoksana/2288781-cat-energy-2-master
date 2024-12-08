@@ -1,5 +1,7 @@
 .main-footer {
-  @include container; //!
+  // @include container;
+
+  display: flex;
 
   background-color: $accent-light-grey;
 }
@@ -28,15 +30,20 @@
 }
 
 .main-footer__footer-logotext {
+  display: flex;
+  justify-content: center;
+
   width: 128px;
   height: 24px;
   margin-inline: auto;
+  margin-right: 0;
+  color: $extra-dark-grey;
 
   &:hover {
     fill: $hover;
 
     img {
-      filter: url("#filter_A");
+      filter: url("#");
     }
   }
 
@@ -44,7 +51,7 @@
     fill: $hover;
 
     img {
-      filter: url("#filter_A");
+      filter: url("#");
     }
   }
 
@@ -52,7 +59,7 @@
     fill: $active;
 
     img {
-      filter: url("#filter_B");
+      filter: url("#");
     }
   }
 }
@@ -61,7 +68,7 @@
   width: 128px;
   height: 24px;
 
-  fill: blue;
+  fill: #0000ff;
 
   overflow: hidden;
 }

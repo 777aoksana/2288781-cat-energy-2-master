@@ -1,91 +1,58 @@
 .toggle {
   position: relative;
-  top: 0;
-  right: 0;
-  z-index: 2;
-
-  display: block;
 
   width: 24px;
   height: 24px;
-  margin-left: auto;
-
-  font-size: 0;
+  margin: 0;
+  padding-block: 0;
+  padding-inline: 0;
 
   background-color: transparent;
+  color: currentColor;
   border: none;
-  outline: none;
   cursor: pointer;
+
+  &::after,
+  &::before {
+    @include pseudo-element;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: $black;
+    border-radius: 2px;
+  }
+
+  &::before {
+    top: 0;
+
+    box-shadow: 0 11px 0 $black;
+    transition: box-shadow 0.3s 0.15s, top 0.3s 0.15s, transform 0.3s;
+  }
+
+  &::after {
+    bottom: 0;
+
+    transition: bottom 0.3s 0.15s, transform 0.3s;
+  }
+
+  &.active::before {
+    top: 11px;
+
+    transform: rotate(45deg);
+    box-shadow: 0 6px 0 $white;
+    transition: box-shadow 0.15s, top 0.3s, transform 0.3s 0.15s;
+  }
+
+  &.active::after {
+    bottom: 11px;
+
+    transform: rotate(-45deg);
+    transition: bottom 0.3s, transform 0.3s 0.15s;
+  }
 
   @media (min-width: $breakpoint-tablet) {
     display: none;
   }
-}
-
-.toggle.open {
-  transform: rotate(180deg);
-  transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
-}
-
-.toggle span {
-  position: absolute;
-
-  display: block;
-
-  width: 100%;
-  height: 2px;
-
-  border-radius: 1.5px;
-  transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
-  transition-delay: 200ms;
-  background-color: $black;
-}
-
-.toggle:hover span {
-  background-color: $primary;
-  transform: scale(1.2);
-  transition: 350ms cubic-bezier(0.8, 0.5, 0.2, 1.4);
-}
-
-.toggle span:first-child {
-  top: 0;
-  left: 0;
-}
-
-.toggle span:nth-child(2) {
-  top: 11px;
-  left: 0;
-
-  opacity: 1;
-}
-
-.toggle span:last-child {
-  bottom: 0;
-  left: 0;
-}
-
-.toggle__icon:not(.open):hover span:first-child {
-  transform: rotate(-3deg) scaleY(1.1);
-}
-
-.toggle__icon:not(.open):hover span:nth-child(2) {
-  transform: rotate(3deg) scaleY(1.1);
-}
-
-.toggle__icon:not(.open):hover span:last-child {
-  transform: rotate(-4deg) scaleY(1.1);
-}
-
-.toggle__icon.open span:first-child {
-  transform: rotate(45deg);
-  top: 11px;
-}
-
-.toggle__icon.open span:nth-child(2) {
-  opacity: 0;
-}
-
-.toggle__icon.open span:last-child {
-  transform: rotate(-45deg);
-  top: 11px;
 }

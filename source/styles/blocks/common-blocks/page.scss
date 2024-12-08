@@ -1,26 +1,30 @@
 .page {
+  position: static;
+
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+
   height: 100%;
 
-  color: $accent-dark-grey;
-  background-color: $accent-light-grey;
+  color: $white; //для себя
+  background-color: #8483ce; //для проверки, для себя
 }
 
 .page__body {
-  position: relative;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
 
-  display: flex;
-  flex-direction: column;
-
-  margin: 0;
-
-  max-width: max-content;
+  min-width: 320px;
   min-height: 100%;
-
-  overflow-x: hidden;
+  margin: 0 auto;
 }
 
 .page__headline {
-  margin: 0;
+  display: block;
+
+  padding: 0;
 
   font-family: $main-font;
   font-size: 36px;
@@ -28,6 +32,7 @@
   font-weight: 400;
 
   text-align: left;
+  transform: scale(0);
 
   @media (min-width: $breakpoint-tablet) {
     font-size: 60px;
@@ -41,10 +46,8 @@
   left: 0;
   right: 0;
 
-  flex-grow: 0;
-  flex-shrink: 0;
-
   width: 100%;
+  height: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -60,22 +63,33 @@
     &--index {
       z-index: 0;
 
+      &::after {
+        @include pseudo-element;
+        inset: 0 0 0 calc(50% + 40px);
+        z-index: -1;
+
+        background-color: $primary fon;
+      }
+
       &::before {
         @include pseudo-element;
         inset: 0 0 0 calc(50% + 40px);
         z-index: -1;
 
+        width: 720px;
         height: 694px;
 
         background-image: linear-gradient(to right, $primary-fon 100%, $primary), image-set(url("../../../images/index-page/cat-desktop@1x.jpg") type("image/jpg") 1x, url("../../../images/index-page/cat-desktop@2x.jpg") type("image/jpg") 2x, url("../../../images/index-page/cat-desktop@1x.webp") type("image/webp") 1x, url("../../../images/index-page/cat-desktop@2x.webp") type("image/webp") 2x);
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: right center, center;
-
-        // @include retina {
-        //   background-image: url("../../../images/index-page/cat-mobile@2x.jpg, ../../../images/index-page/cat-desktop@2x.webp");
-        // }
+        background-position: right top, center;
       }
     }
+  }
+}
+
+.page__main-header--catalog .page__main-header--index::before {
+  @media (min-width: $breakpoint-desktop) {
+    display: none;
   }
 }

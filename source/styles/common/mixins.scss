@@ -9,7 +9,6 @@
 }
 
 @mixin container {
-  width: 100%;
   min-width: 320px;
   margin: 0 auto;
   padding: 0 20px;
@@ -20,18 +19,13 @@
   }
 
   @media (min-width: $breakpoint-desktop) {
-    max-width: 1440px;
+    max-width: 1220px;
     padding: 0 110px;
   }
 }
 
-@mixin a {
-  display: inline-block;
-
-  vertical-align: top;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: $black;
+@mixin a($text-decoration: none) {
+  text-decoration: $text-decoration;
 }
 
 @mixin reset-list($margin: 0, $padding: 0, $list-style: none) {
@@ -43,6 +37,7 @@
 @mixin primary-button($color: $white, $bg-color: $primary) {
   display: inline-block;
 
+  width: 100%;
   min-width: 280px;
   min-height: 40px;
   padding: 10px 0;
@@ -56,7 +51,7 @@
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
-  vertical-align: top;
+  vertical-align: middle;
   border: 0;
   cursor: pointer;
   transition: all 0.15s ease-in;
@@ -100,8 +95,23 @@
   display: $display;
 }
 
-@mixin retina {
-  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    @content;
-  }
-}
+// @mixin flex-container($flex-direction, $justify-content, $align-items) {
+//   display: flex;
+//   flex-direction: $flex-direction;
+//   justify-content: $justify-content;
+//   align-items: $align-items;
+// }
+
+// .new-container {
+//   @include flex-container(row, center, flex-start);
+// }
+
+// @mixin center-element {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .my-element {
+//   @include center-element;
+// }

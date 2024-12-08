@@ -8,6 +8,13 @@
   }
 
   &__item {
+    display: grid;
+    row-gap: 25px;
+    grid-template-columns: 1fr auto auto;
+
+    padding: 26px 38px 28px;
+
+    border: 1px solid $dark-grey;
     text-align: center;
   }
 

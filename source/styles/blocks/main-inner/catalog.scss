@@ -1,4 +1,8 @@
 .catalog {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  align-content: start;
+
   &__title {
     font-family: $main-font;
     font-size: 36px;
@@ -11,4 +15,12 @@
   &__list {
     list-style-type: none;
   }
+}
+
+.catalog .catalog__title {
+  grid-column: 1 / -1;
+}
+
+.catalog .catalog__list {
+  grid-column: 1 / -1;
 }

@@ -1,5 +1,9 @@
 /* здесь используйте глобальные переменные */
 
+//Шрифты
+$base-font: "Lato", "Arial", sans-serif;
+$main-font: "Oswald", "Arial", sans-serif;
+
 // Основные цвета
 $white: #ffffff;
 $black: #000000;
@@ -22,8 +26,5 @@ $active: #6b6b6b;
 $primary-fon: rgba($primary, 0.85);
 
 // Брейкпоинты
-$breakpoint-mobile: 320px;
-$breakpoint-tablet: 780px;
+$breakpoint-tablet: 768px;
 $breakpoint-desktop: 1440px;
-
-$retina: (min-resolution: 144dpi), (min-resolution: 1.5dppx);

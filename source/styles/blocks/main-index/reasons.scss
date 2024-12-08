@@ -1,187 +1,212 @@
-.reasons__wrapper {
-  @include container; //!
+.reasons {
+  // @include container;
 
-  padding: 0 20px 49px;
+  width: 100%;
+  min-width: 320px;
+  margin: 0 auto;
 
-  @media (min-width: $breakpoint-tablet) {
-    padding: 45px 30px 47px;
+  @media screen and (min-width: $breakpoint-tablet) {
+    width: 708px;
 
     border-bottom: 1px solid $extra-light-grey;
   }
 
-  @media (min-width: $breakpoint-desktop) {
-    padding: 71px 110px 69px;
+  @media screen and (min-width: $breakpoint-desktop) {
+    width: 1220px;
+    margin-bottom: 69px;
 
     border: none;
   }
-}
 
-.reasons__title {
-  margin: 0;
-  margin-bottom: 40px;
+  &__title {
+    margin-block: 0 0;
+    margin-bottom: 40px;
 
-  font-family: $main-font;
-  font-size: 36px;
-  line-height: 40px;
+    font-family: $main-font;
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: 400;
 
-  @media (min-width: $breakpoint-tablet) {
-    margin-bottom: 32px;
+    text-align: left;
 
-    font-size: 60px;
-    line-height: 60px;
-  }
-}
+    @media screen and (min-width: $breakpoint-tablet) {
+      margin-bottom: 72px;
 
-.reasons__list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+      font-size: 60px;
+      line-height: 60px;
+    }
 
-  margin: 0;
-  padding: 0;
-
-  list-style-type: none;
-  color: $accent-dark-grey;
-
-  @media (min-width: $breakpoint-tablet) {
-    flex-flow: row wrap;
-    gap: 37px 137px;
-
-    font-size: 16px;
-    line-height: 24px;
-  }
-
-  @media (min-width: $breakpoint-desktop) {
-    column-gap: 77px;
-  }
-}
-
-.reasons__item {
-  position: relative;
-
-  min-height: 60px;
-
-  @media (min-width: $breakpoint-tablet) {
-    flex-basis: 35%;
-
-    counter-increment: chapter 1;
-
-    &::before {
-      content: counter(chapter);
-      position: absolute;
-      left: 114px;
-      bottom: 0;
-
-      font-family: $main-font;
-      font-size: 280px;
-      line-height: 280px;
-      color: $accent-light-grey;
-
-      z-index: -1;
+    @media screen and (min-width: $breakpoint-tablet) {
+      margin-bottom: 32px;
     }
   }
 
-  @media (min-width: $breakpoint-desktop) {
-    flex-basis: 20%;
+  &__list {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 20px;
+
+    @include reset-list;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+      display: grid;
+      grid-template-columns: 247px 249px;
+      grid-template-rows: 280px;
+      grid-auto-rows: 280px;
+      gap: 37px 136px;
+
+      margin-block: 0 0;
+      margin: 0;
+      padding-inline-start: 0;
+      padding: 0;
+
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+      grid-template-columns: 230px 246px 248px 250px;
+      grid-template-rows: 280px;
+      column-gap: 94px 79px 77px;
+      justify-content: space-between;
+    }
   }
-}
 
-.reasons__item-text {
-  margin: 1px 0 0 80px;
-
-  &::before {
-    content: "";
-    position: absolute;
+  &__item {
+    position: relative;
+    top: 0;
     left: 0;
 
-    width: 60px;
-    height: 60px;
+    display: block;
 
-    background-color: $primary;
+    min-height: 60px;
+    margin: 0;
+    padding: 0;
 
-    @media (min-width: $breakpoint-tablet) {
-      left: 0;
-      top: 40px;
+    text-align: center;
 
-      width: 80px;
-      height: 80px;
+    @media screen and (min-width: $breakpoint-tablet) {
+      flex-basis: 35%;
+
+      counter-increment: chapter 1;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+      flex-basis: 20%;
     }
   }
 
-  @media (min-width: $breakpoint-desktop) {
-    min-height: 280px;
+  &__item-text {
+    margin-block: 0 0;
+    margin-left: 90px;
+
+    text-align: left;
+
+    &::before {
+      @include pseudo-element;
+      top: 0;
+      left: 0;
+
+      width: 60px;
+      height: 60px;
+
+      background-color: $primary;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+      min-height: 280px;
+      margin: 0;
+      margin-top: 151px;
+    }
+  }
+
+  &__item-text--leaf::after {
+    @include pseudo-element;
+    inset: 14px 15px;
+
+    width: 30px;
+    height: 32px;
     margin: 0;
-    padding: 151px 0 57px;
+    padding: 0;
+
+    background-image: url("../../icons/stack.svg#icon-leaf");
+    background-repeat: no-repeat;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__item-text--powder::after {
+    @include pseudo-element;
+    inset: 16px 17px;
+
+    width: 26px;
+    height: 29px;
+    margin: 0;
+    padding: 0;
+
+    background-image: url("../../icons/stack.svg#icon-powder");
+    background-repeat: no-repeat;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__item-text--food::after {
+    @include pseudo-element;
+    inset: 14px 15px;
+
+    width: 25px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+
+    background-image: url("../../icons/stack.svg#icon-food");
+    background-repeat: no-repeat;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__item-text--time::after {
+    @include pseudo-element;
+    inset: 15px 18px 14px 17px;
+
+    width: 26px;
+    height: 31px;
+    margin: 0;
+    padding: 0;
+
+    background-image: url("../../icons/stack.svg#icon-time");
+    background-repeat: no-repeat;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+      top: 0;
+      left: 0;
+    }
   }
 }
 
-.reasons__item-text--leaf::after {
-  content: "";
-  position: absolute;
-  top: 14px;
-  left: 15px;
+.reasons__item::before {
+  @include pseudo-element;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
 
-  width: 30px;
-  height: 32px;
-  background-image: url("../../icons/stack.svg#icon-leaf");
-  background-repeat: no-repeat;
+  font-family: $main-font;
+  font-size: 280px;
+  line-height: 280px;
 
-  @media (min-width: $breakpoint-tablet) {
-    top: 65px;
-    left: 24px;
-  }
-}
+  color: $accent-light-grey;
 
-.reasons__item-text--powder::after {
-  content: "";
-  position: absolute;
-  top: 16px;
-  left: 18px;
-
-  width: 26px;
-  height: 29px;
-
-  background-image: url("../../icons/stack.svg#icon-powder");
-  background-repeat: no-repeat;
-
-  @media (min-width: $breakpoint-tablet) {
-    top: 66px;
-    left: 27px;
-  }
-}
-
-.reasons__item-text--food::after {
-  content: "";
-  position: absolute;
-  top: 15px;
-  left: 18px;
-
-  width: 25px;
-  height: 30px;
-
-  background-image: url("../../icons/stack.svg#icon-food");
-  background-repeat: no-repeat;
-
-  @media (min-width: $breakpoint-tablet) {
-    top: 64px;
-    left: 27px;
-  }
-}
-
-.reasons__item-text--time::after {
-  content: "";
-  position: absolute;
-  top: 15px;
-  left: 18px;
-
-  width: 26px;
-  height: 31px;
-
-  background-image: url("../../icons/stack.svg#icon-time");
-  background-repeat: no-repeat;
-
-  @media (min-width: $breakpoint-tablet) {
-    top: 64px;
-    left: 27px;
+  @media screen and (min-width: $breakpoint-tablet) {
+    width: 80px;
+    height: 80px;
   }
 }

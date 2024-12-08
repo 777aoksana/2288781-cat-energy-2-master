@@ -82,14 +82,14 @@
   text-align: center;
   color: $white;
 
-  @media (min-width: $breakpoint-tablet) {
+  @media screen and (min-width: $breakpoint-tablet) {
     margin: 0;
     margin-left: 344px;
 
     text-align: left;
   }
 
-  @media (min-width: $breakpoint-desktop) {
+  @media screen and (min-width: $breakpoint-desktop) {
     margin: 0;
     margin-top: 129px;
 
