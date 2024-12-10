@@ -5,18 +5,18 @@
   grid-template-columns: 190px 24px;
   grid-template-rows: 1fr;
   gap: 65px;
+  align-items: center;
 
   width: 100%;
   min-width: 279px;
-  height: 66px;
+  min-height: 66px;
   margin: 0 auto;
   padding: 0 20px;
 
+  background-color: $white;
+
   @media (min-width: $breakpoint-tablet) {
-    display: flex;
-    flex-direction: rows;
-    align-items: center;
-    justify-content: space-between;
+    @include flex-container(row, center, space-between);
 
     min-height: 75px;
   }
@@ -30,14 +30,17 @@
 
 .main-header__logo {
   position: relative;
+  top: 0;
+  left: 0;
 
   display: flex;
   align-items: center;
   gap: 56px;
 
-  width: 190px;
-  height: 38px;
-  margin: 13px 0 14px;
+  min-width: 190px;
+  min-height: 66px;
+  margin: 0 auto;
+  padding: 13px 0 14px;
 
   cursor: pointer;
 
@@ -70,6 +73,10 @@
 }
 
 .main-header__logo-image {
+  position: absolute;
+  top: 12px;
+  left: 0;
+
   display: block;
 
   width: 33px;
@@ -105,3 +112,7 @@
   }
 }
 
+.main-header__main-nav {
+  width: 24px;
+  height: 24px;
+}

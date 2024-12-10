@@ -1,31 +1,71 @@
 .main-nav__toggle {
-  position: absolute;
-  top: 20px;
-  right: 102px;
-  z-index: 10;
+  position: relative;
+  top: 0;
+  left: 0;
+  bottom: 5px;
 
   display: block;
-
   width: 24px;
   height: 24px;
-  padding-block: 0;
-  padding-inline: 0;
+  margin: 0;
+  padding: 0;
 
-  mask-image: url("../../../icons/stack.svg#icon-menu-closed");
+  background-color: transparent;
   mask-repeat: no-repeat;
-  mask-position: center;
-  mask-size: contain;
-  background-color: $black;
-
   border: none;
-  outline: none;
-  transition: opacity 0.5s linear;
-  user-select: none;
-  overflow: hidden;
   cursor: pointer;
+  transition: opacity 0.5s linear;
 
-  &--no-js {
+  &::before {
+    @include pseudo-element;
+
+    background-color: $black;
+    mask-position: contain;
+    mask-repeat: no-repeat;
+  }
+
+  &--open::before {
+    top: 1px;
+
+    width: 24px;
+    height: 24px;
+
+    mask-image: url("../../../icons/stack.svg#icon-menu-opened");
+    mask-position: center;
+    mask-size: contain;
+  }
+
+  &--close::before {
+    top: 3px;
+    left: 3px;
+
+    width: 18px;
+    height: 18px;
+
+    mask-image: url("../../../icons/stack.svg#icon-menu-closed");
+    mask-position: center;
+    mask-size: contain;
+  }
+
+  &--nojs::before {
     display: none;
+  }
+
+  &:hover::before,
+  &:focus-visible::before {
+    background-color: $primary;
+    opacity: 0.8;
+    transition: all 1s ease-in-out;
+    transition-duration: 200ms;
+    transform: rotate(180deg);
+  }
+
+  &:active::before {
+    background-color: $primary;
+    opacity: 0.6;
+    transition: all 1s ease-in-out;
+    transition-duration: 200ms;
+    transform: rotate(180deg);
   }
 
   @media (min-width: $breakpoint-tablet) {
@@ -36,69 +76,65 @@
 .main-nav__wrapper {
   position: relative;
 
-  display: block;
+  min-width: 100%;
 
-  min-width: 20px;
-  margin-top: 1px;
-
-  @media (min-width: $breakpoint-tablet) {
-    min-width: 436px;
-    margin-top: 25px;
+  &--open {
+    position: absolute;
+    top: 66px;
+    right: 0;
+    left: 0;
   }
 
-  @media (min-width: $breakpoint-desktop) {
-    min-width: 475px;
-    margin-top: 55px;
+  &--close {
+    display: none;
+  }
+
+  &--nojs {
+    position: static;
   }
 }
 
 .main-nav__list {
-  position: absolute;
-  top: 65px;
-  left: -340px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  @include reset-list;
 
   width: 100%;
   min-width: 320px;
-  height: 264px;
+  padding: 0;
   margin: 0;
 
   background-color: $white;
 
+  @media screen and (min-width: $breakpoint-mobile) {
+    display: flex;
+    flex-flow: column wrap;
+  }
+
   @media (min-width: $breakpoint-tablet) {
     flex-flow: row wrap;
     justify-content: space-between;
+    gap: 33px;
   }
 
   @media (min-width: $breakpoint-desktop) {
-    flex-direction: row;
-    justify-content: space-between;
+    background-color: transparent;
   }
 }
 
 .main-nav__item {
-  border-top: 2px solid $extra-light-grey;
+  border-top: 1px solid $extra-light-grey;
   text-align: center;
 
-  @include reset-list;
-
   @media (min-width: $breakpoint-tablet) {
-    margin-left: 33px;
-    padding: 0 0 10px;
-
     border: none;
-  }
-
-  @media (min-width: $breakpoint-desktop) {
-    padding: 0 0 5px;
   }
 }
 
 .main-nav__link {
   position: relative;
+
+  display: block;
+
+  padding: 22px 0 24px;
 
   font-family: $main-font;
   font-size: 20px;
@@ -108,7 +144,8 @@
   text-decoration: none;
   text-transform: uppercase;
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     opacity: 0.6;
   }
 
@@ -117,7 +154,6 @@
   }
 
   @media (min-width: $breakpoint-tablet) {
-    font-weight: 400;
     font-size: 18px;
     line-height: 24px;
 
@@ -126,94 +162,20 @@
       border-bottom: 2px solid $primary;
       pointer-events: none;
     }
-
-    &--green {
-      border-bottom: 2px solid $primary;
-    }
   }
 
   @media (min-width: $breakpoint-desktop) {
-    &--white {
-      color: $white;
-    }
+    margin: 0;
 
     font-size: 20px;
     line-height: 30px;
 
+    &--desktop {
+      color: $white;
+    }
+
     &--active {
       border-bottom: 2px solid $white;
     }
-
-    &--active-green {
-      border-bottom: 2px solid $primary;
-    }
-  }
-}
-
-@media (max-width: $breakpoint-tablet) {
-  .main-nav--closed .main-nav__toggle {
-    mask-image: url("../../../icons/stack.svg#icon-menu-opened");
-    mask-repeat: no-repeat;
-    mask-position: center;
-    mask-size: contain;
-    background-color: $black;
-
-    border: none;
-    transition: opacity 0.5s linear;
-
-    &:hover {
-      background-color: $primary;
-      opacity: 0.8;
-      transition: all 1s ease-in-out;
-      transition-duration: 200ms;
-      transform: rotate(180deg);
-    }
-
-    &:active {
-      background-color: $primary;
-      opacity: 0.6;
-      transition: all 1s ease-in-out;
-      transition-duration: 200ms;
-      transform: rotate(180deg);
-    }
-  }
-
-  .main-nav--closed .main-nav__wrapper {
-    display: none;
-  }
-
-  .main-nav--no-js .main-nav__toggle {
-    mask-image: url("../../../icons/stack.svg#icon-menu-closed");
-    mask-repeat: no-repeat;
-    mask-position: center;
-    mask-size: contain;
-    background-color: $black;
-
-    border: none;
-    transition: opacity 0.5s linear;
-
-    &:hover {
-      background-color: $primary;
-      opacity: 0.8;
-      transition: all 1s ease-in-out;
-      transition-duration: 200ms;
-      transform: rotate(180deg);
-    }
-
-    &:active {
-      background-color: $primary;
-      opacity: 0.6;
-      transition: all 1s ease-in-out;
-      transition-duration: 200ms;
-      transform: rotate(180deg);
-    }
-  }
-
-  .main-nav--no-js .main-nav__wrapper {
-    position: static;
-
-    display: block;
-
-    min-height: 0;
   }
 }

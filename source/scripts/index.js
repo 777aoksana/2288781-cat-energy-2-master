@@ -2,79 +2,38 @@
 
 // меню
 
-const navMain = document.querySelector('.main-nav')
-  , navToggle = document.querySelector('.main-nav__toggle');
+const navMain = document.querySelector('.main-nav__wrapper');
+const buttonToggle = document.querySelector('.main-nav__toggle');
+const navToggle = document.querySelector('.main-nav__toggle');
 
-navMain.classList.remove('main-nav--no-js'),
-navToggle.classList.remove('main-nav__toggle--no-js'),
-navToggle.addEventListener('click', (() => {
-  navMain.classList.toggle('main-nav--closed');
-}
-));
+navMain.classList.remove('main-nav__wrapper--nojs');
+navMain.classList.remove('main-nav__wrapper--open');
+navMain.classList.add('main-nav__wrapper--close');
+buttonToggle.classList.add('main-nav__toggle--open');
+buttonToggle.classList.remove('main-nav__toggle--nojs');
+
+
+navToggle.addEventListener('click', () => {
+  if (navMain.classList.contains('main-nav__wrapper--close')) {
+    navMain.classList.remove('main-nav__wrapper--close');
+    navMain.classList.add('main-nav__wrapper--open');
+  } else {
+    navMain.classList.add('main-nav__wrapper--close');
+    navMain.classList.remove('main-nav__wrapper--open');
+  }
+});
+
+navToggle.addEventListener('click', () => {
+  if (navToggle.classList.contains('main-nav__toggle--open')) {
+    navToggle.classList.remove('main-nav__toggle--open');
+    navToggle.classList.add('main-nav__toggle--close');
+  } else {
+    navToggle.classList.add('main-nav__toggle--open');
+    navToggle.classList.remove('main-nav__toggle--close');
+  }
+});
 
 
 // ползунок
-document.documentElement.lang = 'ru';
-document.documentElement.classList.add('page');
-document.body.classList.add('page__body');
 
-const slider = document.querySelector('.slider');
-const curtain = slider.querySelector('.slider__curtain');
-const sliderStyles = getComputedStyle(slider);
-let curtainPlaceStart;
-let clientX;
 
-window.addEventListener('pointerup', stopTheCurtainShifting);
-curtain.addEventListener('pointerdown', startTheCurtainShifting);
-
-function startTheCurtainShifting (event) {
-  curtainPlaceStart = Number(sliderStyles.getPropertyValue('--curtain-place'));
-  clientX = event.clientX;
-  window.addEventListener('pointermove', shiftТheСurtain);
-}
-
-function shiftТheСurtain (event) {
-  const deltaX = event.clientX - clientX;
-  const cursorPlace = curtainPlaceStart + deltaX / slider.clientWidth;
-  const curtainPlace = Math.min(Math.max(cursorPlace, 0), 1);
-  slider.style.setProperty('--curtain-place', `${curtainPlace}`);
-}
-
-function stopTheCurtainShifting () {
-  window.removeEventListener('pointermove', shiftТheСurtain);
-}
-
-function check(radio) {
-  radio.checked = true;
-}
-
-function uncheck(radio) {
-  radio.checked = false;
-}
-
-///
-if (before && after && sliderPhoto && scale) {
-  before.addEventListener('click', () => {
-    scale.classList.add('slider__scale--right');
-    sliderPhoto.classList.add('slider__photo--after');
-  });
-
-  after.addEventListener('click', () => {
-    scale.classList.remove('slider__scale--right');
-    sliderPhoto.classList.remove('slider__photo--after');
-  });
-
-  scale.addEventListener('click', () => {
-    if (!scale.classList.contains('slider__scale--right')) {
-      scale.classList.add('slider__scale--right');
-      sliderPhoto.classList.add('slider__photo--after');
-      check(before);
-      uncheck(after);
-    } else {
-      scale.classList.remove('slider__scale--right');
-      sliderPhoto.classList.remove('slider__photo--after');
-      check(after);
-      uncheck(before);
-    }
-  });
-}

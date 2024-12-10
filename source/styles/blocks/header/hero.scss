@@ -1,51 +1,5 @@
 .hero {
-  @include container;
-
-  @media (min-width: $breakpoint-desktop) {
-    margin-bottom: 82px;
-  }
-}
-
-.hero__inner {
-  &::before {
-    @include pseudo-element;
-
-    top: 65px;
-    left: 0;
-    z-index: -1;
-
-    width: 100%;
-    height: 302px;
-
-    background-color: $primary-fon;
-    background-image: linear-gradient($primary-fon, $primary-fon), url("../../../images/index-page/cat-mobile@1x.jpg, ../../../../images/index-page/cat-mobile@1x.webp");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-
-    @media screen and (min-resolution: 2dppx) {
-      background-image: linear-gradient($primary-fon, $primary-fon), url("../../../images/index-page/cat-mobile@2x.jpg, ../../../../images/index-page/cat-mobile@2x.webp");
-    }
-
-    @media screen and (min-width: $breakpoint-tablet) {
-      display: none;
-    }
-
-    @media screen and (min-width: $breakpoint-desktop) {
-      position: relative;
-      top: -188px;
-      right: 0;
-      left: 50%;
-
-      display: block;
-
-      width: 50%;
-      height: 694px;
-
-      visibility: hidden;
-      z-index: -2;
-    }
-  }
+  position: relative;
 }
 
 .hero__wrapper {
@@ -64,6 +18,30 @@
   @media screen and (min-width: $breakpoint-desktop) {
     min-height: 694px;
     margin: 0;
+  }
+}
+
+.hero__inner {
+  @media screen and (max-width: $breakpoint-mobile) {
+    width: 100%;
+    min-width: 320px;
+    height: 100%;
+    min-height: 302px;
+    margin-bottom: 198px;
+
+    background-color: $primary-fon;
+    background-image: linear-gradient(to top, $primary-fon, $primary-fon), url("../../../images/index-page/cat-mobile@1x.jpg, ../../../../images/index-page/cat-mobile@1x.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient($primary-fon, $primary-fon), url("../../../images/index-page/cat-mobile@2x.jpg, ../../../../images/index-page/cat-mobile@2x.webp");
+    }
+
+    @media screen and (min-width: $breakpoint-tablet) {
+      display: none;
+    }
   }
 }
 

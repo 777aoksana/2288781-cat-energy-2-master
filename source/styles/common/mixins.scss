@@ -1,3 +1,4 @@
+// Подключение шрифтов
 @mixin font-face($font-family, $font-weight, $font-style, $font-src) {
   @font-face {
     font-family: $font-family;
@@ -8,6 +9,7 @@
   }
 }
 
+// Контейнер
 @mixin container {
   width: 100%;
   min-width: 320px;
@@ -39,18 +41,23 @@
   }
 }
 
+// Нет декоративности
 @mixin a($text-decoration: none) {
   text-decoration: $text-decoration;
 }
 
+// Список без маркеров
 @mixin reset-list($margin: 0, $padding: 0, $list-style: none) {
   margin: $margin;
   padding: $padding;
   list-style: $list-style;
 }
 
+// Базовая кнопка
 @mixin primary-button($color: $white, $bg-color: $primary) {
-  display: inline-block;
+  grid-area: button;
+
+  @include center-element;
 
   width: 100%;
   min-width: 280px;
@@ -65,15 +72,16 @@
   background-color: $bg-color;
   text-transform: uppercase;
   text-decoration: none;
-  text-align: center;
-  vertical-align: middle;
-  border: 0;
-  cursor: pointer;
+  border: none;
   transition: all 0.15s ease-in;
 
-  &:hover,
+  &:hover {
+    $bg-color: $hover-green;
+  }
+
   &:focus {
     $bg-color: $hover-green;
+    cursor: pointer;
   }
 
   &:active {
@@ -86,15 +94,20 @@
   }
 }
 
+// Серая кнопка
 @mixin grey-button {
   @include primary-button;
 
   $color: $accent-dark-grey;
   $bg-color: $accent-light-grey;
 
-  &:hover,
+  &:hover {
+    $bg-color: $extra-light-grey;
+  }
+
   &:focus {
     $bg-color: $extra-light-grey;
+    cursor: pointer;
   }
 
   &:active {
@@ -104,29 +117,28 @@
   }
 }
 
+// Псевдоэлемент
 @mixin pseudo-element($content: "", $position: absolute, $display: block) {
   content: $content;
   position: $position;
   display: $display;
 }
 
-// @mixin flex-container($flex-direction, $justify-content, $align-items) {
-//   display: flex;
-//   flex-direction: $flex-direction;
-//   justify-content: $justify-content;
-//   align-items: $align-items;
-// }
+// Флекс-контейнер
+@mixin flex-container($flex-direction, $justify-content, $align-items) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
 
 // .new-container {
 //   @include flex-container(row, center, flex-start);
 // }
 
-// @mixin center-element {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
-
-// .my-element {
-//   @include center-element;
-// }
+// Центрированный флекс-элемент
+@mixin center-element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
