@@ -22,7 +22,7 @@
 }
 
 .hero__inner {
-  @media screen and (max-width: $breakpoint-mobile) {
+  @media (min-width: $breakpoint-tablet) {
     width: 100%;
     min-width: 320px;
     height: 100%;

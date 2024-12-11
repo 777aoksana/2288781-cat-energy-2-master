@@ -106,11 +106,11 @@
 
   @media screen and (min-width: $breakpoint-mobile) {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: columns wrap;
   }
 
   @media (min-width: $breakpoint-tablet) {
-    flex-flow: row wrap;
+    flex-flow: rows wrap;
     justify-content: space-between;
     gap: 33px;
   }
@@ -131,6 +131,7 @@
 
 .main-nav__link {
   position: relative;
+  z-index: 1;
 
   display: block;
 
@@ -140,6 +141,7 @@
   font-size: 20px;
   line-height: 20px;
 
+  background-color: $white;
   color: $black;
   text-decoration: none;
   text-transform: uppercase;
