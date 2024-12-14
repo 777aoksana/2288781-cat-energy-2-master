@@ -13,7 +13,7 @@
 
   padding: 40px 0;
 
-  @media (min-width: $breakpoint-tablet) {
+  @media (min-width: $breakpoint-tablet-min) {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     gap: 20px;
@@ -21,7 +21,7 @@
     padding: 55px 0;
   }
 
-  @media (min-width: $breakpoint-desktop) {
+  @media (min-width: $breakpoint-desktop-min) {
     min-width: 1440px;
     padding: 66px 0;
   }
@@ -59,7 +59,7 @@
   width: 128px;
   height: 24px;
 
-  fill: blue;
+  fill: #0000ff;
 
   overflow: hidden;
 }

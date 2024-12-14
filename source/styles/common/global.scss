@@ -24,7 +24,9 @@ body {
   display: flex;
 
   min-width: 320px;
+  width: 100%;
   min-height: 100%;
+  margin: 0;
 
   font-family: "Arial", sans-serif;
   font-size: 14px;
@@ -35,6 +37,9 @@ body {
 
 img {
   display: block;
+
   max-width: 100%;
   height: auto;
+
+  object-fit: contain;
 }

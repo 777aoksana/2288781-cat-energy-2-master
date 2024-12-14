@@ -3,13 +3,13 @@
 
   padding: 0 20px 49px;
 
-  @media (min-width: $breakpoint-tablet) {
+  @media (min-width: $breakpoint-tablet-min) {
     padding: 45px 30px 47px;
 
     border-bottom: 1px solid $extra-light-grey;
   }
 
-  @media (min-width: $breakpoint-desktop) {
+  @media (min-width: $breakpoint-desktop-min) {
     padding: 71px 110px 69px;
 
     border: none;
@@ -24,7 +24,7 @@
   font-size: 36px;
   line-height: 40px;
 
-  @media (min-width: $breakpoint-tablet) {
+  @media (min-width: $breakpoint-tablet-min) {
     margin-bottom: 32px;
 
     font-size: 60px;
@@ -43,7 +43,7 @@
   list-style-type: none;
   color: $accent-dark-grey;
 
-  @media (min-width: $breakpoint-tablet) {
+  @media (min-width: $breakpoint-tablet-min) {
     flex-flow: row wrap;
     gap: 37px 137px;
 
@@ -51,7 +51,7 @@
     line-height: 24px;
   }
 
-  @media (min-width: $breakpoint-desktop) {
+  @media (min-width: $breakpoint-desktop-min) {
     column-gap: 77px;
   }
 }
@@ -61,7 +61,7 @@
 
   min-height: 60px;
 
-  @media (min-width: $breakpoint-tablet) {
+  @media (min-width: $breakpoint-tablet-min) {
     flex-basis: 35%;
 
     counter-increment: chapter 1;
@@ -81,7 +81,7 @@
     }
   }
 
-  @media (min-width: $breakpoint-desktop) {
+  @media (min-width: $breakpoint-desktop-min) {
     flex-basis: 20%;
   }
 }
@@ -99,7 +99,7 @@
 
     background-color: $primary;
 
-    @media (min-width: $breakpoint-tablet) {
+    @media (min-width: $breakpoint-tablet-min) {
       left: 0;
       top: 40px;
 
@@ -108,7 +108,7 @@
     }
   }
 
-  @media (min-width: $breakpoint-desktop) {
+  @media (min-width: $breakpoint-desktop-min) {
     min-height: 280px;
     margin: 0;
     padding: 151px 0 57px;
@@ -126,7 +126,7 @@
   background-image: url("../../icons/stack.svg#icon-leaf");
   background-repeat: no-repeat;
 
-  @media (min-width: $breakpoint-tablet) {
+  @media (min-width: $breakpoint-tablet-min) {
     top: 65px;
     left: 24px;
   }
@@ -144,7 +144,7 @@
   background-image: url("../../icons/stack.svg#icon-powder");
   background-repeat: no-repeat;
 
-  @media (min-width: $breakpoint-tablet) {
+  @media (min-width: $breakpoint-tablet-min) {
     top: 66px;
     left: 27px;
   }
@@ -162,7 +162,7 @@
   background-image: url("../../icons/stack.svg#icon-food");
   background-repeat: no-repeat;
 
-  @media (min-width: $breakpoint-tablet) {
+  @media (min-width: $breakpoint-tablet-min) {
     top: 64px;
     left: 27px;
   }
@@ -180,7 +180,7 @@
   background-image: url("../../icons/stack.svg#icon-time");
   background-repeat: no-repeat;
 
-  @media (min-width: $breakpoint-tablet) {
+  @media (min-width: $breakpoint-tablet-min) {
     top: 64px;
     left: 27px;
   }

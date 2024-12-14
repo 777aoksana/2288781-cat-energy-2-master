@@ -1,5 +1,9 @@
 /* здесь используйте глобальные переменные */
 
+// Подключение шрифтов
+$base-font: "Lato", sans-serif;
+$main-font: "Oswald", sans-serif;
+
 // Основные цвета
 $white: #ffffff;
 $black: #000000;
@@ -21,9 +25,12 @@ $hover-green: #5eaa2f;
 $active: #6b6b6b;
 $primary-fon: rgba($primary, 0.85);
 
-// Брейкпоинты
-$breakpoint-mobile: 320px;
-$breakpoint-tablet: 780px;
-$breakpoint-desktop: 1440px;
+$light-blue: #e0e0fd; //просто фон под рисунков
 
-$retina: (min-resolution: 144dpi), (min-resolution: 1.5dppx);
+// Брейкпоинты
+$breakpoint-mobile-min: 320px;
+$breakpoint-mobile-max: 767px;
+$breakpoint-tablet-min: 768px;
+$breakpoint-tablet-max: 1439px;
+$breakpoint-desktop-min: 1440px;
+$breakpoint-desktop-max: 1440px;

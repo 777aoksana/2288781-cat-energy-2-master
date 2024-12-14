@@ -9,35 +9,39 @@
 }
 
 @mixin container {
+  min-width: $breakpoint-mobile-min;
   width: 100%;
-  min-width: 320px;
   margin: 0 auto;
   padding: 0 20px;
 
-  @media (min-width: $breakpoint-tablet) {
-    min-width: 768px;
+  @media (min-width: $breakpoint-tablet-min) {
+    min-width: $breakpoint-tablet-min;
     padding: 0 30px;
   }
 
-  @media (min-width: $breakpoint-desktop) {
-    max-width: 1440px;
+  @media (min-width: $breakpoint-desktop-min) {
+    min-width: $breakpoint-desktop-min;
+    max-width: $breakpoint-desktop-max;
     padding: 0 110px;
   }
 }
 
-@mixin a {
-  display: inline-block;
+@mixin reset-link {
+  display: block;
 
-  vertical-align: top;
-  text-transform: uppercase;
   text-decoration: none;
-  color: $black;
 }
 
 @mixin reset-list($margin: 0, $padding: 0, $list-style: none) {
   margin: $margin;
   padding: $padding;
   list-style: $list-style;
+}
+
+@mixin pseudo-element($content: "", $position: absolute, $display: block) {
+  content: $content;
+  position: $position;
+  display: $display;
 }
 
 @mixin primary-button($color: $white, $bg-color: $primary) {
@@ -64,6 +68,7 @@
   &:hover,
   &:focus {
     $bg-color: $hover-green;
+    opacity: 0.6;
   }
 
   &:active {
@@ -71,7 +76,7 @@
     opacity: 0.3;
   }
 
-  @media (min-width: $breakpoint-tablet) {
+  @media (min-width: $breakpoint-tablet-min) {
     padding: 14px 0;
   }
 }
@@ -94,14 +99,15 @@
   }
 }
 
-@mixin pseudo-element($content: "", $position: absolute, $display: block) {
-  content: $content;
-  position: $position;
-  display: $display;
+@mixin reset-button {
+  padding: 0;
+
+  font: inherit;
+  color: inherit;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
 }
 
-@mixin retina {
-  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    @content;
-  }
-}

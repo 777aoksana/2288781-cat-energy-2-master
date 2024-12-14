@@ -1,17 +1,33 @@
 .page {
   height: 100%;
-
-  color: $accent-dark-grey;
-  background-color: $accent-light-grey;
 }
 
 .page__body {
+  position: relative;
+
   display: flex;
   flex-direction: column;
 
+  width: 100%;
   min-height: 100%;
 
   overflow-x: hidden;
+
+  &--index {
+    z-index: 0;
+
+    @media (min-width: $breakpoint-desktop-min) {
+      &::before {
+        @include pseudo-element;
+        inset: 0 0 0 calc(50% + 40px);
+        z-index: -2;
+
+        height: 694px;
+
+        background: linear-gradient(to right, $primary-fon 100px, $primary-fon 100px), image-set(url("../../../images/index-page/cat-desktop@1x.jpg") 1x type("image/jpeg"), url("../../cat-desktop@1x.webp") 1x type("image/webp"), url("../../../images/index-page/cat-desktop@2x.jpg") 2x type("image/jpeg"), url("../../cat-desktop@2x.webp") 2x type("image/webp"));
+      }
+    }
+  }
 }
 
 .page__headline {
@@ -24,7 +40,7 @@
 
   text-align: left;
 
-  @media (min-width: $breakpoint-tablet) {
+  @media (min-width: $breakpoint-tablet-min) {
     font-size: 60px;
     line-height: 60px;
   }
@@ -36,40 +52,13 @@
   left: 0;
   right: 0;
 
+  margin: 0;
+  padding: 0;
+
   flex-grow: 0;
   flex-shrink: 0;
-
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .page__main {
   flex-grow: 1;
-}
-
-.page__main-header {
-  position: relative;
-
-  @media (min-width: $breakpoint-desktop) {
-    &--index {
-      z-index: 0;
-
-      &::before {
-        @include pseudo-element;
-        inset: 0 0 0 calc(50% + 40px);
-
-        background-color: $primary;
-        background-image: url("../../../images/index-page/cat-desktop@1x.jpg, ../../cat-desktop@1x.webp");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: right center, center;
-        z-index: -1;
-
-        // @include retina {
-        //   background-image: url("../../../images/index-page/cat-mobile@2x.jpg, ../../../images/index-page/cat-desktop@2x.webp");
-        // }
-      }
-    }
-  }
 }

@@ -6,7 +6,7 @@
 
   padding: 40px 20px;
 
-  @media (min-width: $breakpoint-tablet) {
+  @media (min-width: $breakpoint-tablet-min) {
     flex-direction: row;
     align-items: center;
 
@@ -14,7 +14,7 @@
     padding: 55px 30px;
   }
 
-  @media (min-width: $breakpoint-desktop) {
+  @media (min-width: $breakpoint-desktop-min) {
     margin: 0;
     padding: 66px 110px;
   }
@@ -51,12 +51,12 @@
 
     width: 280px;
 
-    @media (min-width: $breakpoint-tablet) {
+    @media (min-width: $breakpoint-tablet-min) {
       content: none;
     }
   }
 
-  @media (min-width: $breakpoint-tablet) {
+  @media (min-width: $breakpoint-tablet-min) {
     padding: 0;
   }
 }
@@ -88,12 +88,12 @@
 
     background-color: currentColor;
 
-    @media (min-width: $breakpoint-tablet) {
+    @media (min-width: $breakpoint-tablet-min) {
       content: none;
     }
   }
 
-  @media (min-width: $breakpoint-tablet) {
+  @media (min-width: $breakpoint-tablet-min) {
     padding: 8px 0 7px;
 
     border: none;
@@ -149,7 +149,7 @@
   background-color: $very-dark-grey;
   overflow: visible;
 
-  @media (min-width: $breakpoint-tablet) {
+  @media (min-width: $breakpoint-tablet-min) {
     gap: 23px;
 
     width: auto;
@@ -167,7 +167,7 @@
 
   text-decoration: none;
 
-  @media (min-width: $breakpoint-tablet) {
+  @media (min-width: $breakpoint-tablet-min) {
     max-width: 168px;
     padding: 0;
   }

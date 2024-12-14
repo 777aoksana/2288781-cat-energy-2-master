@@ -2,85 +2,87 @@
 <html class="page" lang="ru">
 
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Учебный проект «Кэт энерджи» - главная страница магазина «Кэт энерджи»</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="favicon.ico"><!-- 32x32 -->
-  <link rel="icon" href="../favicons/favicon.svg" type="image/svg+xml" />
-  <link rel="icon" href="android-chrome-512.png" sizes="512x512" />
-  <link rel="icon" href="apple-touch-icon-180.png" />
-  <link rel="icon" href="152.png" sizes="152x152" />
-  <link rel="icon" href="32.png" sizes="32x32" />
-  <link rel="icon" href="16.png" sizes="16x16" />
-  <link rel="manifest" href="manifest.webmanifest" />
-  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="icon" href="../favicons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="android-chrome-512.png" sizes="512x512">
+  <link rel="icon" href="apple-touch-icon-180.png">
+  <link rel="icon" href="152.png" sizes="152x152">
+  <link rel="icon" href="32.png" sizes="32x32">
+  <link rel="icon" href="16.png" sizes="16x16">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles/styles.css">
   <script src="scripts/index.js" defer="defer"></script>
 </head>
 
-<body class="page__body">
+<body class="page__body page__body--index nojs">
 
   <h1 class="page__headline visually-hidden">Онлайн-магазин «Кэт энерджи» - главная страница</h1>
 
-  <header class="page__main-header page__main-header--index main-header">
+  <header class="page__header header">
 
-    <div class="main-header__wrapper">
+    <div class="header__container container">
 
-      <a class="main-header__logo" href="./" aria-current="page" aria-label="Активная главная страница">
+      <a class="header__logo" href="./" aria-current="page" aria-label="Активная главная страница">
 
         <picture>
-          <source media="(min-width: 1440px)" type="image/svg+xml" width="70" height="59" srcset="images/logo/header-logo/logotype-desktop.svg" />
-          <source media="(min-width: 780px)" type="image/svg+xml" width="60" height="50" srcset="images/logo/header-logo/logotype-tablet.svg" />
-          <img class="main-header__logo-image" width="33" height="38" src="images/logo/header-logo/logotype-mobile.svg" alt="Товарный знак логотипа магазина «Кэт энерджи»." />
+          <source media="(min-width: 1440px)" type="image/svg+xml" width="70" height="59" srcset="images/logo/header-logo/logotype-desktop.svg">
+          <source media="(min-width: 780px)" type="image/svg+xml" width="60" height="50" srcset="images/logo/header-logo/logotype-tablet.svg">
+          <img class="header__logo-image" width="33" height="38" src="images/logo/header-logo/logotype-mobile.svg" alt="Товарный знак логотипа магазина «Кэт энерджи».">
         </picture>
 
         <picture>
-          <source media="(min-width: 1440px)" type="image/svg+xml" width="118" height="21" srcset="images/logo/header-logo/logotext-desktop.svg" />
-          <source media="(min-width: 780px)" type="image/svg+xml" width="101" height="18" srcset="images/logo/header-logo/logotext-tablet.svg" />
-          <img class="main-header__logo-text" width="101" height="18" src="images/logo/header-logo/logotext-mobile.svg" alt="Товарный знак текстового логотипа магазина «Кэт энерджи»." />
+          <source media="(min-width: 1440px)" type="image/svg+xml" width="118" height="21" srcset="images/logo/header-logo/logotext-desktop.svg">
+          <source media="(min-width: 780px)" type="image/svg+xml" width="101" height="18" srcset="images/logo/header-logo/logotext-tablet.svg">
+          <img class="header__logo-text" width="101" height="18" src="images/logo/header-logo/logotext-mobile.svg" alt="Товарный знак текстового логотипа магазина «Кэт энерджи».">
         </picture>
 
       </a>
 
-      <nav class="main-header__navigation navigation navigation--opened navigation--no-js">
-
-        <button class="navigation__toggle toggle" type="button">
-          <span class="visually-hidden">Открыть/закрыть меню</span>
-          <div class="toggle__icon">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </button>
-
-        <ul class="navigation__list navigation__list--index">
-          <li class="navigation__item">
-            <a class="navigation__link navigation__link--current" href="./">Главная</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="form.html">Подбор программы</a>
-          </li>
-        </ul>
-
-      </nav>
+      <button class="header__toggle header__toggle--closed button-toggle" type="button">
+        <span class="visually-hidden">Открыть/Скрыть главное меню</span>
+      </button>
 
     </div>
+
+    <nav class="header__main-nav main-nav main-nav--closed">
+      <ul class="main-nav__list main-nav__list--white">
+        <li class="main-nav__item">
+          <a class="main-nav__link main-nav__link--current" href="./">Главная</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="form.html">Подбор программы</a>
+        </li>
+      </ul>
+
+    </nav>
+
+  </header>
+
+  <main class="page__main main-index">
 
     <section class="main-header__hero hero">
 
       <h2 class="visually-hidden">Подбор программы</h2>
 
-      <div class="hero__wrapper">
+      <div class="hero__content">
 
-        <div class="hero__content">
+        <div class="hero__wrapper">
 
           <p class="hero__intro">Функциональное питание для котов</p>
 
           <p class="hero__slogan">Занялся собой? Займись котом!</p>
 
-          <a class="promo__link primary-button" href="form.html">Подобрать программу</a>
+        </div>
+
+        <div class="hero__container container">
+
+          <a class="hero__link button" href="form.html">Подобрать программу</a>
 
           <picture>
             <source media="(min-width: 1440px)" width="552" height="499" type="image/webp" srcset="images/index-glass/hero-glass-desktop@1x.webp 1x, images/index-glass/hero-glass-desktop@2x.webp 2x" />
@@ -97,11 +99,7 @@
 
     </section>
 
-  </header>
-
-  <main class="page__main main-index">
-
-    <section class="programs">
+    <!-- <section class="programs">
 
       <div class="programs__wrapper">
 
@@ -131,9 +129,9 @@
 
       </div>
 
-    </section>
+    </section> -->
 
-    <section class="reasons">
+    <!-- <section class="reasons">
 
       <div class="reasons__wrapper">
 
@@ -156,9 +154,9 @@
 
       </div>
 
-    </section>
+    </section> -->
 
-    <section class="stats">
+    <!-- <section class="stats">
 
       <div class="stats__wrapper">
 
@@ -252,17 +250,19 @@
 
       </section>
 
-    </section>
+    </section> -->
 
   </main>
 
   <footer class="page__main-footer main-footer">
 
-    <div class="main-footer__container container">
+    Подвал
+
+    <!-- <div class="main-footer__container container">
 
       <a class="main-footer__footer-logotext" href="./" aria-current="page" aria-label="Активная главная страница">
         <span class="visually-hidden">Главная страница онлайн-магазина «Кэт энерджи»</span>
-        <img class="main-footer__footer-logotext-image" type="image/svg+xml" width="128" height="24" src="../images/logo/footer-logo/footer-logotext.svg" alt="Товарный знак текстового логотипа онлайн-магазина «Кэт энерджи»." />
+        <img class="main-footer__footer-logotext-image" type="image/svg+xml" width="128" height="24" src="../images/logo/footer-logo/footer-logotext.svg" alt="Товарный знак текстового логотипа онлайн-магазина «Кэт энерджи».">
       </a>
 
       <ul class="main-footer__list">
@@ -290,9 +290,11 @@
         </div>
       </a>
 
-    </div>
+    </div> -->
 
   </footer>
+
+  <script src="./scripts/index.js"></script>
 
 </body>
 

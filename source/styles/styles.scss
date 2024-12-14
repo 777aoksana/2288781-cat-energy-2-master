@@ -1,24 +1,24 @@
 /* GLOBAL */
 @import "./common/variables.scss";
 @import "./common/mixins.scss";
-@import "./common/global.scss";
-@import "./common/animation.scss";
 @import "./common/fonts.scss";
+@import "./common/visually-hidden.scss";
+@import "./common/global.scss";
 
 /* BLOCKS */
 //Общие блоки
-@import "./blocks/common-blocks/visually-hidden.scss";
 @import "./blocks/common-blocks/page.scss";
 @import "./blocks/common-blocks/button.scss";
+@import "./blocks/common-blocks/container.scss";
 
 //Шапка
-@import "./blocks/header/main-header.scss";
-@import "./blocks/header/navigation.scss";
-@import "./blocks/header/toggle.scss";
-@import "./blocks/header/hero.scss";
+@import "./blocks/header/header.scss";
+@import "./blocks/header/main-nav.scss";
+@import "./blocks/header/burger-toggle.scss";
 
 //Главная страница
 @import "./blocks/main-index/main-index.scss";
+@import "./blocks/main-index/hero.scss";
 @import "./blocks/main-index/programs.scss";
 @import "./blocks/main-index/reasons.scss";
 @import "./blocks/main-index/stats.scss";
