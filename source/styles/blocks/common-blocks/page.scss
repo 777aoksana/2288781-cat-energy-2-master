@@ -32,11 +32,13 @@
       background-image: linear-gradient(to top, $primary-fon, $primary-fon), image-set(url("../../../images/index-page/cat-mobile@1x.jpg") type("image/jpg") 1x, url("../../../images/index-page/cat-mobile@1x.webp") type("image/webp") 1x);
       background-repeat: no-repeat;
       background-size: auto 302px;
-      background-position-x: top;
+      background-position: top left;
+    }
+  }
 
-      @media (min-width: $breakpoint-tablet) {
-        display: none;
-      }
+  @media (min-width: $breakpoint-tablet) {
+    &::before {
+      display: none;
     }
   }
 
@@ -47,6 +49,8 @@
       left: 50%;
       z-index: -1;
 
+      display: grid;
+
       width: 50%;
       height: 694px;
 
@@ -54,7 +58,7 @@
       background-image: linear-gradient(to top, $primary-fon, $primary-fon), image-set(url("../../../images/index-page/cat-desktop@1x.jpg") type("image/jpg") 1x, url("../../../images/index-page/cat-desktop@1x.webp") type("image/webp") 1x);
       background-repeat: no-repeat;
       background-size: auto 694px;
-      background-position-x: top right;
+      background-position: top right;
 
       @media screen and (min-resolution: 2dppx) {
         background-image: url("../../../images/index-page/cat-desktop@2x.jpg, ../../../images/index-page/cat-desktop@2x.webp");
