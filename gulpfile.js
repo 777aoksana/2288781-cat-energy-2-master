@@ -32,6 +32,7 @@ const PATHS_TO_STATIC = [
 ];
 let isDevelopment = true;
 
+
 export function processMarkup () {
   return src(`${PATH_TO_SOURCE}**/*.html`)
     .pipe(htmlmin({ collapseWhitespace: !isDevelopment }))

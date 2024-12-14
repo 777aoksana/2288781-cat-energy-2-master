@@ -78,7 +78,6 @@
   font-weight: 400;
 
   text-align: left;
-  transform: scale(0);
 
   @media (min-width: $breakpoint-tablet) {
     font-size: 60px;
@@ -98,10 +97,4 @@
 
 .page__main {
   flex-grow: 1;
-}
-
-.page__main-header--inner .page__body::before {
-  @media (min-width: $breakpoint-desktop) {
-    display: none;
-  }
 }

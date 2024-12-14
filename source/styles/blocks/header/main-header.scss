@@ -5,8 +5,7 @@
 
   background-color: $white;
   color: $black;
-  transition: all 0.5s;
-  transform: translateY(0%);
+  transition: all 0.5s translateY(0);
   zoom: 1;
 
   @media (min-width: $breakpoint-tablet) {
@@ -112,3 +111,223 @@
 .main-header__main-nav {
   position: relative;
 }
+
+
+.navigation {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  min-width: 100%;
+  margin: 7px 0;
+  padding: 4px 0;
+
+  border: none;
+  background-color: $black;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  will-change: background-color, color;
+}
+
+.main-header__toggle::after {
+  @include pseudo-element;
+
+  top: 0;
+  left: 0;
+  bottom: 5px;
+
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+
+  background-color: transparent;
+  mask-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s linear;
+
+  &::before {
+    @include pseudo-element;
+
+    background-color: $black;
+    mask-position: contain;
+    mask-repeat: no-repeat;
+  }
+
+  &--open::before {
+    top: 1px;
+
+    width: 24px;
+    height: 24px;
+
+    mask-image: url("../../../icons/stack.svg#icon-menu-opened");
+    mask-position: center;
+    mask-size: contain;
+  }
+
+  &--close::before {
+    top: 3px;
+    left: 3px;
+
+    width: 18px;
+    height: 18px;
+
+    mask-image: url("../../../icons/stack.svg#icon-menu-closed");
+    mask-position: center;
+    mask-size: contain;
+  }
+
+  &--nojs::before {
+    display: none;
+  }
+
+  &:hover::before,
+  &:focus-visible::before {
+    background-color: $primary;
+    opacity: 0.8;
+    transition: all 1s ease-in-out;
+    transition-duration: 200ms;
+    transform: rotate(180deg);
+  }
+
+  &:active::before {
+    background-color: $primary;
+    opacity: 0.6;
+    transition: all 1s ease-in-out;
+    transition-duration: 200ms;
+    transform: rotate(180deg);
+  }
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    background-color: $white;
+    color: $black;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    display: none;
+  }
+}
+
+// .navigation__list {
+//   @include reset-list;
+
+//   top: 66px;
+//   left: 0;
+//   z-index: 1000;
+
+//   width: 100%;
+//   min-width: 320px;
+//   padding: 0;
+//   margin: 0;
+
+//   background-color: $white;
+//   transform: translateY(-10px);
+//   visibility: hidden;
+//   opacity: 0;
+//   transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+//   will-change: opacity, transform, visibility;
+
+//   @media screen and (min-width: $breakpoint-mobile) {
+//     display: flex;
+//     flex-flow: columns wrap;
+//   }
+
+//   @media (min-width: $breakpoint-tablet) {
+//     flex-flow: rows wrap;
+//     justify-content: space-between;
+//     gap: 33px;
+//   }
+
+//   @media (min-width: $breakpoint-desktop) {
+//     background-color: transparent;
+//   }
+// }
+
+// .navigation__item {
+//   border-top: 1px solid $extra-light-grey;
+//   text-align: center;
+
+//   @media (min-width: $breakpoint-tablet) {
+//     border: none;
+//   }
+// }
+
+// .navigation__link {
+//   position: relative;
+//   z-index: 1;
+
+//   display: block;
+
+//   padding: 22px 0 24px;
+
+//   font-family: $main-font;
+//   font-size: 20px;
+//   line-height: 20px;
+
+//   background-color: $white;
+//   color: $black;
+//   text-decoration: none;
+//   text-transform: uppercase;
+//   transition: background-color 0.15s;
+//   will-change: background-color;
+
+//   &:hover,
+//   &:focus-visible {
+//     opacity: 0.6;
+//   }
+
+//   &:active {
+//     opacity: 0.3;
+//   }
+
+//   @media (min-width: $breakpoint-tablet) {
+//     font-size: 18px;
+//     line-height: 24px;
+
+//     &--active {
+//       padding-bottom: 4px;
+//       border-bottom: 2px solid $primary;
+//       pointer-events: none;
+//     }
+//   }
+
+//   @media (min-width: $breakpoint-desktop) {
+//     margin: 0;
+
+//     font-size: 20px;
+//     line-height: 30px;
+
+//     &--desktop {
+//       color: $white;
+//     }
+
+//     &--active {
+//       border-bottom: 2px solid $white;
+//     }
+//   }
+// }
+
+// .navigation.open .navigation-toggle li {
+//   transform: translateY(10px);
+//   opacity: 0;
+//   animation: fadeIn 0.3s ease forwards;
+// }
+
+// @keyframes fadeIn {
+//   to {
+//     transform: translateY(0);
+//     opacity: 1;
+//   }
+// }
+
+// @keyframes fadeIn {
+//   to {
+//     transform: translateY(0);
+//     opacity: 1;
+//   }
+// }
