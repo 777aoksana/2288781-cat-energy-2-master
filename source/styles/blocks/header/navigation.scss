@@ -1,9 +1,28 @@
-.main-nav__toggle {
+.navigation {
   position: relative;
+
+  display: flex;
+  align-items: center;
+
+  min-width: 100%;
+  margin: 7px 0;
+  padding: 4px 0;
+
+  border: none;
+  background-color: $black;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  will-change: background-color, color;
+}
+
+.main-header__toggle::after {
+  @include pseudo-element;
+
   top: 0;
   left: 0;
+  bottom: 5px;
 
-  display: block;
+  display: inline-block;
   width: 24px;
   height: 24px;
   margin: 0;
@@ -13,7 +32,7 @@
   mask-repeat: no-repeat;
   border: none;
   cursor: pointer;
-  transition: opacity 0.5s linear;
+  transition: 0.5s linear;
 
   &::before {
     @include pseudo-element;
@@ -24,6 +43,8 @@
   }
 
   &--open::before {
+    top: 1px;
+
     width: 24px;
     height: 24px;
 
@@ -49,7 +70,7 @@
   }
 
   &:hover::before,
-  &:focus::before {
+  &:focus-visible::before {
     background-color: $primary;
     opacity: 0.8;
     transition: all 1s ease-in-out;
@@ -65,34 +86,24 @@
     transform: rotate(180deg);
   }
 
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    background-color: $white;
+    color: $black;
+  }
+
   @media (min-width: $breakpoint-tablet) {
     display: none;
   }
 }
 
-.main-nav__wrapper {
-  position: relative;
-
-  min-width: 100%;
-
-  &--open {
-    position: absolute;
-    top: 66px;
-    right: 0;
-    left: 0;
-  }
-
-  &--close {
-    display: none;
-  }
-
-  &--nojs {
-    position: static;
-  }
-}
-
-.main-nav__list {
+.navigation__list {
   @include reset-list;
+
+  top: 66px;
+  left: 0;
+  z-index: 1000;
 
   width: 100%;
   min-width: 320px;
@@ -100,8 +111,13 @@
   margin: 0;
 
   background-color: $white;
+  transform: translateY(-10px);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  will-change: opacity, transform, visibility;
 
-  @media (min-width: $breakpoint-mobile) {
+  @media screen and (min-width: $breakpoint-mobile) {
     display: flex;
     flex-flow: columns wrap;
   }
@@ -117,7 +133,7 @@
   }
 }
 
-.main-nav__item {
+.navigation__item {
   border-top: 1px solid $extra-light-grey;
   text-align: center;
 
@@ -126,7 +142,7 @@
   }
 }
 
-.main-nav__link {
+.navigation__link {
   position: relative;
   z-index: 1;
 
@@ -142,6 +158,8 @@
   color: $black;
   text-decoration: none;
   text-transform: uppercase;
+  transition: background-color 0.15s;
+  will-change: background-color;
 
   &:hover,
   &:focus-visible {
@@ -176,5 +194,25 @@
     &--active {
       border-bottom: 2px solid $white;
     }
+  }
+}
+
+.navigation.open .navigation-toggle li {
+  transform: translateY(10px);
+  opacity: 0;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

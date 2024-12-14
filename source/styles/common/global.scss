@@ -21,16 +21,14 @@ body {
 body {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  place-content: flex-start space-between;
 
-  width: 100%;
   min-width: 320px;
   min-height: 100%;
   margin: 0;
   padding: 0;
 
-  font-family: "Arial", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
@@ -47,4 +45,12 @@ picture {
   max-width: 100%;
   height: auto;
   object-fit: contain;
+}
+
+a {
+  @include a;
+}
+
+li {
+  @include reset-list;
 }

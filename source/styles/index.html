@@ -21,49 +21,53 @@
 
   <h1 class="page__headline visually-hidden">Онлайн-магазин «Кэт энерджи» - главная страница</h1>
 
-  <header class="page__main-header page__main-header--inner main-header">
+  <header class="page__main-header main-header">
 
-    <a class="main-header__logo" href="index.html" aria-label="Активная главная страница">
+    <div class="main-header__wrapper">
 
-      <picture>
-        <source media="(min-width: 1440px)" type="image/svg+xml" width="70" height="59" srcset="images/logo/header-logo/logotype-desktop.svg">
-        <source media="(min-width: 780px)" type="image/svg+xml" width="60" height="50" srcset="images/logo/header-logo/logotype-tablet.svg">
-        <img class="main-header__logo-image" width="33" height="38" src="images/logo/header-logo/logotype-mobile.svg" alt="Товарный знак логотипа магазина «Кэт энерджи».">
-      </picture>
+      <a class="main-header__logo" href="index.html" aria-label="Активная главная страница">
 
-      <picture>
-        <source media="(min-width: 1440px)" type="image/svg+xml" width="118" height="21" srcset="images/logo/header-logo/logotext-desktop.svg">
-        <source media="(min-width: 780px)" type="image/svg+xml" width="101" height="18" srcset="images/logo/header-logo/logotext-tablet.svg">
-        <img class="main-header__logo-text" width="101" height="18" src="images/logo/header-logo/logotext-mobile.svg" alt="Товарный знак текстового логотипа магазина «Кэт энерджи».">
-      </picture>
+        <picture>
+          <source media="(min-width: 1440px)" type="image/svg+xml" width="70" height="59" srcset="images/logo/header-logo/logotype-desktop.svg">
+          <source media="(min-width: 780px)" type="image/svg+xml" width="60" height="50" srcset="images/logo/header-logo/logotype-tablet.svg">
+          <img class="main-header__logo-image" width="33" height="38" src="images/logo/header-logo/logotype-mobile.svg" alt="Товарный знак логотипа магазина «Кэт энерджи».">
+        </picture>
 
-    </a>
+        <picture>
+          <source media="(min-width: 1440px)" type="image/svg+xml" width="118" height="21" srcset="images/logo/header-logo/logotext-desktop.svg">
+          <source media="(min-width: 780px)" type="image/svg+xml" width="101" height="18" srcset="images/logo/header-logo/logotext-tablet.svg">
+          <img class="main-header__logo-text" width="101" height="18" src="images/logo/header-logo/logotext-mobile.svg" alt="Товарный знак текстового логотипа магазина «Кэт энерджи».">
+        </picture>
 
-    <nav class="main-header__main-nav main-nav">
+      </a>
 
-      <button class="main-nav__toggle main-nav__toggle--no-js" type="button" aria-label="Открыть/скрыть меню"></button>
+      <nav class="main-header__main-nav main-nav">
 
-      <div class="main-nav__wrapper main-nav__wrapper--open main-nav__wrapper--nojs">
+        <button class="main-nav__toggle main-nav__toggle--no-js" type="button" aria-label="Открыть/скрыть меню"></button>
 
-        <ul class="main-nav__list">
+        <div class="main-nav__wrapper main-nav__wrapper--open main-nav__wrapper--nojs">
 
-          <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--desktop main-nav__link--active" href="./" aria-current="page">Главная</a>
-          </li>
+          <ul class="main-nav__list">
 
-          <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--desktop" href="catalog.html">Каталог продукции</a>
-          </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--desktop main-nav__link--active" href="./" aria-current="page">Главная</a>
+            </li>
 
-          <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--desktop" href="form.html">Подбор программы</a>
-          </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--desktop" href="catalog.html">Каталог продукции</a>
+            </li>
 
-        </ul>
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--desktop" href="form.html">Подбор программы</a>
+            </li>
 
-      </div>
+          </ul>
 
-    </nav>
+        </div>
+
+      </nav>
+
+    </div>
 
     <section class="main-header__hero hero">
 
@@ -82,12 +86,12 @@
           </div>
 
           <picture>
-            <source media="(min-width: 1440px)" width="552" height="499" type="image/webp" srcset="images/index-glass/hero-glass-desktop@1x.webp 1x, images/index-glass/hero-glass-desktop@2x.webp 2x">
-            <source media="(min-width: 780px)" width="709" height="609" type="image/webp" srcset="images/index-glass/hero-glass-tablet@1x.webp 1x, images/index-glass/hero-glass-tablet@2x.webp 2x">
-            <source media="(min-width: 320px)" width="280" height="270" type="image/webp" srcset="images/index-glass/hero-glass-mobile@1x.webp 1x, images/index-glass/hero-glass-mobile@2x.webp 2x">
-            <source media="(min-width: 1440px)" width="552" height="499" type="image/png" srcset="images/index-glass/hero-glass-desktop@1x.png 1x, images/index-glass/hero-glass-desktop@2x.png 2x">
-            <source media="(min-width: 780px)" width="709" height="609" type="image/png" srcset="images/index-glass/hero-glass-tablet@1x.png 1x, images/index-glass/hero-glass-tablet@2x.png 2x">
-            <img class="hero__image" width="280" height="270" src="images/index-glass/hero-glass-mobile@1x.png" srcset="images/index-glass/hero-glass-mobile@2x.png 2x" alt="Упаковка магазина «Кэт энерджи» в виде стаканчика объемом 1000 г со вкусом курицы.">
+            <source media="(min-width: 1440px)" width="552" height="499" type="image/webp" srcset="images/index-glass/hero-glass-desktop@1x.webp 1x, images/index-glass/hero-glass-desktop@2x.webp 2x" />
+            <source media="(min-width: 780px)" width="709" height="609" type="image/webp" srcset="images/index-glass/hero-glass-tablet@1x.webp 1x, images/index-glass/hero-glass-tablet@2x.webp 2x" />
+            <source media="(min-width: 320px)" width="280" height="270" type="image/webp" srcset="images/index-glass/hero-glass-mobile@1x.webp 1x, images/index-glass/hero-glass-mobile@2x.webp 2x" />
+            <source media="(min-width: 1440px)" width="552" height="499" type="image/png" srcset="images/index-glass/hero-glass-desktop@1x.png 1x, images/index-glass/hero-glass-desktop@2x.png 2x" />
+            <source media="(min-width: 780px)" width="709" height="609" type="image/png" srcset="images/index-glass/hero-glass-tablet@1x.png 1x, images/index-glass/hero-glass-tablet@2x.png 2x" />
+            <img class="hero__image" width="280" height="270" src="images/index-glass/hero-glass-mobile@1x.png" srcset="images/index-glass/hero-glass-mobile@2x.png 2x" alt="Упаковка магазина «Кэт энерджи» в виде стаканчика объемом 1000 г со вкусом курицы." />
           </picture>
 
           <a class="hero__button button" href="form.html">Подобрать программу</a>
@@ -102,7 +106,7 @@
 
   <main class="page__main main-index">
 
-    <section class="programs">
+    <!-- <section class="programs">
 
       <div class="programs__wrapper">
 
@@ -132,9 +136,9 @@
 
       </div>
 
-    </section>
+    </section> -->
 
-    <section class="reasons">
+    <!-- <section class="reasons">
 
       <h2 class="reasons__title">Как это работает</h2>
 
@@ -153,9 +157,9 @@
         </li>
       </ol>
 
-    </section>
+    </section> -->
 
-    <section class="stats">
+    <!-- <section class="stats">
 
       <div class="stats__wrapper">
 
@@ -219,75 +223,75 @@
 
       </div>
 
-    </section>
+    </section> -->
+
+    <!-- <section class="main-footer__map map">
+
+      <h2 class="map__title visually-hidden">Местонахождение магазина «Кэт Энерджи» с вывеской на карте</h2>
+
+      <div class="map__address address">
+        <p class="address__text">Приглашаем<br> к сотрудничеству дилеров!</p>
+        <p class="address__street">ул. Большая Конюшенная, д. 19/8
+          <span class="address__sity">Санкт-Петербург</span>
+        </p>
+      </div>
+
+      <div class="map__location">
+
+        <div class="map__pin">
+          <span class="visually-hidden">Кастомный курсор логотипа магазина «Кэт Энерджи», размещенная на улице Большая Конюшенная, д. 19/8</span>
+        </div>
+
+        <picture>
+          <source media="(min-width: 1440px)" type="image/webp" width="1440" height="400" srcset="images/maps/location-desktop@1x.webp 1x, images/maps/location-desktop@2x.webp 2x" />
+          <source media="(min-width: 768px)" type="image/webp" width="768" height="400" srcset="images/maps/location-tablet@1x.webp 1x, images/maps/location-tablet@2x.webp 2x" />
+          <source media="(min-width: 320px)" type="image/webp" width="320" height="320" srcset="images/maps/location-mobile@1x.webp 1x, images/maps/location-mobile@2x.webp 2x" />
+          <source media="(min-width: 1440px)" type="image/jpeg" width="1440" height="400" srcset="images/maps/location-desktop@1x.jpg 1x, images/maps/location-desktop@2x.jpg 2x" />
+          <source media="(min-width: 768px)" type="image/jpeg" width="768" height="400" srcset="images/maps/location-tablet@1x.jpg 1x, images/maps/location-tablet@2x.jpg 2x" />
+          <img class="map__location-image" width="320" height="320" src="images/maps/location-mobile@1x.jpg" srcset="images/maps/location-mobile@2x.jpg 2x" alt="Фрагмент карты города Санкт-Петербурга" />
+        </picture>
+
+      </div>
+
+    </section> -->
 
   </main>
 
   <footer class="page__main-footer main-footer">
 
-    <div class="main-footer__container container">
-
-      <section class="main-footer__map map">
-
-        <h2 class="map__title visually-hidden">Местонахождение магазина «Кэт Энерджи» с вывеской на карте</h2>
-
-        <div class="map__address address">
-          <p class="address__text">Приглашаем<br> к сотрудничеству дилеров!</p>
-          <p class="address__street">ул. Большая Конюшенная, д. 19/8
-            <span class="address__sity">Санкт-Петербург</span>
-          </p>
-        </div>
-
-        <div class="map__location">
-
-          <div class="map__pin">
-            <span class="visually-hidden">Кастомный курсор логотипа магазина «Кэт Энерджи», размещенная на улице Большая Конюшенная, д. 19/8</span>
-          </div>
-
-          <picture>
-            <source media="(min-width: 1440px)" type="image/webp" width="1440" height="400" srcset="images/maps/location-desktop@1x.webp 1x, images/maps/location-desktop@2x.webp 2x">
-            <source media="(min-width: 768px)" type="image/webp" width="768" height="400" srcset="images/maps/location-tablet@1x.webp 1x, images/maps/location-tablet@2x.webp 2x">
-            <source media="(min-width: 320px)" type="image/webp" width="320" height="320" srcset="images/maps/location-mobile@1x.webp 1x, images/maps/location-mobile@2x.webp 2x">
-            <source media="(min-width: 1440px)" type="image/jpeg" width="1440" height="400" srcset="images/maps/location-desktop@1x.jpg 1x, images/maps/location-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" type="image/jpeg" width="768" height="400" srcset="images/maps/location-tablet@1x.jpg 1x, images/maps/location-tablet@2x.jpg 2x">
-            <img class="map__location-image" width="320" height="320" src="images/maps/location-mobile@1x.jpg" srcset="images/maps/location-mobile@2x.jpg 2x" alt="Фрагмент карты города Санкт-Петербурга">
-          </picture>
-
-        </div>
-
-      </section>
+    <!-- <div class="main-footer__container container">
 
       <a class="main-footer__footer-logotext" href="./" aria-current="page" aria-label="Активная главная страница">
         <span class="visually-hidden">Главная страница онлайн-магазина «Кэт энерджи»</span>
-        <img class="main-footer__footer-logotext-image" width="128" height="24" src="../images/logo/footer-logo/footer-logotext.svg" alt="Товарный знак текстового логотипа онлайн-магазина «Кэт энерджи».">
+        <img class="main-footer__footer-logotext-image" type="image/svg+xml" width="128" height="24" src="../images/logo/footer-logo/footer-logotext.svg" alt="Товарный знак текстового логотипа онлайн-магазина «Кэт энерджи»." />
       </a>
 
       <ul class="main-footer__list">
-        <li class="main-footer__item">
-          <a class="main-footer__link main-footer__link--vkontakte" href="https://vk.com/htmlacademy">
+        <li class="channels__item">
+          <a class="channels__link channels__link--vkontakte" href="https://vk.com/htmlacademy">
             <span class="visually-hidden">Канал HTML Academy в «Вконтакте»</span>
           </a>
         </li>
-        <li class="main-footer__item">
-          <a class="main-footer__link main-footer__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+        <li class="channels__item">
+          <a class="channels__link channels__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
             <span class="visually-hidden">Канал HTML Academy в «Youtube»</span>
           </a>
         </li>
-        <li class="main-footer__item">
-          <a class="main-footer__link main-footer__link--telegram" href="https://t.me/htmlacademy">
+        <li class="channels__item">
+          <a class="channels__link channels__link--telegram" href="https://t.me/htmlacademy">
             <span class="visually-hidden">Канал HTML Academy в «Телеграмм»</span>
           </a>
         </li>
       </ul>
 
       <a class="main-footer__logo-htmlacademy" href="https://htmlacademy.ru/intensive/adaptive">
-        <p class="main-footer__logo-academy-text">HTML Academy</p>
-        <div class="main-footer__logo-academy-icon">
+        <p class="channels__logo-academy-text">HTML Academy</p>
+        <div class="channels__logo-academy-icon">
           <span class="visually-hidden">Иконка логотипа HTML Academy</span>
         </div>
       </a>
 
-    </div>
+    </div> -->
 
   </footer>
 

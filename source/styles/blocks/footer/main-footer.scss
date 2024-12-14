@@ -1,27 +1,9 @@
 .main-footer {
-  @include container;
+  // @include container;
 
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 40px 0;
 
   background-color: $accent-light-grey;
-
-  @media (min-width: $breakpoint-tablet) {
-    flex-direction: row;
-    align-items: center;
-
-    margin-bottom: 0;
-    padding: 55px 0;
-  }
-
-  @media (min-width: $breakpoint-desktop) {
-    margin: 0;
-    padding: 66px 0;
-  }
 }
 
 .main-footer__container {
@@ -50,204 +32,43 @@
 .main-footer__footer-logotext {
   display: flex;
   justify-content: center;
-  align-items: center;
 
   width: 128px;
   height: 24px;
   margin-inline: auto;
   margin-right: 0;
-
   color: $extra-dark-grey;
-  cursor: pointer;
 
-  img {
-    fill: $extra-dark-grey;
+  &:hover {
+    fill: $hover;
 
-    &:hover {
-      opacity: 0.8;
-    }
-
-    &:focus {
-      opacity: 0.8;
-    }
-
-    &:active {
-      opacity: 0.3;
+    img {
+      filter: url("#");
     }
   }
 
+  &:focus {
+    fill: $hover;
 
-  &::after {
-    content: "";
-
-    display: block;
-
-    width: 280px;
-
-    @media (min-width: $breakpoint-tablet) {
-      content: none;
+    img {
+      filter: url("#");
     }
   }
 
-  @media (min-width: $breakpoint-tablet) {
-    padding: 0;
+  &:active {
+    fill: $active;
+
+    img {
+      filter: url("#");
+    }
   }
 }
 
 .main-footer__footer-logotext-image {
   width: 128px;
   height: 24px;
-  margin: 0 auto;
+
+  fill: #0000ff;
 
   overflow: hidden;
-}
-
-.main-footer__list {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 24px;
-
-  padding-top: 20px;
-  padding-bottom: 20px;
-
-  border-top: 1px solid $specify-light-grey;
-  border-bottom: 1px solid $specify-light-grey;
-
-  list-style-type: none;
-
-  &::after {
-    content: "";
-    display: block;
-
-    width: 280px;
-    margin-bottom: 20px;
-
-    background-color: currentColor;
-
-    @media (min-width: $breakpoint-tablet) {
-      content: none;
-    }
-  }
-
-  @media (min-width: $breakpoint-tablet) {
-    padding: 8px 0 7px;
-
-    border: none;
-  }
-}
-
-.main-footer__link {
-  display: block;
-
-  min-width: 28px;
-  min-height: 22px;
-
-  background-color: $very-dark-grey;
-  mask-position: center;
-  mask-repeat: no-repeat;
-  mask-size: 28px 22px;
-  transition: all 1.3s;
-
-  &:hover {
-    background-color: $primary;
-  }
-
-  &:focus {
-    background-color: $primary;
-  }
-
-  &:active {
-    background-color: $primary;
-    opacity: 0.3;
-  }
-}
-
-.main-footer__link--vkontakte {
-  mask-image: url("../../icons/stack.svg#icon-vkontakte");
-}
-
-.main-footer__link--youtube {
-  mask-image: url("../../icons/stack.svg#icon-youtube");
-}
-
-.main-footer__link--telegram {
-  mask-image: url("../../icons/stack.svg#icon-telegram");
-}
-
-.main-footer__logo-htmlacademy-image {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  width: 100%;
-  padding: 20px 0;
-
-  background-color: $very-dark-grey;
-  overflow: visible;
-
-  @media (min-width: $breakpoint-tablet) {
-    gap: 23px;
-
-    width: auto;
-    padding: 0;
-  }
-}
-
-.main-footer__logo-htmlacademy {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  width: 100%;
-  margin: 0;
-
-  text-decoration: none;
-
-  @media (min-width: $breakpoint-tablet) {
-    max-width: 168px;
-    padding: 0;
-  }
-
-  &:hover .main-footer__logo-academy-icon {
-    background-color: $hover-green;
-  }
-
-  &:focus .main-footer__logo-academy-icon {
-    background-color: $hover-green;
-  }
-
-  &:active .main-footer__logo-academy-icon {
-    background-color: $hover-green;
-    opacity: 0.3;
-  }
-}
-
-.main-footer__logo-academy-text {
-  font-size: 16px;
-  line-height: 20px;
-
-  color: $accent-dark-grey;
-  transition: all, all 1.3s;
-}
-
-.main-footer__logo-academy-icon {
-  display: block;
-
-  width: 27px;
-  height: 34px;
-
-  background-color: $very-dark-grey;
-  mask-image: url("../../icons/stack.svg#icon-htmlacademy");
-  mask-position: 50%;
-  mask-repeat: no-repeat;
-  mask-size: 27px 34px;
-}
-
-.main-footer__logo-academy-icon a {
-  cursor: pointer;
-}
-
-.main-footer__logo-academy-icon img {
-  overflow: visible;
 }

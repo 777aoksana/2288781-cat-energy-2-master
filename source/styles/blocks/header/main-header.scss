@@ -1,50 +1,49 @@
 .main-header {
-  position: relative;
+  position: fixed;
 
-  display: inline-grid;
-  grid-template-columns: 190px 24px;
-  grid-template-rows: 1fr;
-  gap: 65px;
-  align-items: center;
-
-  width: 100%;
-  min-width: 279px;
-  min-height: 66px;
-  margin: 0 auto;
-  padding: 0 20px;
+  height: 65px;
 
   background-color: $white;
+  color: $black;
+  transition: all 0.5s;
+  transform: translateY(0%);
+  zoom: 1;
 
   @media (min-width: $breakpoint-tablet) {
     @include flex-container(row, center, space-between);
 
-    min-height: 75px;
+    height: 75px;
   }
 
   @media (min-width: $breakpoint-desktop) {
-    min-height: 114px;
+    height: 114px;
 
     background-color: transparent;
   }
 }
 
-.main-header__logo {
-  position: relative;
-  top: 0;
-  left: 0;
+.main-header__wrapper {
+  @include container;
+}
 
-  display: flex;
+.main-header__logo {
+  @include a($extra-dark-grey, none, uppercase);
+
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 33px 101px;
+  grid-template-rows: 38px;
+  justify-content: space-between;
   align-items: center;
   gap: 56px;
+  grid-area: "logo";
 
-  min-width: 190px;
-  min-height: 66px;
-  margin: 0 auto;
+  width: 190px;
+  height: 66px;
   padding: 13px 0 14px;
 
   cursor: pointer;
-
-  @include a;
 
   @media (min-width: $breakpoint-tablet) {
     justify-content: space-between;
@@ -52,7 +51,7 @@
 
     width: 174px;
     height: 50px;
-    margin-top: 25px;
+    padding-top: 25px;
   }
 
   @media (min-width: $breakpoint-desktop) {
@@ -60,7 +59,7 @@
 
     width: 202px;
     height: 59px;
-    margin-top: 55px;
+    padding-top: 55px;
   }
 
   &:hover {
@@ -73,11 +72,9 @@
 }
 
 .main-header__logo-image {
-  position: absolute;
-  top: 12px;
+  position: relative;
+  top: 0;
   left: 0;
-
-  display: block;
 
   width: 33px;
   height: 38px;
@@ -113,6 +110,5 @@
 }
 
 .main-header__main-nav {
-  width: 24px;
-  height: 24px;
+  position: relative;
 }

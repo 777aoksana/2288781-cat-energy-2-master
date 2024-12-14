@@ -1,27 +1,46 @@
 .page {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-
   height: 100%;
 }
 
 .page__body {
   position: relative;
+  inset: 0;
   z-index: 0;
 
   display: grid;
   grid-template-rows: min-content 1fr min-content;
-  align-items: start;
+  align-content: start;
 
-  width: 100%;
   min-width: 320px;
   min-height: 100%;
-  margin: 0 auto;
 
   overflow-x: hidden;
+  background-color: #5658e2;
+  color: $white;
 
-  @media screen and (min-width: $breakpoint-desktop) {
+  @media (min-width: $breakpoint-mobile) {
+    &::before {
+      @include pseudo-element;
+      top: 65px;
+      left: 0;
+      z-index: -1;
+
+      width: 100%;
+      height: 302px;
+
+      background-color: $primary-fon;
+      background-image: linear-gradient(to top, $primary-fon, $primary-fon), image-set(url("../../../images/index-page/cat-mobile@1x.jpg") type("image/jpg") 1x, url("../../../images/index-page/cat-mobile@1x.webp") type("image/webp") 1x);
+      background-repeat: no-repeat;
+      background-size: auto 302px;
+      background-position-x: top;
+
+      @media (min-width: $breakpoint-tablet) {
+        display: none;
+      }
+    }
+  }
+
+  @media (min-width: $breakpoint-desktop) {
     &::before {
       @include pseudo-element;
       top: 0;
@@ -34,7 +53,7 @@
       background-color: $primary-fon;
       background-image: linear-gradient(to top, $primary-fon, $primary-fon), image-set(url("../../../images/index-page/cat-desktop@1x.jpg") type("image/jpg") 1x, url("../../../images/index-page/cat-desktop@1x.webp") type("image/webp") 1x);
       background-repeat: no-repeat;
-      background-size: auto 697px;
+      background-size: auto 694px;
       background-position-x: top right;
 
       @media screen and (min-resolution: 2dppx) {
@@ -63,42 +82,21 @@
   }
 }
 
-.page__top {
-  position: relative;
-  margin-bottom: 20px;
-
-  @media (min-width: $breakpoint-tablet) {
-    min-height: 950px;
-    margin-bottom: 0;
-  }
-
-  @media (min-width: $breakpoint-desktop) {
-    min-height: 694px;
-    margin-bottom: 82px;
-  }
-}
-
 .page__main-header,
 .page__main-footer {
   position: relative;
-  left: 0;
+  top: 0;
   right: 0;
+  left: 0;
 
   width: 100%;
-  height: 100%;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .page__main {
   flex-grow: 1;
 }
 
-.page__main-header {
-  @include container;
-}
-
-.page__main-header--catalog .page__body::before {
+.page__main-header--inner .page__body::before {
   @media (min-width: $breakpoint-desktop) {
     display: none;
   }
