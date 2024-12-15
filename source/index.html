@@ -21,46 +21,56 @@
 
   <h1 class="page__headline visually-hidden">Онлайн-магазин «Кэт энерджи» - главная страница</h1>
 
-  <header class="page__header header">
+  <header class="page__header page-header">
 
-    <div class="header__container container">
+    <div class="page-header__wrapper container">
 
-      <a class="header__logo" href="./" aria-current="page" aria-label="Активная главная страница">
+      <div class="page-header__logo-wrapper">
 
-        <picture>
-          <source media="(min-width: 1440px)" type="image/svg+xml" width="70" height="59" srcset="images/logo/header-logo/logotype-desktop.svg">
-          <source media="(min-width: 780px)" type="image/svg+xml" width="60" height="50" srcset="images/logo/header-logo/logotype-tablet.svg">
-          <img class="header__logo-image" width="33" height="38" src="images/logo/header-logo/logotype-mobile.svg" alt="Товарный знак логотипа магазина «Кэт энерджи».">
-        </picture>
+        <a class="page-header__logo" href="./" aria-current="page" aria-label="Активная главная страница">
 
-        <picture>
-          <source media="(min-width: 1440px)" type="image/svg+xml" width="118" height="21" srcset="images/logo/header-logo/logotext-desktop.svg">
-          <source media="(min-width: 780px)" type="image/svg+xml" width="101" height="18" srcset="images/logo/header-logo/logotext-tablet.svg">
-          <img class="header__logo-text" width="101" height="18" src="images/logo/header-logo/logotext-mobile.svg" alt="Товарный знак текстового логотипа магазина «Кэт энерджи».">
-        </picture>
+          <picture>
+            <source media="(min-width: 1440px)" type="image/svg+xml" width="70" height="59" srcset="images/logo/header-logo/logotype-desktop.svg">
+            <source media="(min-width: 780px)" type="image/svg+xml" width="60" height="50" srcset="images/logo/header-logo/logotype-tablet.svg">
+            <img class="page-header__logo-image" width="33" height="38" src="images/logo/header-logo/logotype-mobile.svg" alt="Товарный знак логотипа магазина «Кэт энерджи».">
+          </picture>
 
-      </a>
+          <picture>
+            <source media="(min-width: 1440px)" type="image/svg+xml" width="118" height="21" srcset="images/logo/header-logo/logotext-desktop.svg">
+            <source media="(min-width: 780px)" type="image/svg+xml" width="101" height="18" srcset="images/logo/header-logo/logotext-tablet.svg">
+            <img class="page-header__logo-text" width="101" height="18" src="images/logo/header-logo/logotext-mobile.svg" alt="Товарный знак текстового логотипа магазина «Кэт энерджи».">
+          </picture>
 
-      <button class="header__toggle header__toggle--closed button-toggle" type="button">
-        <span class="visually-hidden">Открыть/Скрыть главное меню</span>
-      </button>
+        </a>
+
+        <button class="page-header__toggle page-header__toggle--closed button-toggle" type="button">
+          <span class="visually-hidden">Открыть/скрыть главное меню</span>
+        </button>
+
+      </div>
+
+      <nav class="page-header__nav main-nav main-nav--closed">
+
+        <ul class="main-nav__list main-nav__list--white">
+
+          <li class="main-nav__item">
+
+            <a class="main-nav__link main-nav__link--desktop main-nav__link--current" href="./" aria-current="page">Главная</a>
+          </li>
+
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--desktop" href="catalog.html">Каталог продукции</a>
+          </li>
+
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--desktop" href="#">Подбор программы</a>
+          </li>
+
+        </ul>
+
+      </nav>
 
     </div>
-
-    <nav class="header__main-nav main-nav main-nav--closed">
-      <ul class="main-nav__list main-nav__list--white">
-        <li class="main-nav__item">
-          <a class="main-nav__link main-nav__link--current" href="./">Главная</a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="form.html">Подбор программы</a>
-        </li>
-      </ul>
-
-    </nav>
 
   </header>
 
@@ -99,7 +109,7 @@
 
     </section>
 
-    <!-- <section class="programs">
+    <section class="programs">
 
       <div class="programs__wrapper">
 
@@ -129,9 +139,9 @@
 
       </div>
 
-    </section> -->
+    </section>
 
-    <!-- <section class="reasons">
+    <section class="reasons">
 
       <div class="reasons__wrapper">
 
@@ -154,9 +164,9 @@
 
       </div>
 
-    </section> -->
+    </section>
 
-    <!-- <section class="stats">
+    <section class="stats">
 
       <div class="stats__wrapper">
 
@@ -250,15 +260,13 @@
 
       </section>
 
-    </section> -->
+    </section>
 
   </main>
 
   <footer class="page__main-footer main-footer">
 
-    Подвал
-
-    <!-- <div class="main-footer__container container">
+    <div class="main-footer__container container">
 
       <a class="main-footer__footer-logotext" href="./" aria-current="page" aria-label="Активная главная страница">
         <span class="visually-hidden">Главная страница онлайн-магазина «Кэт энерджи»</span>
@@ -290,7 +298,7 @@
         </div>
       </a>
 
-    </div> -->
+    </div>
 
   </footer>
 

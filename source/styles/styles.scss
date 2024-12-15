@@ -1,20 +1,30 @@
 /* GLOBAL */
-@import "./common/variables.scss";
+//Миксины
 @import "./common/mixins.scss";
+//Переменные
+@import "./common/variables.scss";
+//Шрифты
 @import "./common/fonts.scss";
-@import "./common/visually-hidden.scss";
+//Общие стили
 @import "./common/global.scss";
 
 /* BLOCKS */
 //Общие блоки
+@import "./blocks/common-blocks/visually-hidden.scss";
 @import "./blocks/common-blocks/page.scss";
-@import "./blocks/common-blocks/button.scss";
 @import "./blocks/common-blocks/container.scss";
+@import "./blocks/common-blocks/construction.scss";
+@import "./blocks/common-blocks/button.scss";
 
 //Шапка
-@import "./blocks/header/header.scss";
+@import "./blocks/header/page-header.scss";
 @import "./blocks/header/main-nav.scss";
-@import "./blocks/header/burger-toggle.scss";
+
+//Подвал
+@import "./blocks/footer/main-footer.scss";
+@import "./blocks/footer/map.scss";
+@import "./blocks/footer/address.scss";
+@import "./blocks/footer/channels.scss";
 
 //Главная страница
 @import "./blocks/main-index/main-index.scss";
@@ -36,8 +46,5 @@
 @import "./blocks/main-inner/gift.scss";
 @import "./blocks/main-inner/promotions.scss";
 
-//Подвал
-@import "./blocks/footer/main-footer.scss";
-@import "./blocks/footer/map.scss";
-@import "./blocks/footer/address.scss";
-@import "./blocks/footer/channels.scss";
+//Страница форм (не будут рассматривать на защите)
+@import "./blocks/main-form/main-form.scss";

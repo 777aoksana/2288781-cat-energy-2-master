@@ -1,0 +1,153 @@
+.page-header {
+  position: relative;
+}
+
+.page-header__wrapper {
+  display: grid;
+  grid-template-columns: 190px 24px;
+  justify-content: space-between;
+  align-items: center;
+
+  min-width: 320px;
+  margin: 0;
+
+  @media (min-width: $breakpoint-tablet-min) {
+    flex-direction: row;
+
+    min-width: 708px;
+    padding-top: 25px;
+  }
+
+  @media (min-width: $breakpoint-desktop-min) {
+    min-width: 1220px;
+
+    padding-top: 55px;
+  }
+}
+
+.page-header__logo-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 38px;
+  margin: 13px 0 15px;
+
+  text-decoration: none;
+
+  @media (min-width: $breakpoint-tablet-min) {
+    height: 50px;
+    padding: 0;
+  }
+
+  @media (min-width: $breakpoint-desktop-min) {
+    height: 50px;
+  }
+}
+
+.page-header__logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 280px;
+  height: 38px;
+  margin: 13px 0 15px;
+
+  text-decoration: none;
+
+  @media (min-width: $breakpoint-tablet-min) {
+    grid-template-columns: 60px 101px;
+    column-gap: 13px;
+
+    width: 174px;
+    margin-right: auto;
+    padding: 0;
+  }
+
+  @media (min-width: $breakpoint-desktop-min) {
+    grid-template-columns: 70px 118px;
+    column-gap: 14px;
+
+    width: 202px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.page-header__logo-image {
+  display: block;
+
+  width: 33px;
+  height: 38px;
+
+  @media (min-width: $breakpoint-tablet-min) {
+    width: 60px;
+    height: 50px;
+  }
+
+  @media (min-width: $breakpoint-desktop-min) {
+    width: 70px;
+    height: 59px;
+  }
+}
+
+.page-header__logo-text {
+  display: block;
+
+  @media (min-width: $breakpoint-tablet-min) {
+    width: 101px;
+    height: 18px;
+  }
+
+  @media (min-width: $breakpoint-desktop-min) {
+    width: 118px;
+    height: 21px;
+  }
+}
+
+.page-header__toggle {
+  width: 24px;
+  height: 24px;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: $breakpoint-tablet-min) {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.page-header__toggle--closed {
+  background-image: url("../../../icons/stack.svg#icon-menu-opened");
+}
+
+.page-header__toggle--opened {
+  background-image: url("../../../icons/stack.svg#icon-menu-closed");
+}
+
+.nojs .page-header__toggle {
+  visibility: hidden;
+}

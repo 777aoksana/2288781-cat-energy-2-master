@@ -1,0 +1,12 @@
+.construction {
+  width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: $breakpoint-tablet-min) {
+    width: 708px;
+  }
+
+  @media (min-width: $breakpoint-desktop-min) {
+    width: 1220px;
+  }
+}

@@ -9,6 +9,9 @@
 }
 
 @mixin container {
+  display: flex;
+  flex-direction: column;
+
   min-width: $breakpoint-mobile-min;
   width: 100%;
   margin: 0 auto;
@@ -63,12 +66,14 @@
   vertical-align: top;
   border: 0;
   cursor: pointer;
-  transition: all 0.15s ease-in;
+  transition: background-color 0.4s ease, color 0.4s ease;
 
-  &:hover,
+  &:hover {
+    $bg-color: $hover-green;
+  }
+
   &:focus {
     $bg-color: $hover-green;
-    opacity: 0.6;
   }
 
   &:active {
