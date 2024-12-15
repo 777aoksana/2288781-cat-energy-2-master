@@ -27,6 +27,9 @@
     max-width: $breakpoint-desktop-max;
     padding: 0 110px;
   }
+
+  // outline: 5px solid rgba(24, 42, 179, 0.8);
+  // outline-offset: -3px;
 }
 
 @mixin reset-link {

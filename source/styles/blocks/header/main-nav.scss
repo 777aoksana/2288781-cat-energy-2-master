@@ -1,6 +1,11 @@
 .main-nav__list {
   @include reset-list;
 
+  position: absolute;
+
+  display: flex;
+
+
   font-family: $main-font;
   font-size: 20px;
   line-height: 20px;
@@ -12,7 +17,7 @@
     position: static;
 
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     gap: 33px;
 
     max-width: 500px;
@@ -29,6 +34,9 @@
     font-size: 20px;
     line-height: 30px;
   }
+
+  // outline: 5px solid rgba(0, 255, 0, 0.8);
+  // outline-offset: -5px;
 }
 
 .main-nav__item {
@@ -37,11 +45,13 @@
   }
 
   @media (min-width: $breakpoint-tablet-min) {
-    display: none;
+    display: block;
   }
 }
 
 .main-nav__link {
+  @include reset-link;
+
   display: block;
 
   padding: 22px 0 24px;
