@@ -21,51 +21,51 @@
 
   <h1 class="page__headline visually-hidden">Онлайн-магазин «Кэт энерджи» - каталог</h1>
 
-  <header class="page__main-header">
+  <header class="page__header page-header">
 
-    <div class="main-header__wrapper">
+    <div class="page-header__wrapper container">
 
-      <a class="main-header__logo" href="index.html" aria-label="Переход на главную страницу">
+      <div class="page-header__logo-wrapper">
 
-        <picture>
-          <source media="(min-width: 1440px)" type="image/svg+xml" width="70" height="59" srcset="images/logo/header-logo/logotype-desktop.svg" />
-          <source media="(min-width: 780px)" type="image/svg+xml" width="60" height="50" srcset="images/logo/header-logo/logotype-tablet.svg" />
-          <img class="main-header__logo-image" width="33" height="38" src="images/logo/header-logo/logotype-mobile.svg" alt="Товарный знак логотипа магазина «Кэт энерджи»." />
-        </picture>
+        <a class="page-header__logo" href="index.html" aria-label="Переход на главную страницу">
 
-        <picture>
-          <source media="(min-width: 1440px)" type="image/svg+xml" width="118" height="21" srcset="images/logo/header-logo/logotext-desktop.svg" />
-          <img class="main-header__logo-text" width="101" height="18" src="images/logo/header-logo/logotext-mobile-tablet.svg" alt="Товарный знак текстового логотипа магазина «Кэт энерджи»." />
-        </picture>
+          <picture>
+            <source media="(min-width: 1440px)" type="image/svg+xml" width="70" height="59" srcset="images/logo/header-logo/logotype-desktop.svg">
+            <source media="(min-width: 780px)" type="image/svg+xml" width="60" height="50" srcset="images/logo/header-logo/logotype-tablet.svg">
+            <img class="page-header__logo-image" width="33" height="38" src="images/logo/header-logo/logotype-mobile.svg" alt="Товарный знак логотипа магазина «Кэт энерджи».">
+          </picture>
 
-      </a>
+          <picture>
+            <source media="(min-width: 1440px)" type="image/svg+xml" width="118" height="21" srcset="images/logo/header-logo/logotext-desktop.svg">
+            <source media="(min-width: 780px)" type="image/svg+xml" width="101" height="18" srcset="images/logo/header-logo/logotext-tablet.svg">
+            <img class="page-header__logo-text" width="101" height="18" src="images/logo/header-logo/logotext-mobile.svg" alt="Товарный знак текстового логотипа магазина «Кэт энерджи».">
+          </picture>
 
-      <nav class="main-header__navigation">
+        </a>
 
-        <button class="main-header__toggle" type="button">
-
-          <span class="visually-hidden">Открыть/скрыть меню</span>
-
-          <svg class="main-header__toggle-icon main-header__toggle-icon--opened" width="24" height="19">
-            <use href="../../icons/stack.svg#icon-menu-opened"></use>
-          </svg>
-
-          <svg class="main-header__toggle-icon main-header__toggle-icon--closed" width="18" height="18">
-            <use href="../../icons/stack.svg#icon-menu-closed"></use>
-          </svg>
-
+        <button class="page-header__toggle page-header__toggle--closed button-toggle" type="button">
+          <span class="visually-hidden">Открыть/скрыть главное меню</span>
         </button>
 
-        <ul class="main-header__list">
-          <li class="main-header__item">
-            <a class="main-header__link" href="index.html">Главная</a>
+      </div>
+
+      <nav class="page-header__nav main-nav main-nav--closed">
+
+        <ul class="main-nav__list main-nav__list--white">
+
+          <li class="main-nav__item">
+
+            <a class="main-nav__link main-nav__link--desktop" href="index.html">Главная</a>
           </li>
-          <li class="main-header__item">
-            <a class="main-header__link main-header__link--active" href="./">Каталог продукции</a>
+
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--desktop main-nav__link--current" href="./">Каталог продукции</a>
           </li>
-          <li class="main-header__item">
-            <a class="main-header__link" href="form.html">Подбор программы</a>
+
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--desktop" href="#">Подбор программы</a>
           </li>
+
         </ul>
 
       </nav>
