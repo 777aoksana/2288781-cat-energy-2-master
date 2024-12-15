@@ -93,14 +93,12 @@
   height: 24px;
   margin: 0 auto;
 
-  fill: #0000ff;
-
   overflow: hidden;
 }
 
 .main-footer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
 
@@ -109,7 +107,7 @@
   background-color: $accent-light-grey;
 
   @media (min-width: $breakpoint-tablet-min) {
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
 
     margin-bottom: 0;

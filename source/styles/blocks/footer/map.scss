@@ -1,4 +1,5 @@
 .map {
+  padding: 0 -20px;
   background-color: $white;
 }
 
@@ -40,7 +41,8 @@
 .map__location-image {
   display: block;
 
-  width: 320px;
+  width: 100%;
+  min-width: 320px;
   height: 362px;
 
   margin: 0;

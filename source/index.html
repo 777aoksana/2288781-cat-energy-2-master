@@ -17,7 +17,7 @@
   <script src="scripts/index.js" defer="defer"></script>
 </head>
 
-<body class="page__body page__body--index nojs">
+<body class="page__body page__body--index">
 
   <h1 class="page__headline visually-hidden">Онлайн-магазин «Кэт энерджи» - главная страница</h1>
 
@@ -25,45 +25,40 @@
 
     <div class="page-header__wrapper container">
 
-      <div class="page-header__logo-wrapper">
+      <a class="page-header__logo" href="./" aria-current="page" aria-label="Активная главная страница">
 
-        <a class="page-header__logo" href="./" aria-current="page" aria-label="Активная главная страница">
+        <picture>
+          <source media="(min-width: 1440px)" type="image/svg+xml" width="70" height="59" srcset="images/logo/header-logo/logotype-desktop.svg">
+          <source media="(min-width: 780px)" type="image/svg+xml" width="60" height="50" srcset="images/logo/header-logo/logotype-tablet.svg">
+          <img class="page-header__logo-image" width="33" height="38" src="images/logo/header-logo/logotype-mobile.svg" alt="Товарный знак логотипа магазина «Кэт энерджи».">
+        </picture>
 
-          <picture>
-            <source media="(min-width: 1440px)" type="image/svg+xml" width="70" height="59" srcset="images/logo/header-logo/logotype-desktop.svg">
-            <source media="(min-width: 780px)" type="image/svg+xml" width="60" height="50" srcset="images/logo/header-logo/logotype-tablet.svg">
-            <img class="page-header__logo-image" width="33" height="38" src="images/logo/header-logo/logotype-mobile.svg" alt="Товарный знак логотипа магазина «Кэт энерджи».">
-          </picture>
+        <picture>
+          <source media="(min-width: 1440px)" type="image/svg+xml" width="118" height="21" srcset="images/logo/header-logo/logotext-desktop.svg">
+          <source media="(min-width: 780px)" type="image/svg+xml" width="101" height="18" srcset="images/logo/header-logo/logotext-tablet.svg">
+          <img class="page-header__logo-text" width="101" height="18" src="images/logo/header-logo/logotext-mobile.svg" alt="Товарный знак текстового логотипа магазина «Кэт энерджи».">
+        </picture>
 
-          <picture>
-            <source media="(min-width: 1440px)" type="image/svg+xml" width="118" height="21" srcset="images/logo/header-logo/logotext-desktop.svg">
-            <source media="(min-width: 780px)" type="image/svg+xml" width="101" height="18" srcset="images/logo/header-logo/logotext-tablet.svg">
-            <img class="page-header__logo-text" width="101" height="18" src="images/logo/header-logo/logotext-mobile.svg" alt="Товарный знак текстового логотипа магазина «Кэт энерджи».">
-          </picture>
+      </a>
 
-        </a>
+      <nav class="page-header__main-nav main-nav main-nav--closed main-nav--nojs">
 
-        <button class="page-header__toggle page-header__toggle--closed button-toggle" type="button">
+        <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть/скрыть главное меню</span>
         </button>
 
-      </div>
-
-      <nav class="page-header__nav main-nav main-nav--closed">
-
-        <ul class="main-nav__list main-nav__list--white">
+        <ul class="main-nav__list main-nav__list--index">
 
           <li class="main-nav__item">
-
-            <a class="main-nav__link main-nav__link--desktop main-nav__link--current" href="./" aria-current="page">Главная</a>
+            <a class="main-nav__link main-nav__link--active" href="./" aria-current="page">Главная</a>
           </li>
 
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--desktop" href="catalog.html">Каталог продукции</a>
+            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
           </li>
 
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--desktop" href="#">Подбор программы</a>
+            <a class="main-nav__link" href="#">Подбор программы</a>
           </li>
 
         </ul>
@@ -166,9 +161,9 @@
 
     </section>
 
-    <section class="stats">
+    <section class="stats container">
 
-      <div class="stats__wrapper">
+      <div class="stats__wrapper ">
 
         <h2 class="stats__title">Живой пример</h2>
 
@@ -202,9 +197,9 @@
 
           <picture>
             <source media="(min-width: 768px)" type="image/webp" width="560" height="512" srcset="images/cats/cat-tablet-desktop-before@1x.webp 1x, images/cats/cat-tablet-desktop-before@2x.webp 2x">
-            <source media="(min-width: 320px)" type="image/webp" width="280" height="256" srcset="images/cats/cat-mobile-before@1x.webp 1x, images/cats/cat-mobile-before@2x.webp 2x">
-            <source media="(min-width: 768px)" type="image/png" width="560" height="512" srcset="images/cats/cat-tablet-desktop-before@1x.png 1x, images/cats/cat-tablet-desktop-before@2x.png 2x">
-            <img class="stats__slider-image" width="280" height="256" src="images/cats/cat-mobile-before@1x.png" srcset="images/cats/cat-mobile-before@2x.png 2x" alt="Фото толстого кота до приема функционального питания «Кэт энерджи».">
+            <source media="(min-width: 320px)" type="image/webp" width="280" height="256" srcset="images/cats/@1x.webp 1x, images/cats/cat-mobile-before@2x.webp 2x">
+            <source media="(min-width: 768px)" type="image/png" width="560" height="512" srcset="images/cats/cat-before@1x.png 1x, images/cats/cat-before@2x.png 2x">
+            <img class="stats__slider-image" width="280" height="256" src="images/cats/cat-before@1x.png" srcset="images/cats/cat-before@2x.png 2x" alt="Фото толстого кота до приема функционального питания «Кэт энерджи».">
           </picture>
 
         </div>
@@ -224,7 +219,7 @@
             <source media="(min-width: 768px)" type="image/webp" width="560" height="512" srcset="images/cats/cat-tablet-desktop-after@1x.webp 1x, images/cats/cat-tablet-desktop-after@2x.webp 2x">
             <source media="(min-width: 320px)" type="image/webp" width="280" height="256" srcset="images/cats/cat-mobile-after@1x.webp 1x, images/cats/cat-mobile-after@2x.webp 2x">
             <source media="(min-width: 768px)" type="image/png" width="560" height="512" srcset="images/cats/cat-tablet-desktop-after@1x.png 1x, images/cats/cat-tablet-desktop-after@2x.png 2x">
-            <img class="stats__slider-image" width="280" height="256" src="images/cats/cat-mobile-after@1x.png" srcset="images/cats/cat-mobile-after@2x.png 2x" alt="Фото худого кота после приема функционального питания «Кэт энерджи».">
+            <img class="stats__slider-image" width="280" height="256" src="images/cats/cat-after@1x.png" srcset="images/cats/cat-after@2x.png 2x" alt="Фото худого кота после приема функционального питания «Кэт энерджи».">
           </picture>
         </div>
 
@@ -301,8 +296,6 @@
     </div>
 
   </footer>
-
-  <script src="./scripts/index.js"></script>
 
 </body>
 
