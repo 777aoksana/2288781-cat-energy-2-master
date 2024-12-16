@@ -2,6 +2,8 @@
 
 * Студент: [Оксана Арефьева](https://up.htmlacademy.ru/adaptive-individual/2/user/2288781).
 * Наставник: [Оксана Вайнруб](https://htmlacademy.ru/profile/id166797).
+* Учебный проект: [Cat Energy](http://localhost:3000/).
+
 
 ---
 
