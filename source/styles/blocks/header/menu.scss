@@ -1,3 +1,132 @@
+.menu {
+  @include reset-list;
+
+  background-color: transparent;
+
+  @media (min-width: $breakpoint-tablet-min) {
+    display: flex;
+    justify-content: right;
+    gap: 33px;
+  }
+}
+
+.menu__item {
+  position: relative;
+
+  font-family: $main-font;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media (min-width: $breakpoint-tablet-min) {
+    margin-top: 1px;
+
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $breakpoint-desktop-min) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.menu__item:first-child,
+.menu__item:nth-child(2) {
+  @media (min-width: $breakpoint-tablet-min) {
+    margin-right: -1px;
+  }
+
+  @media (min-width: $breakpoint-desktop-min) {
+    margin-right: 1px;
+  }
+}
+
+.menu__item:last-child {
+  @media (min-width: $breakpoint-tablet-min) {
+    margin-right: 3px;
+  }
+
+  @media (min-width: $breakpoint-desktop-min) {
+    margin-right: 2px;
+  }
+}
+
+.menu__item::before {
+  @include pseudo-element;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 1px;
+
+  background-color: $specify-light-grey;
+
+  @media (min-width: $breakpoint-tablet-min) {
+    display: none;
+  }
+}
+
+.menu__item:last-child::after {
+  @include pseudo-element;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 1px;
+
+  background-color: $specify-light-grey;
+
+  @media (min-width: $breakpoint-tablet-min) {
+    display: none;
+  }
+}
+
+.menu__item--active::after {
+  @media (min-width: $breakpoint-tablet-min) {
+    @include pseudo-element;
+    bottom: 1;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: $primary;
+  }
+
+  @media (min-width: $breakpoint-desktop-min) {
+    @include pseudo-element;
+    bottom: 1;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: $white;
+  }
+}
+
+.menu__item .menu__link {
+  @include reset-link;
+
+  display: block;
+
+  padding: 22px 0 24px;
+
+  color: $black;
+
+  @media (min-width: $breakpoint-tablet-min) {
+    padding: 10px px;
+  }
+
+  @media (min-width: $breakpoint-desktop-min) {
+    padding: 10px px;
+
+    color: $white;
+  }
+}
+
 .hero {
   color: $white;
 
@@ -32,7 +161,7 @@
 
   &::after {
     @include pseudo-element;
-    top: 65px;
+    top: 0;
     z-index: -2;
 
     width: 100%;
@@ -69,7 +198,7 @@
   }
 }
 
-.hero__titul {
+.hero__intro {
   position: relative;
   z-index: 0;
 

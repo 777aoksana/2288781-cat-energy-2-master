@@ -14,7 +14,7 @@
   <link rel="icon" href="16.png" sizes="16x16">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles/styles.css">
-  <script src="scripts/index.js" defer></script>
+  <script src="scripts/index.js" defer="defer"></script>
 </head>
 
 <body class="page__body page__body--index">
@@ -41,27 +41,31 @@
 
       </a>
 
-      <nav class="page-header__main-nav main-nav main-nav--closed main-nav--nojs">
+      <button class="page-header__toggle page-header__toggle--close" type="button">
+        <span class="visually-hidden">Открыть/скрыть главное меню</span>
+      </button>
 
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть/скрыть главное меню</span>
-        </button>
+      <nav class="page-header__main-nav main-nav main-nav--closed">
 
-        <ul class="main-nav__list main-nav__list--index">
+        <div class="main-nav__content">
 
-          <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--active" href="./" aria-current="page">Главная</a>
-          </li>
+          <ul class="main-nav__list menu">
 
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
-          </li>
+            <li class="menu__item menu__item--index menu__item--active">
+              <a class="menu__link " href="./" aria-current="page">Главная</a>
+            </li>
 
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="#">Подбор программы</a>
-          </li>
+            <li class="menu__item">
+              <a class="menu__link" href="catalog.html">Каталог продукции</a>
+            </li>
 
-        </ul>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Подбор программы</a>
+            </li>
+
+          </ul>
+
+        </div>
 
       </nav>
 
@@ -98,7 +102,7 @@
 
     </section>
 
-    <!-- <section class="programs">
+    <section class="programs">
 
       <div class="programs__wrapper">
 
@@ -128,9 +132,9 @@
 
       </div>
 
-    </section> -->
+    </section>
 
-    <!-- <section class="reasons">
+    <section class="reasons">
 
       <div class="reasons__wrapper">
 
@@ -153,7 +157,7 @@
 
       </div>
 
-    </section> -->
+    </section>
 
     <!-- <section class="stats container">
 
@@ -225,7 +229,7 @@
 
   <footer class="page__main-footer main-footer">
 
-    <!-- <section class="main-footer__map map">
+    <section class="main-footer__map map">
 
       <h2 class="map__title visually-hidden">Местонахождение магазина «Кэт Энерджи» с вывеской на карте</h2>
 
@@ -253,9 +257,9 @@
 
       </div>
 
-    </section> -->
+    </section>
 
-    <!-- <div class="main-footer__container container">
+    <div class="main-footer__container container">
 
       <a class="main-footer__footer-logotext" href="./" aria-current="page" aria-label="Активная главная страница">
         <span class="visually-hidden">Главная страница онлайн-магазина «Кэт энерджи»</span>
@@ -287,7 +291,7 @@
         </div>
       </a>
 
-    </div> -->
+    </div>
 
   </footer>
 

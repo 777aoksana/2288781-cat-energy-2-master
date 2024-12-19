@@ -4,7 +4,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  outline: 1px solid #a01b4e; // для себя, потом удалю
+  // outline: 1px solid #a01b4e; // для себя, потом удалю
 
   // outline: 5px solid rgba(255, 0, 0, 0.8);
   // outline-offset: -3px;
@@ -23,8 +23,8 @@ body {
 body {
   display: flex;
 
-  min-width: $breakpoint-mobile-min;
   width: 100%;
+  min-width: $breakpoint-mobile-min;
   min-height: 100%;
   margin: 0;
   padding: 0;
@@ -35,6 +35,7 @@ body {
   font-weight: 400;
   font-style: normal;
 
+  background-color: $white;
   color: $accent-dark-grey;
 }
 
