@@ -69,7 +69,7 @@
   }
 }
 
-.hero__titul {
+.hero__title {
   position: relative;
   z-index: 0;
 
@@ -169,6 +169,7 @@
   padding-top: 29px;
 
   order: 1;
+  text-align: center;
 
   @media (min-width: $breakpoint-tablet-min) {
     margin-top: -29px;
@@ -192,6 +193,7 @@
 
 .hero__link {
   @include reset-link;
+  @include primary-button;
 
   position: relative;
 

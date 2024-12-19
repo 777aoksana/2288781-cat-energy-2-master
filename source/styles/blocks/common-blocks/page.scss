@@ -20,7 +20,7 @@
 
         height: 694px;
 
-        background: linear-gradient(to right, $primary-fon 100px, $primary-fon 100px), image-set(url("../../../images/index-page/cat-desktop@1x.jpg") 1x type("image/jpeg"), url("../../cat-desktop@1x.webp") 1x type("image/webp"), url("../../../images/index-page/cat-desktop@2x.jpg") 2x type("image/jpeg"), url("../../cat-desktop@2x.webp") 2x type("image/webp"));
+        background: linear-gradient(to right, $primary-fon 100px, $primary-fon 100px), image-set(url("../../../images/index-page/cat-desktop@1x.jpg") 1x type("image/jpeg"), url("../../cat-desktop@1x.webp") 1x type("image/webp"), url("../../../images/index-page/cat-desktop@2x.jpg") 2x type("image/jpeg"), url("../../cat-desktop@2x.webp") 2x type("image/webp")) no-repeat;
       }
     }
   }

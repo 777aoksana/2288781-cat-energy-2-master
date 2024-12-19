@@ -92,6 +92,7 @@
   width: 128px;
   height: 24px;
   margin: 0 auto;
+  padding: 0;
 
   overflow: hidden;
 }
@@ -121,32 +122,21 @@
 }
 
 .main-footer__list {
+  @include www
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 24px;
 
+  margin: 0;
   padding-top: 20px;
   padding-bottom: 20px;
+  padding-left: 0;
 
   border-top: 1px solid $specify-light-grey;
   border-bottom: 1px solid $specify-light-grey;
 
   list-style-type: none;
-
-  &::after {
-    content: "";
-    display: block;
-
-    width: 280px;
-    margin-bottom: 20px;
-
-    background-color: currentColor;
-
-    @media (min-width: $breakpoint-tablet-min) {
-      content: none;
-    }
-  }
 
   @media (min-width: $breakpoint-tablet-min) {
     padding: 8px 0 7px;
