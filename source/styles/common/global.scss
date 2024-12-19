@@ -23,24 +23,22 @@ body {
 body {
   display: flex;
 
-  min-width: 320px;
+  min-width: $breakpoint-mobile-min;
   width: 100%;
   min-height: 100%;
   margin: 0;
+  padding: 0;
 
   font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
   font-style: normal;
+
+  color: $accent-dark-grey;
 }
 
-img,
-picture {
-  display: block;
-
+img {
   max-width: 100%;
   height: auto;
-
-  object-fit: contain;
 }

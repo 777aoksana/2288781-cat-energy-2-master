@@ -1,34 +1,28 @@
 .page-header {
   position: relative;
-  z-index: 10;
 }
 
 .page-header__wrapper {
-  position: relative;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 
-  height: 65px;
-  margin-bottom: auto;
+  min-width: 320px;
   padding-top: 13px;
   padding-bottom: 15px;
 
-  background-color: $white;
-
   @media (min-width: $breakpoint-tablet-min) {
-    justify-content: space-between;
+    flex-direction: row;
 
-    height: 50px;
-    padding-top: 25px;
-    margin-right: 4px;
+    width: 708px;
+    margin: 0 auto;
+    padding-top: 25px 0 0;
   }
 
   @media (min-width: $breakpoint-desktop-min) {
-    height: 59px;
-    padding-top: 55px;
-
-    background-color: transparent;
+    width: 1220px;
+    padding-top: 55px 0 0;
   }
 
   outline: 8px solid rgba(255, 0, 0, 0.8);
@@ -39,18 +33,22 @@
   display: grid;
   grid-template-columns: 38px 101px;
   gap: 56px;
+  // justify-content: center;
   align-items: center;
 
-  height: 38px;
-  margin-top: 13px;
-  margin-bottom: 15px;
+  width: 190px;
+  height: 65px;
+  margin-right: auto;
 
-  text-decoration: none;
+  cursor: pointer;
+
+  transition: opacity 0.4s;
 
   @media (min-width: $breakpoint-tablet-min) {
     grid-template-columns: 60px 101px;
     gap: 13px;
 
+    width: 174px;
     height: 50px;
     margin: 0;
   }
@@ -59,7 +57,8 @@
     grid-template-columns: 70px 118px;
     gap: 14px;
 
-    height: 50px;
+    width: 202px;
+    height: 59px;
   }
 
   &:hover {
@@ -76,23 +75,34 @@
 }
 
 .page-header__logo-image {
-  width: 33px;
+  @include reset-link;
+
+  width: 100%;
+  min-width: 33px;
   height: 38px;
 
+  vertical-align: middle;
+  text-align: center;
+
   @media (min-width: $breakpoint-tablet-min) {
-    width: 60px;
+    min-width: 60px;
     height: 50px;
   }
 
   @media (min-width: $breakpoint-desktop-min) {
-    width: 70px;
+    min-width: 70px;
     height: 59px;
   }
 }
 
 .page-header__logo-text {
+  @include reset-link;
+
+  height: 100%;
   width: 101px;
-  height: 18px;
+  min-height: 18px;
+
+  vertical-align: middle;
 
   @media (min-width: $breakpoint-desktop-min) {
     width: 118px;
@@ -100,6 +110,24 @@
   }
 }
 
-.page-header__nav {
+.page-header__main-nav {
+  position: relative;
+  top: 65px;
+
   display: flex;
+
+  @media (min-width: $breakpoint-tablet-min) {
+    top: 0;
+
+    align-items: flex-end;
+
+    min-width: 436px;
+  }
+
+  @media (min-width: $breakpoint-desktop-min) {
+    position: relative;
+  }
+
+  outline: 8px solid rgba(60, 255, 0, 0.8);
+  outline-offset: -3px;
 }

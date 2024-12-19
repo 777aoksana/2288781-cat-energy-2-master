@@ -12,6 +12,7 @@
   display: flex;
   flex-direction: column;
 
+  max-width: 1220px;
   min-width: $breakpoint-mobile-min;
   width: 100%;
   margin: 0 auto;
@@ -51,7 +52,7 @@
 }
 
 @mixin primary-button($color: $white, $bg-color: $primary) {
-  display: inline-block;
+  display: block;
 
   min-width: 280px;
   min-height: 40px;
