@@ -122,7 +122,8 @@
 }
 
 .main-footer__list {
-  @include www
+  @include reset-list;
+
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -135,8 +136,6 @@
 
   border-top: 1px solid $specify-light-grey;
   border-bottom: 1px solid $specify-light-grey;
-
-  list-style-type: none;
 
   @media (min-width: $breakpoint-tablet-min) {
     padding: 8px 0 7px;
