@@ -1,65 +1,64 @@
 .main-footer {
-  @include container; //!
+  position: relative;
 
   background-color: $accent-light-grey;
-}
+  color: $black;
 
-.main-footer__container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 
-  padding: 40px 0;
+  &__wrapper {
+    @include container;
 
-  @media (min-width: $breakpoint-tablet) {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     gap: 20px;
 
-    padding: 55px 0;
+    min-width: 320px;
   }
 
-  @media (min-width: $breakpoint-desktop) {
-    min-width: 1440px;
-    padding: 66px 0;
-  }
-}
+  &__footer-logotext {
+    @include reset-link;
 
-.main-footer__footer-logotext {
-  width: fit-content;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0;
 
-  &:hover {
-    fill: $hover;
+    cursor: pointer;
+    text-align: center;
+    color: $extra-dark-grey;
+    border-bottom: 1px solid $specify-light-grey;
 
-    img {
-      filter: url("#filter_A");
+    &:hover img,
+    &:focus img {
+      fill: $hover;
+    }
+
+    &:active img {
+      fill: $active;
     }
   }
 
-  &:focus {
-    fill: $hover;
+  &__footer-logotext-image {
+    width: 128px;
+    height: 24px;
 
-    img {
-      filter: url("#filter_A");
-    }
+    vertical-align: middle;
   }
 
-  &:active {
-    fill: $active;
+  &__social {
+    display: flex;
+    align-self: center;
+    gap: 24px;
 
-    img {
-      filter: url("#filter_B");
-    }
+    min-width: 132px;
+    margin: 0;
+    padding: 20px 0;
   }
-}
 
-.main-footer__footer-logotext-image {
-  width: 128px;
-  height: 24px;
-
-  fill: blue;
-
-  overflow: hidden;
+  &__logo-htmlacademy {
+    position: relative;
+  }
 }

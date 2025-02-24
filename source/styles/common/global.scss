@@ -1,40 +1,50 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее */
 
+/* здесь используйте глобальные селекторы img, body, html и так далее */
+
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  outline: 1px solid #a01b4e; // для себя, потом удалю
-
-  // outline: 5px solid rgba(255, 0, 0, 0.8);
-  // outline-offset: -3px;
-
-  // outline: 5px solid rgba(0, 255, 0, 0.8);
-  // outline-offset: -5px;
-}
-
-html,
-body {
-  height: 100%;
   margin: 0;
   padding: 0;
+
+  box-sizing: border-box;
+
+  outline: 2px dotted #cf2164; // для себя, потом удалю
+}
+
+html {
+  height: 100%;
 }
 
 body {
   display: flex;
+  flex-direction: column;
 
-  min-width: 320px;
+  min-width: $breakpoint-mobile-min;
   min-height: 100%;
 
-  font-family: "Arial", sans-serif;
+  font-family: $base-font, "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
-  font-weight: 400;
-  font-style: normal;
+
+  word-wrap: break-word;
+  background-color: $accent-light-grey;
+  color: $accent-dark-grey;
+  user-select: none;
 }
 
 img {
   display: block;
+
   max-width: 100%;
   height: auto;
+
+  object-fit: contain;
+  object-position: center;
+}
+
+picture,
+source {
+  display: contents;
 }

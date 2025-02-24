@@ -1,107 +1,290 @@
-@mixin font-face($font-family, $font-weight, $font-style, $font-src) {
+// Шрифты
+@mixin font-face($font-family, $font-weight, $font-style, $font-src, $font-src2) {
   @font-face {
     font-family: $font-family;
     font-weight: $font-weight;
     font-style: $font-style;
     src: $font-src;
+    src: $font-src2;
     font-display: swap;
   }
 }
 
+// Медиа
+@mixin mobile {
+  @media (min-width: $breakpoint-mobile-min) {
+    @content;
+  }
+}
+
+@mixin max-width-mobile {
+  @media (max-width: $breakpoint-mobile-max) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $breakpoint-tablet-min) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $breakpoint-desktop-min) {
+    @content;
+  }
+}
+
+// Контейнер
 @mixin container {
   width: 100%;
-  min-width: 320px;
   margin: 0 auto;
-  padding: 0 20px;
 
-  @media (min-width: $breakpoint-tablet) {
-    min-width: 768px;
+  @include max-width-mobile {
+    min-width: $breakpoint-mobile-min;
+    max-width: $breakpoint-tablet-min;
+    padding: 0 20px;
+  }
+
+  @include tablet {
+    min-width: $breakpoint-tablet-min;
+    max-width: $breakpoint-desktop-min;
     padding: 0 30px;
   }
 
-  @media (min-width: $breakpoint-desktop) {
-    max-width: 1440px;
+  @include desktop {
+    min-width: 1220px;
+    max-width: $breakpoint-desktop-min;
     padding: 0 110px;
   }
 }
 
-@mixin a {
-  display: inline-block;
+// Заголовки, подзаголовки
+//h1 - headline
+@mixin headline($font-family: $main-font, $color: $black) {
+  display: block;
 
-  vertical-align: top;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: $black;
-}
+  margin: 0;
+  padding: 0;
 
-@mixin reset-list($margin: 0, $padding: 0, $list-style: none) {
-  margin: $margin;
-  padding: $padding;
-  list-style: $list-style;
-}
-
-@mixin primary-button($color: $white, $bg-color: $primary) {
-  display: inline-block;
-
-  min-width: 280px;
-  min-height: 40px;
-  padding: 10px 0;
-
-  font-family: $main-font;
-  font-size: 16px;
-  line-height: 20px;
+  font-family: $font-family;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 500;
 
   color: $color;
-  background-color: $bg-color;
-  text-transform: uppercase;
+
+  @media (min-width: $breakpoint-tablet-min) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+//h2 - title
+@mixin title($font-family: $main-font, $color: $black) {
+  display: block;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: $font-family;
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+
+  color: $color;
+
+  @media (min-width: $breakpoint-tablet-min) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+//h3 - subtitle
+@mixin subtitle($font-family: $main-font, $color: $black) {
+  display: block;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: $font-family;
+  font-size: 24px;
+  line-height: 37px;
+  font-weight: 400;
+
+  color: $color;
+
+  @media (min-width: $breakpoint-tablet-min) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+//h4 - catalog | name
+@mixin important($font-family: $main-font, $color: $specify-dark-grey) {
+  display: block;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: $font-family;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+
+  color: $color;
+
+  @media (min-width: $breakpoint-tablet-min) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+//h5 - catalog | info-title
+@mixin important($font-family: $main-font, $color: $specify-dark-grey) {
+  display: block;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: $font-family;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color: $color;
+
+  @media (min-width: $breakpoint-tablet-min) {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
+
+// Списки
+@mixin reset-list {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+// Ссылки
+@mixin reset-link {
+  @include reset-list;
+
+  display: block;
+
+  border-style: none;
   text-decoration: none;
-  text-align: center;
-  vertical-align: top;
-  border: 0;
   cursor: pointer;
-  transition: all 0.15s ease-in;
-
-  &:hover,
-  &:focus {
-    $bg-color: $hover-green;
-  }
-
-  &:active {
-    $bg-color: $hover-green;
-    opacity: 0.3;
-  }
-
-  @media (min-width: $breakpoint-tablet) {
-    padding: 14px 0;
-  }
+  background-color: transparent;
 }
 
-@mixin grey-button {
-  @include primary-button;
-
-  $color: $accent-dark-grey;
-  $bg-color: $accent-light-grey;
-
-  &:hover,
-  &:focus {
-    $bg-color: $extra-light-grey;
-  }
-
-  &:active {
-    $color: $accent-dark-grey;
-    $bg-color: $extra-light-grey;
-    opacity: 0.3;
-  }
-}
-
+// Псевдо-элемент
 @mixin pseudo-element($content: "", $position: absolute, $display: block) {
   content: $content;
   position: $position;
   display: $display;
 }
 
-@mixin retina {
-  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    @content;
+// Кнопки
+@mixin button {
+  display: block;
+
+  width: 100%;
+  min-height: 40px;
+  margin: 0;
+  padding: 10px 0;
+
+  font-family: $main-font;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  word-break: break-word;
+  border-style: none;
+  cursor: pointer;
+  background: none;
+
+  &:focus {
+    outline: 2px solid $white;
+    outline-offset: 1px;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  @include tablet {
+    padding: 14px 0;
+
+    font-size: 20px;
+    line-height: 26px;
   }
 }
+
+@mixin primary-button($color: $white, $bg-color: $primary) {
+  @include button;
+
+  color: $color;
+  background-color: $bg-color;
+
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition-duration: 1s;
+
+  &:hover {
+    $bg-color: $hover-green;
+  }
+
+  &:focus {
+    $bg-color: $hover-green;
+  }
+
+  &:active {
+    $bg-color: $hover-green;
+    opacity: 0.3;
+  }
+}
+
+@mixin grey-button($color: $accent-dark-grey, $bg-color: $accent-light-grey) {
+  @include button;
+
+  color: $color;
+  background-color: $bg-color;
+
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+  transition-duration: 1s;
+
+  &:hover {
+    $bg-color: $extra-light-grey;
+  }
+
+  &:focus {
+    $bg-color: $extra-light-grey;
+  }
+
+  &:active {
+    $bg-color: $extra-light-grey;
+    opacity: 0.3;
+  }
+}
+
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+// Тест
+@mixin outline($test-color: #ec5a5a) {
+  outline: 3px solid $test-color;
+  outline-offset: -3px;
+}
+
+// @include outline($test-color: #5aeca8);

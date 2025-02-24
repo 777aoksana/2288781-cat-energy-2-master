@@ -1,60 +1,93 @@
 .map {
-  background-color: $white;
+  position: relative;
+
+  min-height: 362px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.map__wrapper {
+  @include container;
+
+  flex-grow: 1;
+
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.map__map-wrapper iframe {
+  flex-grow: 1;
+
+  width: 100%;
+  min-height: 362px;
+
+  border: none;
+
+  @include tablet {
+    min-height: 400px;
+  }
+
+  @include desktop {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+
+    border: none;
+  }
+}
+
+.map__content {
+  display: flex;
+  align-self: center;
+
+  max-width: 140px;
+
+  font-family: $main-font;
+  line-height: 20px;
+
+  color: $extra-dark-grey;
+
+  @include tablet {
+    position: absolute;
+    top: 95px;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    max-width: 163px;
+    padding: 60px 0;
+
+    font-size: 20px;
+    line-height: 26px;
+
+    background-color: $white;
+    text-align: left;
+  }
+
+  @include desktop {
+    align-self: flex-start;
+
+    padding: 60px 78px 61px 80px;
+  }
+}
+
+.map__text {
+  margin: 0;
+
+  text-transform: uppercase;
 }
 
 .map__address {
-  position: relative;
-
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-
-  padding: 26px 20px;
-
-  @media (min-width: $breakpoint-tablet) {
-    display: flex;
-    align-items: center;
-
-    margin: 0;
-    padding: 61px 70px;
-  }
-
-  @media (min-width: $breakpoint-desktop) {
-    position: absolute;
-    top: 95px;
-    left: 110px;
-
-    margin-bottom: -200px;
-    padding: 61px 80px 60px;
-
-    width: 565px;
-
-    background-color: $white;
-    z-index: 1;
-  }
+  margin: 0;
 }
 
 .map__location {
-  background-color: $white;
-}
-
-.map__location-image {
-  display: block;
-
-  width: 320px;
-  height: 362px;
-
-  margin: 0;
-  padding: 0;
-
-  overflow: visible;
-
-  @media (min-width: $breakpoint-tablet) {
-    width: 768px;
-    height: 400px;
-  }
-
-  @media (min-width: $breakpoint-desktop) {
-    width: 1440px;
-    height: 400px;
-  }
+  display: none;
 }
