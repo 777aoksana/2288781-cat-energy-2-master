@@ -33,6 +33,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: min-content 1fr auto;
+    gap: 0;
   }
 }
 
@@ -62,6 +63,12 @@
   &:active {
     opacity: 0.3;
     color: $accent-light-grey;
+  }
+}
+
+.card__link-image {
+  @include tablet {
+    margin-top: 141px;
   }
 }
 
@@ -190,16 +197,16 @@
     min-width: 169px;
     min-height: 21px;
 
-    // &:nth-child(2) {
-    //   margin-bottom: 2px;
-    //   padding-bottom: 6px;
-    // }
+    &:nth-child(2) {
+      margin-bottom: 2px;
+      padding-bottom: 6px;
+    }
 
-    // &:nth-child(3) {
-    //   margin: 0;
-    //   padding-top: 2px;
-    //   padding-bottom: 9px;
-    // }
+    &:nth-child(3) {
+      margin: 0;
+      padding-top: 2px;
+      padding-bottom: 9px;
+    }
   }
 }
 

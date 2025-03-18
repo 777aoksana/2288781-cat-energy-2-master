@@ -10,17 +10,16 @@
   flex-direction: column;
   justify-content: flex-end;
 
-  min-width: 280px;
+  width: 320px;
   height: 207px;
 
   @include tablet {
-    min-width: 250px;
     height: 429px;
   }
 
-  @include tablet {
-    min-width: 250px;
-    height: 431px;
+  @include desktop {
+    width: 245px;
+    height: 430px;
   }
 }
 
@@ -50,11 +49,27 @@
     &::after,
     &::before {
       @include pseudo-element;
-      top: 82px;
+      top: 0;
 
       width: 60px;
       height: 2px;
-      margin-top: 15px;
+
+      background-color: $light-grey;
+    }
+
+    &::before {
+      transform: rotate(90deg);
+    }
+  }
+
+  @include desktop {
+    &::after,
+    &::before {
+      @include pseudo-element;
+      top: 75px;
+
+      width: 60px;
+      height: 2px;
 
       background-color: $light-grey;
     }
@@ -75,8 +90,9 @@
   text-align: center;
 
   @include tablet {
-    margin: 110px 0 23px;
-    padding: 0 18px;
+    width: 170px;
+    margin: 50px 77px 0;
+    padding: 0 18px 23px;
   }
 
   @include desktop {
@@ -92,6 +108,14 @@
 
   color: $accent-dark-grey;
   text-align: center;
+
+  @include tablet {
+    width: 170px;
+    margin: 0 77px;
+
+    font-size: 16px;
+    line-height: 18px;
+  }
 }
 
 .card-add__button {
@@ -99,18 +123,18 @@
 
   grid-column: 1/-1;
 
-  min-width: 280px;
+  width: 280px;
   height: fit-content;
-  margin-top: 17px;
-  padding: 10px;
+  margin: 17px auto 25px;
+  padding: 10px 0;
 
   @include tablet {
-    min-width: 250px;
-    margin-top: 32px;
+    width: 250px;
+    margin: 82px 37px 40px;
   }
 
   @include desktop {
-    min-width: 169px;
-    margin: 82px 37px 40px;
+    width: 169px;
+    margin: 90px 38px 40px;
   }
 }

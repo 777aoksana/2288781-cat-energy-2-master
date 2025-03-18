@@ -50,15 +50,17 @@
     @include desktop {
       width: 245px;
 
-      background-image: linear-gradient(to top, $accent-light-grey 431px, $white 80px);
+      background-image: linear-gradient(to top, $accent-light-grey 431px, $white 81px);
     }
 
     &:last-child {
+      width: 324px;
       height: 207px;
 
       @include tablet {
         height: 429px;
         margin-top: 82px;
+        padding: 0;
 
         background-image: none;
         outline: 2px solid $accent-light-grey;
@@ -66,7 +68,7 @@
 
       @include tablet {
         height: 431px;
-        margin-top: 80px;
+        margin-top: 81px;
       }
     }
   }
