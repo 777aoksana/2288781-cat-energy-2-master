@@ -81,7 +81,7 @@
 
   text-align: center;
 
-  @media (min-width: $breakpoint-tablet-min) {
+  @include tablet {
     font-size: 24px;
     line-height: 32px;
   }
@@ -92,19 +92,26 @@
   flex-direction: column;
   gap: 16px;
 
-  @media (min-width: $breakpoint-tablet-min) {
+  padding: 13px;
+
+  @include tablet {
     flex-direction: row;
     gap: 0;
     justify-content: center;
     align-items: center;
   }
 
-  @media (min-width: $breakpoint-desktop-min) {
+  @include desktop {
     justify-content: center;
+
+    width: 632px;
+    padding: 0;
   }
 }
 
 .promotions__input {
+  @include error;
+
   width: 100%;
   padding: 12px;
 
@@ -115,43 +122,50 @@
   color: $accent-dark-grey;
   border: 1px solid $dark-grey;
 
+  transition-property: border-color, outline-width;
+  transition-duration: 0.3s;
+
   &::placeholder {
     color: $accent-dark-grey;
   }
 
-  @media (min-width: $breakpoint-tablet-min) {
+  @include tablet {
     width: auto;
     min-width: 376px;
     height: 54px;
+    margin-bottom: 0;
+
     border: none;
     outline: 1px solid $dark-grey;
   }
 
-  @media (min-width: $breakpoint-desktop-min) {
+  @include desktop {
     min-width: 496px;
   }
 
   &:hover {
+    border-color: $dark-grey;
     outline: 1px solid $dark-grey;
   }
 
   &:focus {
-    outline: 2px solid $accent-dark-grey;
+    border: 1px solid $accent-dark-grey;
+    outline: 1px solid $accent-dark-grey;
   }
 
   &:active {
     outline: 2px solid $accent-dark-grey;
   }
-}
 
-.promotions__form {
-  padding: 13px;
+  &--error {
+    @include error;
 
-  @include tablet {
-    display:inline-block;
+    outline-width: 2px;
+    outline-color: $error-color;
 
-    width: 632px;
-    padding: 0;
+    @include tablet {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -167,36 +181,5 @@
     width: auto;
     min-width: 256px;
     height: 56px;
-  }
-}
-
-.promotions__input {
-  @include error;
-
-  transition-property: border-color, outline-width;
-  transition-duration: 0.3s;
-
-  &:hover {
-    border-color: $dark-grey;
-  }
-
-  &:focus {
-    border: 1px solid $accent-dark-grey;
-    outline: 1px solid $accent-dark-grey;
-  }
-
-  @include tablet {
-    margin-bottom: 0;
-  }
-}
-
-.promotions__input--error {
-  @include error;
-
-  outline-width: 2px;
-  outline-color: $error-color;
-
-  @include tablet {
-    margin-bottom: 0;
   }
 }
