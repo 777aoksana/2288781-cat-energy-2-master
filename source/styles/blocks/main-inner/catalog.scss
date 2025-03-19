@@ -1,7 +1,44 @@
 .catalog {
-  background-color: transparent;
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 320px;
+  margin: 0 auto;
 
   transition: all 0.8s ease-out;
+
+  @include max-width-mobile {
+    &:after {
+      @include pseudo-element;
+      right: 50%;
+      bottom: 0;
+
+      width: 100vw;
+      height: 1px;
+
+      background-color: $extra-light-grey;
+
+      transform: translate(50%);
+    }
+  }
+
+  @include tablet {
+    width: 768px;
+    column-gap: 60px;
+
+    padding-top: 65px;
+    padding-bottom: 74px;
+  }
+
+  @include desktop {
+    width: 1440px;
+    column-gap: 80px;
+
+    width: 1440px;
+    padding-top: 71px;
+  }
 
   &__list {
     @include reset-list;
@@ -33,10 +70,8 @@
 
     width: 320px;
     height: 209px;
-    margin: 0;
-    padding: 0;
 
-    border-top: 1px solid $extra-light-grey;
+    // border-top: 1px solid $extra-light-grey;
 
     @include tablet {
       width: 324px;
@@ -63,7 +98,7 @@
         padding: 0;
 
         background-image: none;
-        outline: 2px solid $accent-light-grey;
+        // outline: 2px solid $accent-light-grey;
       }
 
       @include tablet {
