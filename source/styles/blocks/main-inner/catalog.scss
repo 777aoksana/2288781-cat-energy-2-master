@@ -9,19 +9,17 @@
 
   transition: all 0.8s ease-out;
 
-  @include max-width-mobile {
-    &:after {
-      @include pseudo-element;
-      right: 50%;
-      bottom: 0;
+  &::after {
+    @include pseudo-element;
+    right: 50%;
+    bottom: 0;
 
-      width: 100vw;
-      height: 1px;
+    width: 100%;
+    height: 1px;
 
-      background-color: $extra-light-grey;
+    background-color: $extra-light-grey;
 
-      transform: translate(50%);
-    }
+    transform: translate(50%);
   }
 
   @include tablet {
@@ -33,7 +31,6 @@
   }
 
   @include desktop {
-    width: 1440px;
     column-gap: 80px;
 
     width: 1440px;
@@ -70,8 +67,6 @@
 
     width: 320px;
     height: 209px;
-
-    // border-top: 1px solid $extra-light-grey;
 
     @include tablet {
       width: 324px;
