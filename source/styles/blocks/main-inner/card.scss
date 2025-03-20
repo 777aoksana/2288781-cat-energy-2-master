@@ -1,9 +1,16 @@
 .card {
   position: relative;
 
-  margin: 0 auto;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 25px;
 
   transition: all 0.8s ease-out;
+
+  @include tablet {
+    padding-top: 0;
+    padding-bottom: 40px;
+  }
 }
 
 .card__block {
@@ -16,11 +23,11 @@
 
   @include tablet {
     min-height: 511px;
-    padding: 10px 37px 40px;
+    padding: 10px 0 40px;
   }
 
   @include desktop {
-    padding: 0 38px 40px;
+    padding: 0 0 40px;
   }
 }
 
@@ -117,11 +124,15 @@
   }
 }
 
+.card__link-text {
+  @include reset-link;
+}
+
 .card__denomination {
   @include denomination;
 
   max-width: 80px;
-  margin: 0 0 14px;
+  margin: 0;
 
   text-transform: uppercase;
   vertical-align: middle;

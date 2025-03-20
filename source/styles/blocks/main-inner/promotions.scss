@@ -3,7 +3,7 @@
 
   &::after {
     @include pseudo-element;
-    top: 52px;
+    top: 12px;
     right: 0;
     z-index: 13;
 
@@ -32,7 +32,7 @@
   }
 
   @include desktop {
-    padding: 96px 234px 104px;
+    padding: 96px 0 104px;
   }
 }
 
@@ -40,30 +40,35 @@
   @include subtitle;
 
   position: relative;
+  left: -40px;
+  z-index: 99;
 
   display: flex;
-  gap: 40px;
+  justify-content: flex-start;
 
+  width: 232px;
+  margin-top: 40px;
   margin-bottom: 32px;
-  padding-left: 20px;
+  padding-right: 40px;
+  padding-left: 40px;
 
   line-height: 24px;
 
   background-color: $white;
 
   @include tablet {
+    width: 282px;
+    margin-top: 0;
     margin-bottom: 66px;
-    margin-left: 40px;
-    padding: 0;
-    padding-right: 40px;
-    padding-left: 40px;
+    margin-left: 30px;
 
     font-size: 32px;
     line-height: 32px;
   }
 
   @include desktop {
-    margin-left: 0;
+    width: 333px;
+    margin-left: 110px;
     margin-bottom: 72px;
 
     font-size: 40px;
