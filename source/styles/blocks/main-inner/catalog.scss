@@ -1,7 +1,22 @@
 .catalog {
-  background-color: transparent;
+  margin-bottom: 25px;
 
   transition: all 0.8s ease-out;
+
+  @include tablet {
+    width: 768px;
+    column-gap: 60px;
+
+    margin-top: 0;
+    margin-bottom: 74px;
+  }
+
+  @include desktop {
+    column-gap: 80px;
+
+    width: 1220px;
+    margin-bottom: 71px;
+  }
 
   &__list {
     @include reset-list;
@@ -16,6 +31,7 @@
       gap: 60px 60px;
 
       width: 768px;
+      margin: 0;
     }
 
     @include desktop {
@@ -33,10 +49,6 @@
 
     width: 320px;
     height: 209px;
-    margin: 0;
-    padding: 0;
-
-    border-top: 1px solid $extra-light-grey;
 
     @include tablet {
       width: 324px;
@@ -50,26 +62,43 @@
     @include desktop {
       width: 245px;
 
-      background-image: linear-gradient(to top, $accent-light-grey 431px, $white 80px);
-    }
-
-    &:last-child {
-      height: 207px;
-
-      @include tablet {
-        height: 429px;
-        margin-top: 82px;
-
-        background-image: none;
-        outline: 2px solid $accent-light-grey;
-      }
-
-      @include tablet {
-        height: 431px;
-        margin-top: 80px;
-      }
+      background-image: linear-gradient(to top, $accent-light-grey 431px, $white 81px);
     }
   }
 }
 
+.catalog__item::after {
+  @include pseudo-element;
+  right: 50%;
+  bottom: 0;
+  z-index: 10;
 
+  width: 100%;
+  height: 1px;
+
+  background-color: $extra-light-grey;
+
+  transform: translate(50%);
+
+  @include tablet {
+    background-color: none;
+  }
+}
+
+.catalog__item--card-add {
+  width: 324px;
+  height: 207px;
+
+  @include tablet {
+    height: 429px;
+    margin-top: 82px;
+    padding: 0;
+
+    background: none;
+  }
+
+  @include tablet {
+    height: 431px;
+    margin-top: 81px;
+  }
+}

@@ -1,9 +1,16 @@
 .card {
   position: relative;
 
-  margin: 0 auto;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 25px;
 
   transition: all 0.8s ease-out;
+
+  @include tablet {
+    padding-top: 0;
+    padding-bottom: 40px;
+  }
 }
 
 .card__block {
@@ -16,23 +23,22 @@
 
   @include tablet {
     min-height: 511px;
-    padding: 10px 37px 40px;
+    padding: 10px 0 40px;
   }
 
   @include desktop {
-    padding: 0 38px 40px;
+    padding: 0 0 40px;
   }
 }
 
 .card__inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px 0;
 
   @include tablet {
-    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: min-content 1fr auto;
+    gap: 0;
   }
 }
 
@@ -62,6 +68,12 @@
   &:active {
     opacity: 0.3;
     color: $accent-light-grey;
+  }
+}
+
+.card__link-image {
+  @include tablet {
+    margin-top: 141px;
   }
 }
 
@@ -112,11 +124,15 @@
   }
 }
 
+.card__link-text {
+  @include reset-link;
+}
+
 .card__denomination {
   @include denomination;
 
   max-width: 80px;
-  margin: 0 0 14px;
+  margin: 0;
 
   text-transform: uppercase;
   vertical-align: middle;
@@ -190,16 +206,16 @@
     min-width: 169px;
     min-height: 21px;
 
-    // &:nth-child(2) {
-    //   margin-bottom: 2px;
-    //   padding-bottom: 6px;
-    // }
+    &:nth-child(2) {
+      margin-bottom: 2px;
+      padding-bottom: 6px;
+    }
 
-    // &:nth-child(3) {
-    //   margin: 0;
-    //   padding-top: 2px;
-    //   padding-bottom: 9px;
-    // }
+    &:nth-child(3) {
+      margin: 0;
+      padding-top: 2px;
+      padding-bottom: 9px;
+    }
   }
 }
 

@@ -3,7 +3,7 @@
 
   &::after {
     @include pseudo-element;
-    top: 52px;
+    top: 12px;
     right: 0;
     z-index: 13;
 
@@ -32,7 +32,7 @@
   }
 
   @include desktop {
-    padding: 96px 234px 104px;
+    padding: 96px 0 104px;
   }
 }
 
@@ -40,30 +40,35 @@
   @include subtitle;
 
   position: relative;
+  left: -40px;
+  z-index: 99;
 
   display: flex;
-  gap: 40px;
+  justify-content: flex-start;
 
+  width: 232px;
+  margin-top: 40px;
   margin-bottom: 32px;
-  padding-left: 20px;
+  padding-right: 40px;
+  padding-left: 40px;
 
   line-height: 24px;
 
   background-color: $white;
 
   @include tablet {
+    width: 282px;
+    margin-top: 0;
     margin-bottom: 66px;
-    margin-left: 40px;
-    padding: 0;
-    padding-right: 40px;
-    padding-left: 40px;
+    margin-left: 30px;
 
     font-size: 32px;
     line-height: 32px;
   }
 
   @include desktop {
-    margin-left: 0;
+    width: 333px;
+    margin-left: 110px;
     margin-bottom: 72px;
 
     font-size: 40px;
@@ -81,7 +86,7 @@
 
   text-align: center;
 
-  @media (min-width: $breakpoint-tablet-min) {
+  @include tablet {
     font-size: 24px;
     line-height: 32px;
   }
@@ -92,19 +97,26 @@
   flex-direction: column;
   gap: 16px;
 
-  @media (min-width: $breakpoint-tablet-min) {
+  padding: 13px;
+
+  @include tablet {
     flex-direction: row;
     gap: 0;
     justify-content: center;
     align-items: center;
   }
 
-  @media (min-width: $breakpoint-desktop-min) {
+  @include desktop {
     justify-content: center;
+
+    width: 632px;
+    padding: 0;
   }
 }
 
 .promotions__input {
+  @include error;
+
   width: 100%;
   padding: 12px;
 
@@ -115,43 +127,50 @@
   color: $accent-dark-grey;
   border: 1px solid $dark-grey;
 
+  transition-property: border-color, outline-width;
+  transition-duration: 0.3s;
+
   &::placeholder {
     color: $accent-dark-grey;
   }
 
-  @media (min-width: $breakpoint-tablet-min) {
+  @include tablet {
     width: auto;
     min-width: 376px;
     height: 54px;
+    margin-bottom: 0;
+
     border: none;
     outline: 1px solid $dark-grey;
   }
 
-  @media (min-width: $breakpoint-desktop-min) {
+  @include desktop {
     min-width: 496px;
   }
 
   &:hover {
+    border-color: $dark-grey;
     outline: 1px solid $dark-grey;
   }
 
   &:focus {
-    outline: 2px solid $accent-dark-grey;
+    border: 1px solid $accent-dark-grey;
+    outline: 1px solid $accent-dark-grey;
   }
 
   &:active {
     outline: 2px solid $accent-dark-grey;
   }
-}
 
-.promotions__form {
-  padding: 13px;
+  &--error {
+    @include error;
 
-  @include tablet {
-    display:inline-block;
+    outline-width: 2px;
+    outline-color: $error-color;
 
-    width: 632px;
-    padding: 0;
+    @include tablet {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -167,36 +186,5 @@
     width: auto;
     min-width: 256px;
     height: 56px;
-  }
-}
-
-.promotions__input {
-  @include error;
-
-  transition-property: border-color, outline-width;
-  transition-duration: 0.3s;
-
-  &:hover {
-    border-color: $dark-grey;
-  }
-
-  &:focus {
-    border: 1px solid $accent-dark-grey;
-    outline: 1px solid $accent-dark-grey;
-  }
-
-  @include tablet {
-    margin-bottom: 0;
-  }
-}
-
-.promotions__input--error {
-  @include error;
-
-  outline-width: 2px;
-  outline-color: $error-color;
-
-  @include tablet {
-    margin-bottom: 0;
   }
 }
