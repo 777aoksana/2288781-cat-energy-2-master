@@ -64,28 +64,10 @@
 
       background-image: linear-gradient(to top, $accent-light-grey 431px, $white 81px);
     }
-
-    &--card-add {
-      width: 324px;
-      height: 207px;
-
-      @include tablet {
-        height: 429px;
-        margin-top: 82px;
-        padding: 0;
-
-        background: none;
-      }
-
-      @include tablet {
-        height: 431px;
-        margin-top: 81px;
-      }
-    }
   }
 }
 
-&__item::after {
+.catalog__item::after {
   @include pseudo-element;
   right: 50%;
   bottom: 0;
@@ -100,5 +82,23 @@
 
   @include tablet {
     background-color: none;
+  }
+}
+
+.catalog__item--card-add {
+  width: 324px;
+  height: 207px;
+
+  @include tablet {
+    height: 429px;
+    margin-top: 82px;
+    padding: 0;
+
+    background: none;
+  }
+
+  @include tablet {
+    height: 431px;
+    margin-top: 81px;
   }
 }
