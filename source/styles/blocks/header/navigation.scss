@@ -272,7 +272,7 @@
 
       border-bottom: 2px solid $primary;
 
-      transition: width .3s ease;
+      transition: width 0.3s ease;
     }
   }
 
@@ -284,7 +284,7 @@
     &__list--index &__link--current {
       border-bottom: 2px solid $white;
 
-      transition: width .3s ease;
+      transition: width 0.3s ease;
     }
 
     &__list--catalog &__link,
