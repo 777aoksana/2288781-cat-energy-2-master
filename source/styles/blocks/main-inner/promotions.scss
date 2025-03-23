@@ -11,21 +11,6 @@
     text-align: center;
     background-image: linear-gradient(to bottom, transparent 0, transparent 12px, $primary 12px, $primary 14px, transparent 14px, transparent 100%);
 
-    & span {
-      display: inline-block;
-      margin-left: -120px;
-      padding: 0 40px;
-      background-color: #ffffff;
-
-      @include tablet {
-        margin-left: 24px;
-      }
-
-      @include desktop {
-        margin-left: -50px;
-      }
-    }
-
     @include tablet {
       margin: 80px auto 66px;
       padding: 0 calc((100vw - 768px) / 2);
@@ -40,6 +25,21 @@
       padding: 0 calc((100vw - 1220px) / 2);
       font-size: 40px;
       line-height: 40px;
+    }
+  }
+
+  &__text-subtitle {
+    display: inline-block;
+    margin-left: -120px;
+    padding: 0 40px;
+    background-color: #ffffff;
+
+    @include tablet {
+      margin-left: 24px;
+    }
+
+    @include desktop {
+      margin-left: -50px;
     }
   }
 
