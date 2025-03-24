@@ -8,7 +8,6 @@
 
 html {
   height: 100%;
-  overflow: auto;
 }
 
 body {
@@ -26,8 +25,6 @@ body {
 
   background-color: $accent-light-grey;
   color: $accent-dark-grey;
-  overflow-y: scroll;
-  overflow-x: hidden;
 }
 
 img {
