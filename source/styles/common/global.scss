@@ -4,6 +4,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
+
+  outline: solid 1px red;
 }
 
 html {
@@ -14,6 +16,7 @@ body {
   display: flex;
   flex-direction: column;
 
+  width: 100%;
   min-width: $breakpoint-mobile-min;
   min-height: 100%;
   margin: 0;

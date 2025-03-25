@@ -4,6 +4,8 @@
   transition: all 0.8s ease-out;
 
   &__subtitle {
+    overflow: hidden;
+
     @include subtitle;
     position: relative;
     margin: 25px auto 36px;

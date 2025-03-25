@@ -13,6 +13,8 @@
   background-color: $white;
   color: $black;
 
+  transition: all 0s ease;
+
   &__wrapper {
     @include container;
 
@@ -21,18 +23,16 @@
     justify-content: space-between;
     align-items: center;
 
-    width: $breakpoint-mobile-min;
+    min-width: 280px;
 
     @include tablet {
       align-items: flex-end;
 
-      width: $breakpoint-tablet-min;
-      height: 50px;
+      min-height: 50px;
     }
 
     @include desktop {
-      width: $breakpoint-desktop-min;
-      height: 59px;
+      min-height: 59px;
     }
   }
 
@@ -45,7 +45,7 @@
     align-items: center;
 
     min-width: 190px;
-    height: 38px;
+    min-height: 38px;
     margin-right: auto;
     padding: 0;
 
@@ -53,12 +53,12 @@
 
     @include tablet {
       min-width: 174px;
-      height: 50px;
+      min-height: 50px;
     }
 
     @include desktop {
       min-width: 202px;
-      height: 59px;
+      min-height: 59px;
     }
   }
 

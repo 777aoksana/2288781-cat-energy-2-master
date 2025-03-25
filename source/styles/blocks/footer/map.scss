@@ -95,7 +95,7 @@
 
     border: none;
     object-fit: cover;
-    overflow: visible;
+    visibility: hidden;
 
     @include tablet {
       min-width: 768px;
