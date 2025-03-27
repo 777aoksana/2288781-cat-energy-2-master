@@ -35,29 +35,29 @@
     align-items: center;
     gap: 13px;
 
-    min-height: 50px;
+    height: 50px;
   }
 
   @include desktop {
     gap: 14px;
 
-    min-height: 59px;
+    height: 59px;
   }
 
   &__logo-image {
-    min-width: 33px;
-    min-height: 38px;
+    width: 33px;
+    height: 38px;
 
     border-style: none;
 
     @include tablet {
-      min-width: 60px;
-      min-height: 50px;
+      width: 60px;
+      height: 50px;
     }
 
     @include desktop {
-      min-width: 70px;
-      min-height: 59px;
+      width: 70px;
+      height: 59px;
     }
   }
 

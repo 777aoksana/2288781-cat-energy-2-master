@@ -36,18 +36,15 @@
 
 // Контейнер
 @mixin container {
-  margin: 0;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 
   @include max-width-mobile {
-    min-width: $breakpoint-mobile-min;
-    max-width: $breakpoint-tablet-min;
+    min-width: 320px;
     padding: 0 20px;
   }
 
   @include tablet {
-    min-width: $breakpoint-tablet-min;
+    min-width: 768px;
     max-width: $breakpoint-desktop-min;
     padding: 0 30px;
   }
@@ -208,6 +205,8 @@
   cursor: pointer;
   background: none;
   vertical-align: middle;
+
+  transition: 0.25s ease-in-out;
 
   &:hover {
     outline: none;

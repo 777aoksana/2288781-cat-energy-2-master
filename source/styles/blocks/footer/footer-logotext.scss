@@ -5,9 +5,7 @@
   justify-content: center;
   align-items: center;
 
-  min-width: 100%;
-  min-height: auto;
-  margin: 0;
+  width: 320px;
   padding: 0;
 
   cursor: pointer;
@@ -15,9 +13,6 @@
   transition: all 0.8s ease-out;
 
   @include max-width-mobile {
-    // width: 100%;
-    // min-width: 320px;
-    // margin: 0 auto;
     padding-top: 40px;
     padding-bottom: 20px;
   }

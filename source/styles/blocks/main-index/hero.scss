@@ -2,8 +2,14 @@
   position: relative;
   z-index: 1;
 
+  min-width: 280px;
+
   @include tablet {
-    background-color: transparent;
+    min-width: 768px;
+  }
+
+  @include desktop {
+    min-width: 1220px;
   }
 }
 
@@ -17,8 +23,8 @@
   align-items: center;
   justify-content: start;
 
-  margin: auto;
-  padding: 0;
+
+  min-height: 480px;
 
   @include tablet {
     align-items: flex-start;
@@ -39,7 +45,7 @@
 
 .hero__title {
   max-width: 280px;
-  margin: 27px auto 25px;
+  margin: 0 auto;
   padding: 0;
 
   color: $white;
@@ -120,8 +126,7 @@
 }
 
 .hero__button {
-  width: 100%;
-  min-width: 280px;
+  width: 280px;
   height: 40px;
 
   @include tablet {
@@ -130,7 +135,7 @@
     left: 120px;
 
     width: 242px;
-    min-height: 54px;
+    height: 54px;
   }
 
   @include desktop {

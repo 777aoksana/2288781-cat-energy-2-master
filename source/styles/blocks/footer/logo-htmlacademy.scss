@@ -5,23 +5,18 @@
   justify-content: center;
   align-items: center;
 
-  min-width: 280px;
-  min-height: 34px;
+  width: 280px;
+  margin: 0;
+  padding: 0;
 
   cursor: pointer;
 
   transition: all 0.8s ease-out;
 
-  @include max-width-mobile {
-    max-width: 100%;
-    max-height: 100%;
-  }
-
   @include tablet {
     justify-content: flex-end;
 
-    min-width: 168px;
-    min-height: 37px;
+    width: 168px;
     margin: 0;
     padding: 0;
   }
@@ -32,12 +27,12 @@
     position: relative;
 
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
 
-    min-width: 280px;
-    min-height: 37px;
+    width: 280px;
     margin: 0 auto;
+    padding: 0;
     padding-top: 20px;
     padding-bottom: 40px;
 
@@ -45,7 +40,7 @@
     vertical-align: middle;
 
     @include tablet {
-      justify-content: flex-end;
+      justify-content: flex-start;
 
       min-width: 168px;
       margin: 0;
@@ -96,6 +91,7 @@
     line-height: 20px;
 
     @include tablet {
+      justify-content: flex-start;
       gap: 23px;
 
       min-height: 37px;
