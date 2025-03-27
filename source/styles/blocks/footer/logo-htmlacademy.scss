@@ -47,25 +47,6 @@
       padding: 0;
     }
 
-    &::after {
-      @include pseudo-element;
-      top: 20px;
-      right: 0;
-
-      width: 27px;
-      height: 34px;
-
-      background-color: $very-dark-grey;
-      mask-image: url("../../icons/stack.svg#icon-htmlacademy");
-      mask-size: 27px 34px;
-      mask-repeat: no-repeat;
-      mask-position: center;
-
-      @include tablet {
-        top: 0;
-      }
-    }
-
     &:hover::after {
       background-color: $primary;
     }
@@ -77,6 +58,25 @@
     &:active::after {
       background-color: $primary;
       opacity: 0.3;
+    }
+  }
+
+.logo-htmlacademy__link::after {
+    @include pseudo-element;
+    top: 20px;
+    right: 0;
+
+    width: 27px;
+    height: 34px;
+
+    background-color: $very-dark-grey;
+    mask-image: url("../../icons/stack.svg#icon-htmlacademy");
+    mask-size: 27px 34px;
+    mask-repeat: no-repeat;
+    mask-position: center;
+
+    @include tablet {
+      top: 0;
     }
   }
 
