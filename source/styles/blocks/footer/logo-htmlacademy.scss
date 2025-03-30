@@ -1,102 +1,72 @@
 .logo-htmlacademy {
-  position: relative;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  max-width: 280px;
-  margin: 0;
-  padding: 0;
-
-  cursor: pointer;
-
-  transition: all 0.8s ease-out;
+  border-top: 1px solid $specify-light-grey;
 
   @include tablet {
-    justify-content: flex-end;
+    border: none;
+  }
 
-    max-width: 168px;
-    margin: 0;
+  &__link {
+    @include reset-link;
+
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 20px auto 40px;
     padding: 0;
-  }
-}
 
-.logo-htmlacademy__link {
-  @include reset-link;
+    color: $accent-dark-grey;
 
-  position: relative;
+    &::after {
+      @include pseudo-element;
+      top: 0;
+      right: 0;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+      width: 27px;
+      height: 34px;
 
-  min-width: 280px;
-  margin: 0 auto;
-  padding: 0;
-  padding-top: 20px;
-  padding-bottom: 40px;
+      background-color: $very-dark-grey;
+      mask-image: url("../../../icons/stack.svg#icon-htmlacademy");
+      mask-size: 27px 34px;
+      mask-repeat: no-repeat;
+      mask-position: center;
+    }
 
-  color: $accent-dark-grey;
-  vertical-align: middle;
+    &:hover::after {
+      background-color: $primary;
+    }
 
-  @include tablet {
-    justify-content: flex-start;
+    &:focus::after {
+      background-color: $primary;
+    }
 
-    min-width: 168px;
-    margin: 0;
-    padding: 0;
-  }
-}
+    &:active::after {
+      background-color: $primary;
+      opacity: 0.3;
+    }
 
-.logo-htmlacademy__link::after {
-  @include pseudo-element;
-  top: 20px;
-  right: 0;
-
-  width: 27px;
-  height: 34px;
-
-  background-color: $very-dark-grey;
-  mask-image: url("../../icons/stack.svg#icon-htmlacademy");
-  mask-size: 27px 34px;
-  mask-repeat: no-repeat;
-  mask-position: center;
-
-  @include tablet {
-    top: 0;
+    @include tablet {
+      margin: 0;
+    }
   }
 
-  &:hover::after {
-    background-color: $primary;
-  }
+  &__text {
+    display: flex;
+    align-items: center;
 
-  &:focus::after {
-    background-color: $primary;
-  }
 
-  &:active::after {
-    background-color: $primary;
-    opacity: 0.3;
-  }
-}
+    min-height: 34px;
 
-.logo-htmlacademy__text {
-  display: flex;
-  align-items: center;
+    font-size: 16px;
+    line-height: 20px;
 
-  min-width: 113px;
-  min-height: 34px;
+    @include tablet {
+      gap: 23px;
 
-  font-size: 16px;
-  line-height: 20px;
-
-  @include tablet {
-    justify-content: flex-start;
-    gap: 23px;
-
-    min-height: 37px;
-    margin: 0;
-    padding: 0;
+      margin: 0;
+      padding: 0 0 0 5px;
+    }
   }
 }
