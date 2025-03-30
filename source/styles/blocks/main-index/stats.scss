@@ -40,13 +40,15 @@
   flex-direction: column;
   align-items: center;
 
-  width: 280px;
+  max-width: 280px;
+  min-height: 659px;
   margin: 0 auto;
   padding-top: 25px;
   padding-bottom: 40px;
 
   @include tablet {
-    width: 768px;
+    max-width: 708px;
+    min-height: 1081px;
     padding-top: 45px;
     padding-bottom: 101px;
   }
@@ -56,7 +58,8 @@
     justify-content: space-between;
     align-items: flex-start;
 
-    width: 1440px;
+    max-width: 1440px;
+    min-height: 598px;
     padding-top: 0;
     padding-bottom: 0;
   }
@@ -69,7 +72,7 @@
   @include desktop {
     align-items: flex-start;
 
-    width: 436px;
+    max-width: 436px;
   }
 }
 
@@ -148,16 +151,16 @@
   grid-template-columns: repeat(2, 1fr);
   column-gap: 32px;
 
-  width: 280px;
+  max-width: 280px;
   margin: 0;
 
   @include tablet {
-    width: 367px;
+    max-width: 367px;
     column-gap: 43px;
   }
 
   @include desktop {
-    width: 366px;
+    max-width: 366px;
     column-gap: 42px;
   }
 }
@@ -187,7 +190,6 @@
 
 .stats__action {
   position: absolute;
-  // top: 46px;
   left: 50%;
 
   width: 77px;

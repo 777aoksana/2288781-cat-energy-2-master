@@ -1,4 +1,5 @@
 .programs {
+  min-width: 280px;
   margin: 0 auto;
   padding: 0;
   padding-top: 20px;
@@ -8,6 +9,12 @@
   transition: all 0.8s ease-out;
 
   @include tablet {
+    min-width: 708px;
+    padding-top: 0;
+  }
+
+  @include desktop {
+    min-width: 1440px;
     padding-top: 0;
   }
 
@@ -19,7 +26,6 @@
     align-items: center;
 
     width: 100%;
-    min-width: 280px;
     padding-bottom: 20px;
 
     @include tablet {
@@ -89,7 +95,7 @@
   @media (min-width: $breakpoint-desktop-min) {
     background-image: url("../../icons/stack.svg#icon-cat-slim");
     background-repeat: no-repeat;
-    background-position: top 39px left 53px;
+    background-position: top 41px left 52px;
     background-size: 100px 106px;
   }
 }
@@ -110,7 +116,7 @@
   @include desktop {
     background-image: url("../../icons/stack.svg#icon-cat-pro");
     background-repeat: no-repeat;
-    background-position: top 45px left 35px;
+    background-position: top 47px left 33px;
     background-size: 134px 100px;
   }
 }

@@ -11,31 +11,32 @@
 
 // Медиа
 @mixin mobile {
-  @media (min-width: $breakpoint-mobile-min) {
+  @media screen and (min-width: $breakpoint-mobile-min) {
     @content;
   }
 }
 
 @mixin max-width-mobile {
-  @media (max-width: $breakpoint-mobile-max) {
+  @media screen and (max-width: $breakpoint-mobile-max) {
     @content;
   }
 }
 
 @mixin tablet {
-  @media (min-width: $breakpoint-tablet-min) {
+  @media screen and (min-width: $breakpoint-tablet-min) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media (min-width: $breakpoint-desktop-min) {
+  @media screen and (min-width: $breakpoint-desktop-min) {
     @content;
   }
 }
 
 // Контейнер
 @mixin container {
+  width: 100%;
   margin: 0 auto;
 
   @include max-width-mobile {
@@ -45,13 +46,12 @@
 
   @include tablet {
     min-width: 768px;
-    max-width: $breakpoint-desktop-min;
     padding: 0 30px;
   }
 
   @include desktop {
     min-width: 1220px;
-    max-width: $breakpoint-desktop-min;
+    max-width: 1440px;
     padding: 0 110px;
   }
 }
@@ -282,6 +282,18 @@
   }
 }
 
+
+// Линия
+@mixin bordered($color, $width) {
+  border: $width solid $color;
+}
+
+@mixin bordered-b($color, $width) {
+  border-bottom: $width solid $color;
+}
+
+
+// Центровка
 @mixin absolute-center {
   position: absolute;
   top: 50%;
@@ -290,6 +302,7 @@
   transform: translate(-50%, -50%);
 }
 
+// "Ошибка"
 @mixin error {
   padding: 13px;
 

@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
 
-  width: 280px;
+  max-width: 280px;
   margin: 0;
   padding: 0;
 
@@ -16,87 +16,87 @@
   @include tablet {
     justify-content: flex-end;
 
-    width: 168px;
+    max-width: 168px;
     margin: 0;
     padding: 0;
   }
+}
 
-  &__link {
-    @include reset-link;
+.logo-htmlacademy__link {
+  @include reset-link;
 
-    position: relative;
+  position: relative;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    width: 280px;
-    margin: 0 auto;
+  min-width: 280px;
+  margin: 0 auto;
+  padding: 0;
+  padding-top: 20px;
+  padding-bottom: 40px;
+
+  color: $accent-dark-grey;
+  vertical-align: middle;
+
+  @include tablet {
+    justify-content: flex-start;
+
+    min-width: 168px;
+    margin: 0;
     padding: 0;
-    padding-top: 20px;
-    padding-bottom: 40px;
-
-    color: $accent-dark-grey;
-    vertical-align: middle;
-
-    @include tablet {
-      justify-content: flex-start;
-
-      min-width: 168px;
-      margin: 0;
-      padding: 0;
-    }
-
-    &:hover::after {
-      background-color: $primary;
-    }
-
-    &:focus::after {
-      background-color: $primary;
-    }
-
-    &:active::after {
-      background-color: $primary;
-      opacity: 0.3;
-    }
   }
+}
 
 .logo-htmlacademy__link::after {
-    @include pseudo-element;
-    top: 20px;
-    right: 0;
+  @include pseudo-element;
+  top: 20px;
+  right: 0;
 
-    width: 27px;
-    height: 34px;
+  width: 27px;
+  height: 34px;
 
-    background-color: $very-dark-grey;
-    mask-image: url("../../icons/stack.svg#icon-htmlacademy");
-    mask-size: 27px 34px;
-    mask-repeat: no-repeat;
-    mask-position: center;
+  background-color: $very-dark-grey;
+  mask-image: url("../../icons/stack.svg#icon-htmlacademy");
+  mask-size: 27px 34px;
+  mask-repeat: no-repeat;
+  mask-position: center;
 
-    @include tablet {
-      top: 0;
-    }
+  @include tablet {
+    top: 0;
   }
 
-  &__text {
-    display: flex;
-    align-items: center;
+  &:hover::after {
+    background-color: $primary;
+  }
 
-    min-width: 113px;
-    min-height: 34px;
+  &:focus::after {
+    background-color: $primary;
+  }
 
-    font-size: 16px;
-    line-height: 20px;
+  &:active::after {
+    background-color: $primary;
+    opacity: 0.3;
+  }
+}
 
-    @include tablet {
-      justify-content: flex-start;
-      gap: 23px;
+.logo-htmlacademy__text {
+  display: flex;
+  align-items: center;
 
-      min-height: 37px;
-      margin: 0;
-      padding: 0;
-    }
+  min-width: 113px;
+  min-height: 34px;
+
+  font-size: 16px;
+  line-height: 20px;
+
+  @include tablet {
+    justify-content: flex-start;
+    gap: 23px;
+
+    min-height: 37px;
+    margin: 0;
+    padding: 0;
   }
 }
