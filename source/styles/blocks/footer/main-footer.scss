@@ -30,8 +30,7 @@
     position: relative;
 
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+    flex-flow: wrap column;
     justify-content: center;
     align-items: center;
 
@@ -39,8 +38,7 @@
     padding-bottom: 40px;
 
     @include tablet {
-      flex-direction: row;
-      flex-wrap: nowrap;
+      flex-flow: nowrap row;
       justify-content: space-between;
 
       padding-top: 55px;
