@@ -28,7 +28,7 @@
 
     @include desktop {
       background-color: $accent-light-grey;
-      // box-shadow: 100% 0 0 0 $accent-light-grey;
+      box-shadow: 100% 0 0 0 $accent-light-grey;
     }
   }
 }
@@ -40,15 +40,13 @@
   flex-direction: column;
   align-items: center;
 
-  max-width: 280px;
-  min-height: 659px;
+  width: 280px;
   margin: 0 auto;
   padding-top: 25px;
   padding-bottom: 40px;
 
   @include tablet {
-    max-width: 708px;
-    min-height: 1081px;
+    width: 768px;
     padding-top: 45px;
     padding-bottom: 101px;
   }
@@ -58,8 +56,7 @@
     justify-content: space-between;
     align-items: flex-start;
 
-    max-width: 1440px;
-    min-height: 598px;
+    width: 1440px;
     padding-top: 0;
     padding-bottom: 0;
   }
@@ -72,7 +69,7 @@
   @include desktop {
     align-items: flex-start;
 
-    max-width: 436px;
+    width: 436px;
   }
 }
 
@@ -151,16 +148,16 @@
   grid-template-columns: repeat(2, 1fr);
   column-gap: 32px;
 
-  max-width: 280px;
+  width: 280px;
   margin: 0;
 
   @include tablet {
-    max-width: 367px;
+    width: 367px;
     column-gap: 43px;
   }
 
   @include desktop {
-    max-width: 366px;
+    width: 366px;
     column-gap: 42px;
   }
 }
@@ -190,6 +187,7 @@
 
 .stats__action {
   position: absolute;
+  // top: 46px;
   left: 50%;
 
   width: 77px;
