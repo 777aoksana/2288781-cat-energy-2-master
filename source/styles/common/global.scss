@@ -16,6 +16,7 @@ body {
   min-width: $breakpoint-mobile-min;
   min-height: 100%;
   margin: 0;
+  padding: 0;
 
   font-family: $base-font, "Arial", sans-serif;
   font-size: 14px;
@@ -33,13 +34,11 @@ body {
 }
 
 img {
-  display: block;
-
   max-width: 100%;
   height: auto;
 
   object-fit: contain;
-  overflow: visible;
+  object-position: center;
 }
 
 picture,
