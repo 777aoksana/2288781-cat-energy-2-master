@@ -11,31 +11,6 @@
 
   transition: all 0.8s ease-out;
 
-  &__map {
-    position: relative;
-
-    display: grid;
-
-    width: 100%;
-    min-width: $breakpoint-mobile-min;
-    margin: 0 auto;
-
-    background-color: $white;
-
-    &--color {
-      background-color: $accent-light-grey;
-    }
-
-    @include tablet {
-      min-width: $breakpoint-tablet-min;
-    }
-
-    @include desktop {
-      min-width: $breakpoint-desktop-min;
-      margin: 0;
-    }
-  }
-
   &__wrapper {
     @include container;
 

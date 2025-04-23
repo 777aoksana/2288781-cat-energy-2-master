@@ -1,13 +1,21 @@
 .map {
   position: relative;
 
+  width: fit-content;
+
+  background-color: $accent-light-grey;
+
   transition: all 0.5s ease-out;
 
   &__wrapper {
     @include container;
+
+    @include desktop {
+      position: relative;
+    }
   }
 
-  &__wrappe--color {
+  &__wrapper--color {
     margin: 0;
     background-color: $accent-light-grey;
 
@@ -17,46 +25,28 @@
   }
 
   &__content {
-    position: relative;
-
-    display: grid;
-    grid-template-columns: repeat(2, 140px);
-    grid-template-rows: 60px;
+    display: flex;
     justify-content: space-between;
 
-    width: 100%;
-
     @include max-width-mobile {
-      max-width: 280px;
-      min-height: 112px;
-      margin: 0 auto;
-      padding-top: 65px;
+      width: 280px;
+      padding-top: 26px;
       padding-bottom: 26px;
     }
 
     @include tablet {
-      grid-template-columns: repeat(2, 163px);
-      grid-template-rows: 78px;
-      gap: 274px;
-
-      min-height: 200px;
-      margin: 0 auto;
-      padding: 60px 70px;
+      width: 708px;
+      padding: 60px 40px;
     }
 
     @include desktop {
       position: absolute;
       top: 95px;
-      left: 110px;
+      left: 0;
       z-index: 10;
 
-      justify-content: start;
-      gap: 87px;
-
-      width: 563px;
-      min-height: 199px;
-      margin: 0;
-      padding: 60px 80px;
+      width: 565px;
+      padding: 60px 78px 60px 80px;
 
       background-color: $white;
     }
@@ -73,45 +63,43 @@
   }
 
   &__text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
+    width: 140px;
     margin: 0;
+    padding-top: 4px;
 
     font-family: $main-font;
     font-size: 16px;
     line-height: 20px;
-    padding: 1px 0;
 
     color: $extra-dark-grey;
     text-align: left;
     text-transform: uppercase;
 
     @include tablet {
+      width: 163px;
+      padding-top: 7px;
+      padding-bottom: 5px;
+
       font-size: 20px;
       line-height: 26px;
+    }
+
+    @include desktop {
+      padding-bottom: 1px;
     }
   }
 
   &__direction {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
 
-    width: 140px;
-    margin: 0;
-    margin-right: auto;
+    min-width: 140px;
 
-    font-family: $base-font;
     line-height: 20px;
 
-    color: $accent-dark-grey;
-
     @include tablet {
-      justify-content: space-between;
-
-      width: 163px;
+      gap: 20px;
 
       font-size: 16px;
 
@@ -124,17 +112,22 @@
   }
 
   &__address {
+    width: 140px;
     margin-top: 0;
     margin-bottom: 0;
 
+    font-style: normal;
+
     @include tablet {
-      margin-bottom: 19px;
+      width: 163px;
     }
   }
 
   &__city {
     margin-top: 0;
     margin-bottom: 0;
+
+    font-style: normal;
   }
 
   &__location {
