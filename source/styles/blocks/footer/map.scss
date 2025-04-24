@@ -24,6 +24,8 @@
     display: flex;
     justify-content: space-between;
 
+    margin: 0 auto;
+
     @include max-width-mobile {
       width: 280px;
       padding-top: 26px;
@@ -31,7 +33,7 @@
     }
 
     @include tablet {
-      width: 708px;
+      width: 768px;
       padding: 60px 40px;
     }
 
@@ -140,6 +142,10 @@
     background-position: center;
     background-repeat: no-repeat;
 
+    &--nojs {
+      display: block;
+    }
+
     @include tablet {
       height: 400px;
 
@@ -154,6 +160,8 @@
     }
 
     @include desktop {
+      width: 100%;
+
       background-image:
         image-set(
           url("../../images/maps/map-desktop@2x.webp") 2x type("image/webp"),
@@ -179,10 +187,6 @@
 
     @include tablet {
       height: 400px;
-    }
-
-    @include desktop {
-      height: 100%;
     }
   }
 
