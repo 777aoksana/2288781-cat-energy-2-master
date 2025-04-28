@@ -122,6 +122,10 @@
 
   &__link-info {
     @include reset-link;
+
+    @include tablet {
+      margin: 0 auto;
+    }
   }
 
   &__denomination {
@@ -135,7 +139,7 @@
 
     @include tablet {
       max-width: 135px;
-      margin: 2px auto;
+      margin: 2x auto;
 
       text-align: center;
     }

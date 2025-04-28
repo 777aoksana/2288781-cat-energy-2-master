@@ -57,13 +57,13 @@
     transition: width 0.8s ease-in-out;
 
     @include tablet {
-      width: 768px;
+      width: 708px;
       padding-top: 65px;
       padding-bottom: 84px;
     }
 
     @include desktop {
-      width: 1440px;
+      width: 1220px;
       margin-left: 0;
       padding-top: 75px;
     }
