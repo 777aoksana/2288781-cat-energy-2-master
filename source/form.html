@@ -30,6 +30,10 @@
   <header class="page__main-header main-header" data-test="header">
     <!-- Для отображения меню заменить модификатор объекта main-header__navigation с closed на opened (js) -->
     <nav class="main-header__navigation main-header__navigation--index main-header__navigation--closed main-header__navigation--nojs">
+
+  <header class="page__main-header main-header" data-test="header">
+    <!-- Для отображения меню заменить модификатор объекта main-header__navigation с closed на opened (js) -->
+    <nav class="main-header__navigation main-header__navigation--index main-header__navigation--closed main-header__navigation--nojs">
       <a class="main-header__header-logo header-logo" href="./index.html" aria-label="Изображение логотипа онлайн-магазина «Кэт энерджи» | Переход на главную страницу">
         <picture>
           <source media="(min-width: 1440px)" type="image/svg+xml" width="70" height="59" srcset="images/logo/header-logo/logotype-desktop.svg">
@@ -46,10 +50,18 @@
       <ul class="main-header__list main-header__list--index main-header__list--form">
         <li class="main-header__item">
           <a class="main-header__link" href="./index.html">Главная</a>
+      <button class="main-header__toggle" type="button" aria-label="Открыть/скрыть меню"></button>
+      <ul class="main-header__list main-header__list--index main-header__list--form">
+        <li class="main-header__item">
+          <a class="main-header__link" href="./index.html">Главная</a>
         </li>
         <li class="main-header__item">
           <a class="main-header__link" href="./catalog.html">Каталог продукции</a>
+        <li class="main-header__item">
+          <a class="main-header__link" href="./catalog.html">Каталог продукции</a>
         </li>
+        <li class="main-header__item  main-header__item--active">
+          <a class="main-header__link main-header__link--current main-header__link--form-current" href="./form.html"  aria-current="page">Подбор программы</a>
         <li class="main-header__item  main-header__item--active">
           <a class="main-header__link main-header__link--current main-header__link--form-current" href="./form.html"  aria-current="page">Подбор программы</a>
         </li>
@@ -102,7 +114,7 @@
   </main>
 
   <footer class="page__main-footer main-footer">
-    <section class="map" data-test="contacts">
+    <section class="map map--color" data-test="contacts">
 
       <h2 class="visually-hidden">Контакты и местонахождение офиса онлайн-магазина «Кэт Энерджи» с кастомным курсором на карте</h2>
 
@@ -112,12 +124,16 @@
 
           <p class="map__text">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
 
+
           <p class="map__direction">
+            <span class="map__address">ул. Большая Конюшенная, д.&nbsp;19/8</span>
             <span class="map__address">ул. Большая Конюшенная, д.&nbsp;19/8</span>
             <span class="map__city">Санкт-Петербург</span>
           </p>
 
+
         </div>
+
 
       </div>
 
