@@ -7,7 +7,10 @@
 
   &__wrapper {
     @include container;
+
     position: relative;
+
+    max-width: 320px;
 
     @include max-width-mobile {
       &::after {
@@ -44,9 +47,10 @@
   }
 
   &__title {
-    width: 320px;
+    width: 280px;
     margin: 0 auto;
-    padding: 27px 20px 41px;
+    padding-top: 27px;
+    padding-bottom: 41px;
 
     text-align: left;
 
@@ -54,13 +58,14 @@
 
     @include tablet {
       width: 768px;
-      padding: 65px 30px 84px;
+      padding-top: 65px;
+      padding-bottom: 84px;
     }
 
     @include desktop {
       width: 1440px;
       margin-left: 0;
-      padding: 75px 110px 84px 0;
+      padding-top: 75px;
     }
   }
 }
