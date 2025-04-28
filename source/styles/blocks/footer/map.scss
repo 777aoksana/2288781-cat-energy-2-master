@@ -16,7 +16,7 @@
     }
   }
 
-  &__wrapper{
+  &__wrapper {
     @include container;
   }
 
@@ -175,7 +175,7 @@
     }
   }
 
-  &__location--iframe {
+  &__location-iframe {
     position: relative;
     left: 0;
 
@@ -188,11 +188,3 @@
     overflow: hidden;
   }
 }
-
-.map__location--nojs > body {
-  background: none;
-}
-
-// .map__location--nojs .map__location--iframe {
-//   display: none;
-// }
