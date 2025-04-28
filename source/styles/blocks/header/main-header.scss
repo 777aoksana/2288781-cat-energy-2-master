@@ -165,7 +165,7 @@
       gap: 34px;
 
       width: 478px;
-      margin-top: 18px;
+      margin-top: 21px;
       margin-bottom: 3px;
       padding: 0;
 
@@ -353,8 +353,8 @@
     color: $black;
   }
 
-  .main-header__list--catalog .main-header__list__link--catalog-current,
-  .main-header__list--form .main-header__list__link--catalog-current {
+  .main-header__list--catalog .main-header__link--catalog-current,
+  .main-header__list--form .main-header__link--form-current {
     border-bottom: 2px solid $primary;
   }
 }
