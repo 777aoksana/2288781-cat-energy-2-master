@@ -48,6 +48,10 @@
     opacity: 0.3;
   }
 
+  &:active::after .logo-htmlacademy__text {
+    opacity: 0.3;
+  }
+
   @include tablet {
     margin: 0;
     margin-left: auto;
